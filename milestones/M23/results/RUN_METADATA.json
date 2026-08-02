@@ -1,0 +1,17 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "offsets": [
+    0,
+    1,
+    2
+  ],
+  "completed_holdouts": 10,
+  "thresholds": {
+    "0": 7.335539817810059,
+    "1": 7.255367755889893,
+    "2": 7.28558874130249
+  },
+  "verdict": "PASS_LATE_ONSET_PLUS1",
+  "execution_mode": "single_frozen_50k_calibration_followed_by_paired_independent_holdouts"
+}

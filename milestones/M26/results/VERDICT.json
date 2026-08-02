@@ -1,0 +1,18 @@
+{
+  "verdict": "STRONG_FAIL_EXACT_ONSET_SPLIT_CONFIRMATION",
+  "frozen_threshold": 16.623075485229492,
+  "aggregate_recall_point": 0.28435,
+  "aggregate_recall_lower_95": 0.28203,
+  "aggregate_recall_upper_95": 0.286605,
+  "holdout_pass_count": 0,
+  "fpr_pass_holdout_count": 10,
+  "fpr_robust": true,
+  "extreme_fpr_violation": false,
+  "prediction": {
+    "threshold_in_range": true,
+    "recall_in_range": false,
+    "pass_count_in_range": false,
+    "verdict_confirmed": false,
+    "fully_confirmed": false
+  }
+}

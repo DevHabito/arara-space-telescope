@@ -1,0 +1,16 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "window_length": 8,
+  "methods": [
+    "baseline8",
+    "reference_projected8"
+  ],
+  "thresholds": {
+    "baseline8": 16.19305419921875,
+    "reference_projected8": 4.052854537963867
+  },
+  "verdict": "PASS_REFERENCE_PROJECTION_CANDIDATE",
+  "execution_mode": "paired_baseline_and_reference_only_projection_on_same_curves_single_frozen_50k_calibration_ten_independent_holdouts",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95"
+}

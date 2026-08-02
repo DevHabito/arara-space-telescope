@@ -1,0 +1,13 @@
+{
+  "replication_count": 10,
+  "offsets": [
+    -4,
+    -2,
+    0,
+    2,
+    4
+  ],
+  "completed_replications": 10,
+  "verdict": "INCONCLUSIVE",
+  "execution_mode": "frozen_paired_offsets_in_independent_replications"
+}

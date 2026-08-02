@@ -1,0 +1,6 @@
+window,condition,status,evidence
+t50,"13.75σ, full aligned oracle score",robust pass,M23
+t50,"13.75σ, exact onset, 8-cadence confirmation",strong fail; recall 28.44%,M26
+t50,"13.75σ, exact onset, 16-cadence confirmation",strong fail; recall 16.46%,M27
+t50,short-window matched-filter family,not operationally viable under current shared-step null,M26–M27
+t50,next required control,"paired window-length study: 8,16,24,full",proposed M28

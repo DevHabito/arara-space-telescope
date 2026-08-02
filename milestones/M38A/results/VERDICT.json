@@ -1,0 +1,72 @@
+{
+  "verdict": "PASS_M38A_LATENT_GRID_ELIGIBLE_K5",
+  "selected_grid_size": 5,
+  "selected_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "full_curve_gate": {
+    "minimum_retention": 0.9989970466078516,
+    "minimum_required": 0.995,
+    "pass": true
+  },
+  "local_mesh_gate": {
+    "grid_size": 5,
+    "minimum_retention": 0.9977688876510862,
+    "minimum_condition": {
+      "shape": "power_law",
+      "duration": 31,
+      "relative_endpoint": 3,
+      "phi": 0.8,
+      "u": 0.125,
+      "nearest_grid_u": 0.0
+    },
+    "valid_evaluations": 1090797444,
+    "degenerate_evaluations": 400292640,
+    "trivially_identical_evaluations": 723028581,
+    "guard_pass": true,
+    "minimum_required_with_guard": 0.9955
+  },
+  "local_refinement_gate": {
+    "grid_size": 5,
+    "minimum_retention": 0.9977688876510862,
+    "minimum_condition": {
+      "grid_size": 5,
+      "shape": "power_law",
+      "duration": 49,
+      "relative_endpoint": 3,
+      "nearest_grid_index": 0,
+      "nearest_grid_u": 0.0,
+      "coarse_u": 0.125,
+      "coarse_phi": 0.8,
+      "coarse_retention": 0.9977688876510862,
+      "refined_u": 0.125,
+      "refined_phi": 0.8,
+      "refined_retention": 0.9977688876510862,
+      "optimizer_success": true,
+      "optimizer_evaluations": 739
+    },
+    "pass": true,
+    "optimizer_success_count": 512,
+    "optimizer_total_count": 512,
+    "minimum_required": 0.995
+  },
+  "first_failed_grid": {
+    "grid_size": 2,
+    "reason": "FULL_CURVE_RETENTION_BELOW_CONTRACT",
+    "minimum_retention": 0.9862056011743484
+  },
+  "last_failed_grid_before_selection": {
+    "grid_size": 3,
+    "reason": "LOCAL_CONFIRMATION_RETENTION_BELOW_CONTRACT",
+    "full_curve_minimum_retention": 0.9963197585235828,
+    "local_mesh_minimum_retention": 0.9923064965218195
+  },
+  "outcome_free": true,
+  "positive_curves_generated": 0,
+  "negative_curves_generated": 0,
+  "holdouts_opened": 0
+}

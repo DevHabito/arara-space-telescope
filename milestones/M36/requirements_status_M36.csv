@@ -1,0 +1,8 @@
+window,condition,status,evidence
+"rolling 81..179, latency t50+4",exact discrete shape control,"valid; recall 75.9415%, 10/10",M36
+"rolling 81..179, latency t50+4",four-shape bank without true label,"detection pass; recall 75.7055%, 10/10",M36
+shape selection,selected shape equals true shape among primary hits,"unreliable; accuracy 28.9556%, lower one-sided 95% 28.7639%, 0/10",M36
+detection interpretation,exact discrete shape oracle,not required for detection under exact duration and latent parameter,M36
+physical interpretation,morphology classification,not demonstrated,M36
+remaining template oracles,duration and latent shape parameter,remain exact,M36
+full bank,next required test,"37-duration x 4-shape x 99-endpoint bank with 14,652-hypothesis calibration",M37

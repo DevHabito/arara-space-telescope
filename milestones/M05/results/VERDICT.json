@@ -1,0 +1,13 @@
+{
+  "verdict": "STRONG_FAIL",
+  "criterion_1_fpr_control": true,
+  "criterion_2_global_recall_lower_ge_0_60": false,
+  "criterion_3_six_strata_lower_ge_0_50": false,
+  "criterion_4_fifteen_batches_recall_ge_0_55": false,
+  "good_strata": 0,
+  "good_batches": 0,
+  "threshold": 7.66958475112915,
+  "oracle_recall_point": 0.0033499999999999997,
+  "oracle_recall_lower_95": 0.0028750000000000004,
+  "oracle_recall_upper_95": 0.003825
+}

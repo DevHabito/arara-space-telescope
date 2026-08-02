@@ -1,0 +1,15 @@
+{
+  "status": "MATCH",
+  "verdict": "PASS_M38A_LATENT_GRID_ELIGIBLE_K5",
+  "checks": {
+    "K2_full_fails": true,
+    "K3_full_passes": true,
+    "K3_local_fails": true,
+    "K5_full_passes": true,
+    "K5_mesh_guard_passes": true,
+    "K5_refinement_passes": true,
+    "K5_all_refinements_success": true,
+    "frozen_grid_literal": true,
+    "M38B_hypothesis_count": true
+  }
+}

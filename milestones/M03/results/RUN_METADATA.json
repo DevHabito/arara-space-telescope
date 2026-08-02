@@ -1,0 +1,9 @@
+{
+  "holdout_elapsed_seconds": 28.719115413000054,
+  "thresholds": {
+    "wbs": 19.503551483154297,
+    "sbw": 19.586488723754883
+  },
+  "holdout_open_count": 1,
+  "verdict": "STRONG_FAIL"
+}

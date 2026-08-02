@@ -1,0 +1,24 @@
+{
+  "protocol": "ARARA-M5-ORACLE-ALIGNED-BOUND",
+  "version": "5.0",
+  "development_root_seed": 2026073101,
+  "holdout_root_seed": 2026073102,
+  "bootstrap_seed": 2026073103,
+  "development_per_stratum": 2000,
+  "holdout_per_stratum": 5000,
+  "holdout_batches": 20,
+  "holdout_per_stratum_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_global_recall_lower_ci": 0.6,
+  "minimum_stratum_recall_lower_ci": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "strong_fail_global_recall_upper": 0.3,
+  "bootstrap_replicates": 10000,
+  "prediction_recall_range": [
+    0.4,
+    0.75
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "version": "1.0",
+  "development_root_seed": 2026072701,
+  "holdout_root_seed": 2026072702,
+  "bootstrap_seed": 2026072703,
+  "n_time": 160,
+  "burn_in": 200,
+  "baseline_n": 40,
+  "eval_start": 40,
+  "onset_low": 60,
+  "onset_high": 90,
+  "duration_low": 24,
+  "duration_high": 60,
+  "snr_low": 2.0,
+  "snr_high": 5.0,
+  "phi_low": 0.0,
+  "phi_high": 0.6,
+  "positive_families": [
+    "linear",
+    "power_law",
+    "exponential",
+    "logistic"
+  ],
+  "negative_families": [
+    "quiet",
+    "positive_impulse",
+    "symmetric_bump",
+    "sinusoid",
+    "negative_dip_recovery"
+  ],
+  "m1_windows": [
+    8,
+    16,
+    32
+  ],
+  "cusum_kappas": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "development_n_per_family": 2000,
+  "holdout_total_n_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_n_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_recall_lower_ci": 0.3,
+  "minimum_delta_lower_ci": 0.1,
+  "bootstrap_replicates": 10000
+}

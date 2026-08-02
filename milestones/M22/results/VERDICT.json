@@ -1,0 +1,75 @@
+{
+  "verdict": "INCONCLUSIVE",
+  "offset_details": {
+    "-4": {
+      "offset": -4,
+      "verdict": "INCONCLUSIVE",
+      "aggregate_recall_point": 0.70638,
+      "aggregate_recall_lower_95": 0.6855532500000001,
+      "aggregate_recall_upper_95": 0.72626025,
+      "replication_pass_count": 8,
+      "fpr_pass_replication_count": 8,
+      "extreme_fpr_violation": false,
+      "fpr_robust": false,
+      "prediction_recall_in_range": false
+    },
+    "-2": {
+      "offset": -2,
+      "verdict": "PASS",
+      "aggregate_recall_point": 0.6951050000000001,
+      "aggregate_recall_lower_95": 0.6758597499999999,
+      "aggregate_recall_upper_95": 0.7126322500000001,
+      "replication_pass_count": 9,
+      "fpr_pass_replication_count": 9,
+      "extreme_fpr_violation": false,
+      "fpr_robust": true,
+      "prediction_recall_in_range": false
+    },
+    "0": {
+      "offset": 0,
+      "verdict": "INCONCLUSIVE",
+      "aggregate_recall_point": 0.682895,
+      "aggregate_recall_lower_95": 0.651384,
+      "aggregate_recall_upper_95": 0.7121712499999999,
+      "replication_pass_count": 5,
+      "fpr_pass_replication_count": 7,
+      "extreme_fpr_violation": false,
+      "fpr_robust": false,
+      "prediction_recall_in_range": true
+    },
+    "2": {
+      "offset": 2,
+      "verdict": "INCONCLUSIVE",
+      "aggregate_recall_point": 0.6027899999999999,
+      "aggregate_recall_lower_95": 0.57914,
+      "aggregate_recall_upper_95": 0.62584625,
+      "replication_pass_count": 3,
+      "fpr_pass_replication_count": 9,
+      "extreme_fpr_violation": false,
+      "fpr_robust": true,
+      "prediction_recall_in_range": true
+    },
+    "4": {
+      "offset": 4,
+      "verdict": "STRONG_FAIL",
+      "aggregate_recall_point": 0.514815,
+      "aggregate_recall_lower_95": 0.48564925000000003,
+      "aggregate_recall_upper_95": 0.542056,
+      "replication_pass_count": 0,
+      "fpr_pass_replication_count": 9,
+      "extreme_fpr_violation": false,
+      "fpr_robust": true,
+      "prediction_recall_in_range": true
+    }
+  },
+  "prediction": {
+    "zero_pass": false,
+    "minus2_pass": true,
+    "plus2_pass": false,
+    "at_least_one_pm4_not_pass": true,
+    "zero_has_maximum_recall": false,
+    "overall_verdict_confirmed": false,
+    "all_recall_ranges_confirmed": false,
+    "fully_confirmed": false
+  }
+}

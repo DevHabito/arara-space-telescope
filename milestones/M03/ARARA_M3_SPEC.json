@@ -1,0 +1,29 @@
+{
+  "protocol": "ARARA-M3-SUBTRACT-BEFORE-WHITEN",
+  "version": "3.0",
+  "data_model": "identical_to_M2_with_new_seeds",
+  "development_root_seed": 2026072901,
+  "holdout_root_seed": 2026072902,
+  "bootstrap_seed": 2026072903,
+  "development_per_stratum": 2000,
+  "holdout_per_stratum": 5000,
+  "holdout_batches": 20,
+  "holdout_per_stratum_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_sbw_recall_lower_ci": 0.2,
+  "minimum_delta_lower_ci": 0.1,
+  "clean_noninferiority_margin": -0.03,
+  "required_nonnegative_strata": 7,
+  "required_positive_batches": 15,
+  "bootstrap_replicates": 10000,
+  "prediction_delta_range": [
+    0.1,
+    0.3
+  ],
+  "detector_windows": [
+    8,
+    16,
+    32
+  ]
+}

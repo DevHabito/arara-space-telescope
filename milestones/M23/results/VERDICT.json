@@ -1,0 +1,51 @@
+{
+  "verdict": "PASS_LATE_ONSET_PLUS1",
+  "offset_details": {
+    "0": {
+      "offset": 0,
+      "verdict": "PASS",
+      "aggregate_recall_point": 0.6707799999999999,
+      "aggregate_recall_lower_95": 0.6683250000000001,
+      "aggregate_recall_upper_95": 0.673135,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "extreme_fpr_violation": false,
+      "fpr_robust": true,
+      "prediction_recall_in_range": true
+    },
+    "1": {
+      "offset": 1,
+      "verdict": "PASS",
+      "aggregate_recall_point": 0.641555,
+      "aggregate_recall_lower_95": 0.639115,
+      "aggregate_recall_upper_95": 0.64401,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "extreme_fpr_violation": false,
+      "fpr_robust": true,
+      "prediction_recall_in_range": true
+    },
+    "2": {
+      "offset": 2,
+      "verdict": "STRONG_FAIL",
+      "aggregate_recall_point": 0.59409,
+      "aggregate_recall_lower_95": 0.591915,
+      "aggregate_recall_upper_95": 0.5963099999999999,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "extreme_fpr_violation": false,
+      "fpr_robust": true,
+      "prediction_recall_in_range": true
+    }
+  },
+  "prediction": {
+    "zero_pass": true,
+    "plus1_pass": true,
+    "plus2_inconclusive": false,
+    "all_fpr_robust": true,
+    "strictly_decreasing_recall": true,
+    "overall_verdict_confirmed": true,
+    "all_recall_ranges_confirmed": true,
+    "fully_confirmed": false
+  }
+}

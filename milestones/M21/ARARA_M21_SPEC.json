@@ -1,0 +1,35 @@
+{
+  "protocol": "ARARA-M21-INDEPENDENT-CONFIRMATION-13P75SIGMA-T50",
+  "version": "21.0",
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "replication_count": 10,
+  "replication_root_seed": 2026081601,
+  "aggregate_bootstrap_seed": 2026081602,
+  "development_negatives_per_family": 2000,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "extreme_fpr_upper_limit": 0.015,
+  "minimum_replication_passes": 8,
+  "minimum_fpr_pass_replications": 9,
+  "minimum_global_recall_lower_ci": 0.6,
+  "minimum_stratum_recall_lower_ci": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "bootstrap_replicates": 10000,
+  "prediction_pass_count_range": [
+    8,
+    10
+  ],
+  "prediction_aggregate_recall_range": [
+    0.635,
+    0.685
+  ],
+  "prediction_verdict": "PASS_CONFIRMATORY"
+}

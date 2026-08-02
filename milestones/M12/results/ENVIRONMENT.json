@@ -1,0 +1,9 @@
+{
+  "python": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]",
+  "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "scikit_learn": "1.8.0",
+  "m10_dependency_sha256": "1baac60cc6107f0ced643037a6ea40cd9cb3f58662ae79573736b2a13569b78c"
+}

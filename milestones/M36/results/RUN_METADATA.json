@@ -1,0 +1,20 @@
+{
+  "shape_bank": [
+    "linear",
+    "power_law",
+    "exponential",
+    "logistic"
+  ],
+  "rolling_endpoint_count": 99,
+  "exact_hypothesis_count": 99,
+  "bank_hypothesis_count": 396,
+  "primary_latency": 4,
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "thresholds": {
+    "rolling_exact_shape_latency4": 6.950809001922607,
+    "rolling_four_shape_bank_latency4": 7.105931758880615
+  },
+  "verdict": "PASS_DETECTION_SHAPE_UNRELIABLE",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95"
+}

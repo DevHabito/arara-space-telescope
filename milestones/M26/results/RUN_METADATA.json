@@ -1,0 +1,10 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "guard_length": 1,
+  "confirmation_length": 8,
+  "threshold": 16.623075485229492,
+  "verdict": "STRONG_FAIL_EXACT_ONSET_SPLIT_CONFIRMATION",
+  "execution_mode": "single_frozen_50k_exact_onset_8point_confirmation_ten_holdouts",
+  "report": "M26_RESULT_REPORT_PT_BR.md"
+}

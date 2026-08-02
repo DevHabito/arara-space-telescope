@@ -1,0 +1,3 @@
+Source archive: ARARA_from_zero_M25_complete.zip
+SHA-256: 144486fb66d3578803b1bbad166bf502a97fdb5a1a202b88fa7fc0953e8d5cff
+Archive size: 1511896 bytes

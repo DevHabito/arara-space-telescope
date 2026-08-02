@@ -1,0 +1,32 @@
+{
+  "protocol": "ARARA-M11-SNR-THRESHOLD-T75",
+  "version": "11.0",
+  "target_fraction": 0.75,
+  "snr_levels": [
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    10.0
+  ],
+  "development_root_seed": 2026080601,
+  "holdout_root_seed": 2026080602,
+  "bootstrap_seed": 2026080603,
+  "development_base_fields_per_shape_context": 1000,
+  "development_negatives_per_family": 2000,
+  "holdout_per_positive_stratum": 2500,
+  "holdout_negatives_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_global_recall_lower_ci": 0.6,
+  "minimum_stratum_recall_lower_ci": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "maximum_adjacent_point_drop": 0.02,
+  "predicted_first_passing_snr": 8.5,
+  "bootstrap_replicates": 10000
+}

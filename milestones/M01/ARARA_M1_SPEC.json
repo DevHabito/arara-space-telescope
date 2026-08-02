@@ -1,0 +1,60 @@
+{
+  "protocol": "ARARA-M1",
+  "version": "1.0",
+  "sequence_length": 160,
+  "baseline_end_exclusive": 40,
+  "evaluation_start": 40,
+  "onset_range": [
+    60,
+    90
+  ],
+  "duration_range": [
+    24,
+    60
+  ],
+  "signal_to_noise_amplitude_range": [
+    2.0,
+    5.0
+  ],
+  "ar1_phi_range": [
+    0.0,
+    0.6
+  ],
+  "noise_families": [
+    "gaussian_ar1",
+    "student_t5_ar1"
+  ],
+  "positive_families": [
+    "linear",
+    "power_law",
+    "exponential",
+    "logistic"
+  ],
+  "negative_families": [
+    "quiet",
+    "positive_impulse",
+    "symmetric_bump",
+    "sinusoid",
+    "negative_dip_recovery"
+  ],
+  "m1_windows": [
+    8,
+    16,
+    32
+  ],
+  "cusum_kappa_grid": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "development_per_family": 2000,
+  "holdout_per_family": 5000,
+  "holdout_seed_batches": 20,
+  "development_fpr_target_per_family": 0.005,
+  "holdout_fpr_upper_bound_per_family": 0.01,
+  "minimum_early_recall_lower_ci": 0.3,
+  "minimum_delta_recall_lower_ci": 0.1,
+  "bootstrap_replicates": 10000,
+  "promotion_rule": "all_primary_criteria_must_pass"
+}

@@ -1,0 +1,69 @@
+{
+  "thresholds": {
+    "8": 16.317588806152344,
+    "16": 21.13241958618164,
+    "24": 23.17072296142578,
+    "full": 24.072240829467773
+  },
+  "family_thresholds": {
+    "8": {
+      "quiet": 3.7503464221954346,
+      "shared_ramp": 13.081708908081055,
+      "shared_step": 16.317588806152344,
+      "shared_bump": 13.273332595825195,
+      "shared_oscillation": 10.667790412902832
+    },
+    "16": {
+      "quiet": 4.005786418914795,
+      "shared_ramp": 16.363401412963867,
+      "shared_step": 21.13241958618164,
+      "shared_bump": 16.384716033935547,
+      "shared_oscillation": 11.504647254943848
+    },
+    "24": {
+      "quiet": 4.099738597869873,
+      "shared_ramp": 17.75441551208496,
+      "shared_step": 23.17072296142578,
+      "shared_bump": 17.41010093688965,
+      "shared_oscillation": 11.346780776977539
+    },
+    "full": {
+      "quiet": 4.136101722717285,
+      "shared_ramp": 18.399532318115234,
+      "shared_step": 24.072240829467773,
+      "shared_bump": 17.51494598388672,
+      "shared_oscillation": 11.261467933654785
+    }
+  },
+  "allowed_counts": {
+    "8": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    },
+    "16": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    },
+    "24": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    },
+    "full": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    }
+  },
+  "calibration_negatives_per_family": 50000
+}

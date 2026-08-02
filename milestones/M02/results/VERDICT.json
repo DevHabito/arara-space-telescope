@@ -1,0 +1,32 @@
+{
+  "verdict": "INCONCLUSIVE",
+  "criterion_1_common_mode_fpr_control": true,
+  "criterion_2_common_mode_recall_lower_ge_0_30": false,
+  "criterion_3_delta_lower_ge_0_15": false,
+  "criterion_4_clean_noninferiority": true,
+  "criterion_5_at_least_7_of_8_strata_nonnegative": false,
+  "criterion_6_at_least_15_of_20_batches_positive": false,
+  "positive_batches": 1,
+  "stratum_delta": {
+    "linear__clean": 0.0,
+    "linear__concurrent": 0.0,
+    "power_law__clean": 0.0,
+    "power_law__concurrent": -0.0002,
+    "exponential__clean": 0.0,
+    "exponential__concurrent": -0.0002,
+    "logistic__clean": 0.0,
+    "logistic__concurrent": 0.0
+  },
+  "cm_recall_point": 5e-05,
+  "target_only_recall_point": 0.0001,
+  "delta_point": -5e-05,
+  "cm_recall_lower_95": 0.0,
+  "cm_recall_upper_95": 0.000125,
+  "delta_lower_95": -0.00015000000000000001,
+  "delta_upper_95": 5e-05,
+  "cm_clean_recall_point": 0.0,
+  "target_only_clean_recall_point": 0.0,
+  "clean_delta_point": 0.0,
+  "clean_delta_lower_95": 0.0,
+  "clean_delta_upper_95": 0.0
+}

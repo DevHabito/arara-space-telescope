@@ -1,0 +1,9 @@
+{
+  "holdout_elapsed_seconds": 25.61745135000001,
+  "thresholds": {
+    "target_only": 29.501049041748047,
+    "common_mode": 20.106138229370117
+  },
+  "holdout_open_count": 1,
+  "verdict": "INCONCLUSIVE"
+}

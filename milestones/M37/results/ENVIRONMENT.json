@@ -1,0 +1,12 @@
+{
+  "python": "3.13.5 (main, May  5 2026, 21:05:52) [GCC 14.2.0]",
+  "platform": "Linux-6.12.13-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "scikit_learn": "1.8.0",
+  "m36_dependency_sha256": "4eab48b5c00b57060c6478d8594e6e73ec837197655531271a6e1aeb24a8a8dd",
+  "m35_dependency_sha256": "84659f5c6312b064d23cd2375f039aa54a6a4cf724a61e2e05323e88b18e2cb3",
+  "m34_dependency_sha256": "b47aaa1e2c83fa7a6a72a75185bc4530988b202e053092f3bc636ec55dc6d208",
+  "m32_dependency_sha256": "c699e0da99bfb977dd1468104ca115efa7e277015659683d2c504631e0ce7f45"
+}

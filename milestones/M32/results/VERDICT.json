@@ -1,0 +1,71 @@
+{
+  "verdict": "PASS_DETECTION_ONSET_UNRELIABLE",
+  "control_valid": true,
+  "method_details": {
+    "exact_reference_projected8": {
+      "method": "exact_reference_projected8",
+      "threshold": 4.088747024536133,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.795285,
+      "aggregate_recall_lower_one_sided_95": 0.79384,
+      "aggregate_recall_upper_one_sided_95": 0.7967302500000001,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9852603142999999,
+      "average_precision_mean": 0.9849848084456392
+    },
+    "split_onset_reference_projected8": {
+      "method": "split_onset_reference_projected8",
+      "threshold": 4.280668258666992,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.76547,
+      "aggregate_recall_lower_one_sided_95": 0.763825,
+      "aggregate_recall_upper_one_sided_95": 0.767155,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9786804269000001,
+      "average_precision_mean": 0.9798172542760719
+    }
+  },
+  "paired_difference": {
+    "candidate_minus_exact_point": -0.029815000000000036,
+    "candidate_minus_exact_lower_one_sided_95": -0.03071,
+    "candidate_minus_exact_upper_one_sided_95": -0.02895500000000001
+  },
+  "onset_localization": {
+    "detected_n": 153094,
+    "detected_in_envelope": 38623,
+    "detected_accuracy": 0.2522829111526252,
+    "detected_accuracy_lower_one_sided_95": 0.25045728822419816,
+    "detected_accuracy_upper_one_sided_95": 0.2541154654171715,
+    "all_positive_n": 200000,
+    "all_positive_in_envelope": 49621,
+    "all_positive_accuracy": 0.248105,
+    "all_positive_accuracy_lower_one_sided_95": 0.24651662458919893,
+    "all_positive_accuracy_upper_one_sided_95": 0.24969876917045525,
+    "holdout_pass_count": 0,
+    "localization_pass": false,
+    "detected_early_below_minus2": 38734,
+    "detected_late_above_plus1": 75737,
+    "all_early_below_minus2": 56751,
+    "all_late_above_plus1": 93628
+  },
+  "prediction": {
+    "exact_recall_in_range": true,
+    "candidate_recall_in_range": false,
+    "delta_in_range": false,
+    "control_valid": true,
+    "both_fpr_robust": true,
+    "onset_accuracy_in_range": true,
+    "onset_localization_failed": true,
+    "detection_pass_count_in_range": false,
+    "overall_verdict_confirmed": false,
+    "fully_confirmed": false
+  }
+}

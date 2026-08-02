@@ -1,0 +1,16 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "window_length": 8,
+  "methods": [
+    "baseline8",
+    "projected_t8"
+  ],
+  "thresholds": {
+    "baseline8": 16.520498275756836,
+    "projected_t8": 4.497557640075684
+  },
+  "verdict": "STRONG_FAIL_NUISANCE_PROJECTION",
+  "execution_mode": "paired_baseline_and_reference_nuisance_projection_on_same_curves_single_frozen_50k_calibration_ten_independent_holdouts",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95"
+}

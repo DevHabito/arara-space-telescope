@@ -1,0 +1,19 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "lengths": [
+    "8",
+    "16",
+    "24",
+    "full"
+  ],
+  "thresholds": {
+    "8": 16.317588806152344,
+    "16": 21.13241958618164,
+    "24": 23.17072296142578,
+    "full": 24.072240829467773
+  },
+  "verdict": "STRONG_FAIL_ALL_LENGTHS",
+  "execution_mode": "paired_four_length_scores_on_same_curves_single_frozen_50k_calibration_ten_independent_holdouts",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95"
+}

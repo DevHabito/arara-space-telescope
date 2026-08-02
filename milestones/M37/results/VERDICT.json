@@ -1,0 +1,68 @@
+{
+  "verdict": "INVALID_M37_EXACT_DURATION_CONTROL",
+  "control_valid": false,
+  "method_details": {
+    "rolling_four_shape_exact_duration_latency4": {
+      "method": "rolling_four_shape_exact_duration_latency4",
+      "threshold": 7.28058385848999,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.7447950000000001,
+      "aggregate_recall_lower_one_sided_95": 0.74304,
+      "aggregate_recall_upper_one_sided_95": 0.74656,
+      "holdout_pass_count": 1,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": false,
+      "auroc_mean": 0.9990949171000001,
+      "average_precision_mean": 0.9988957160970223
+    },
+    "rolling_four_shape_full_duration_bank_latency4": {
+      "method": "rolling_four_shape_full_duration_bank_latency4",
+      "threshold": 7.537208557128906,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.73458,
+      "aggregate_recall_lower_one_sided_95": 0.732895,
+      "aggregate_recall_upper_one_sided_95": 0.7363199999999999,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": false,
+      "auroc_mean": 0.9990318102000002,
+      "average_precision_mean": 0.9988180483824257
+    }
+  },
+  "paired_difference": {
+    "full_minus_control_point": -0.010215000000000085,
+    "full_minus_control_lower_one_sided_95": -0.010790000000000006,
+    "full_minus_control_upper_one_sided_95": -0.009649999999999999
+  },
+  "duration_identification": {
+    "primary_hit_n": 146916,
+    "duration_exact_correct": 3796,
+    "duration_exact_accuracy": 0.025837893762422064,
+    "duration_exact_accuracy_lower_one_sided_95": 0.02516058665504421,
+    "duration_tolerance2_correct": 17057,
+    "duration_tolerance2_accuracy": 0.1161003566663944,
+    "duration_tolerance2_accuracy_lower_one_sided_95": 0.11472784707695467,
+    "duration_tolerance2_accuracy_upper_one_sided_95": 0.1174840695025048,
+    "shape_correct": 46130,
+    "shape_accuracy": 0.31398894606441774,
+    "holdout_pass_count": 0,
+    "identification_pass": false
+  },
+  "prediction": {
+    "control_recall_in_range": true,
+    "full_recall_in_range": true,
+    "delta_in_range": true,
+    "control_valid": false,
+    "both_fpr_robust": true,
+    "full_threshold_in_range": true,
+    "full_pass_count_in_range": false,
+    "exact_duration_accuracy_in_range": false,
+    "tolerance2_accuracy_in_range": false,
+    "overall_verdict_confirmed": false,
+    "fully_confirmed": false
+  }
+}

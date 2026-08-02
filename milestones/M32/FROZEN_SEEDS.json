@@ -1,0 +1,161 @@
+{
+  "calibration": {
+    "quiet": {
+      "integer_seed": 515143012,
+      "entropy": 2026082701,
+      "spawn_key": [
+        0
+      ]
+    },
+    "shared_ramp": {
+      "integer_seed": 982964983,
+      "entropy": 2026082701,
+      "spawn_key": [
+        1
+      ]
+    },
+    "shared_step": {
+      "integer_seed": 88186703,
+      "entropy": 2026082701,
+      "spawn_key": [
+        2
+      ]
+    },
+    "shared_bump": {
+      "integer_seed": 437127545,
+      "entropy": 2026082701,
+      "spawn_key": [
+        3
+      ]
+    },
+    "shared_oscillation": {
+      "integer_seed": 3259395122,
+      "entropy": 2026082701,
+      "spawn_key": [
+        4
+      ]
+    }
+  },
+  "holdouts": [
+    {
+      "replication": 0,
+      "seeds": {
+        "development": 2708412700,
+        "holdout": 2482667012,
+        "bootstrap": 1794793186
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        0
+      ]
+    },
+    {
+      "replication": 1,
+      "seeds": {
+        "development": 116425198,
+        "holdout": 894468099,
+        "bootstrap": 3780881667
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        1
+      ]
+    },
+    {
+      "replication": 2,
+      "seeds": {
+        "development": 3833495046,
+        "holdout": 2581638850,
+        "bootstrap": 2498994116
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        2
+      ]
+    },
+    {
+      "replication": 3,
+      "seeds": {
+        "development": 368570911,
+        "holdout": 2495078078,
+        "bootstrap": 2369140971
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        3
+      ]
+    },
+    {
+      "replication": 4,
+      "seeds": {
+        "development": 3265798136,
+        "holdout": 154791943,
+        "bootstrap": 1979504439
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        4
+      ]
+    },
+    {
+      "replication": 5,
+      "seeds": {
+        "development": 321018318,
+        "holdout": 2785064990,
+        "bootstrap": 2072902614
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        5
+      ]
+    },
+    {
+      "replication": 6,
+      "seeds": {
+        "development": 136879651,
+        "holdout": 1586792849,
+        "bootstrap": 431693227
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        6
+      ]
+    },
+    {
+      "replication": 7,
+      "seeds": {
+        "development": 3275195823,
+        "holdout": 272259604,
+        "bootstrap": 3545121373
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        7
+      ]
+    },
+    {
+      "replication": 8,
+      "seeds": {
+        "development": 2576341384,
+        "holdout": 1925776952,
+        "bootstrap": 3679336436
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        8
+      ]
+    },
+    {
+      "replication": 9,
+      "seeds": {
+        "development": 3159338265,
+        "holdout": 2052670873,
+        "bootstrap": 3084840677
+      },
+      "entropy": 2026082702,
+      "spawn_key": [
+        9
+      ]
+    }
+  ]
+}

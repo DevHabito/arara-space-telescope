@@ -1,0 +1,12 @@
+{
+  "world_count": 3,
+  "calibrations": 900,
+  "sizes": [
+    2000,
+    10000,
+    50000
+  ],
+  "resamples_per_size_per_world": 100,
+  "verdict": "STRONG_FAIL_CALIBRATION_NOT_PRIMARY",
+  "execution_mode": "frozen_worlds_with_familywise_generation_and_deterministic_holdout_batches"
+}

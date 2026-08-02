@@ -1,0 +1,3 @@
+Source archive: ARARA_from_zero_M35_complete.zip
+SHA-256: 471b8c8ff0ba92fdc3ca72c56015bf64a9a7f3093bf46da0e11ec27842104072
+Archive size: 12735764 bytes

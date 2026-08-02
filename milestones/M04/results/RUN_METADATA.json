@@ -1,0 +1,11 @@
+{
+  "execution_mode": "deterministic_batch_resume_after_environment_timeout",
+  "holdout_open_count": 1,
+  "completed_batches": 20,
+  "thresholds": {
+    "matched_filter": 28.13385772705078,
+    "sbw_slope": 18.45326042175293
+  },
+  "verdict": "STRONG_FAIL",
+  "template_retained_count": 144
+}

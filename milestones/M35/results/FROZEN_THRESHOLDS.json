@@ -1,0 +1,40 @@
+{
+  "thresholds": {
+    "hinge_exact_t50": 4.235359191894531,
+    "rolling_hinge_first_crossing": 7.002526760101318
+  },
+  "family_thresholds": {
+    "hinge_exact_t50": {
+      "quiet": 3.601024866104126,
+      "shared_ramp": 4.138874530792236,
+      "shared_step": 4.235359191894531,
+      "shared_bump": 3.9452383518218994,
+      "shared_oscillation": 3.6004512310028076
+    },
+    "rolling_hinge_first_crossing": {
+      "quiet": 6.321694374084473,
+      "shared_ramp": 6.952669143676758,
+      "shared_step": 7.002526760101318,
+      "shared_bump": 6.813052177429199,
+      "shared_oscillation": 6.725400447845459
+    }
+  },
+  "allowed_counts": {
+    "hinge_exact_t50": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    },
+    "rolling_hinge_first_crossing": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    }
+  },
+  "calibration_negatives_per_family": 50000,
+  "rolling_endpoint_count": 99
+}

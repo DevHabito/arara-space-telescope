@@ -1,0 +1,7 @@
+window,condition,status,evidence
+t50,"13.75σ, exact onset, full oracle score",robust pass,M23
+t50,"hinge onset, reused selection/confirmation data",strong fail: recall 1.98%,M24
+t50,"hinge onset, split selection and 8-point confirmation","strong fail: recall 27.04%, onset accuracy 27.77%",M25
+t50,data reuse effect,material but not sufficient explanation; split improved recall 13.66x,M24–M25
+t50,autonomous onset,not demonstrated,M24–M25
+t50,required control,exact onset with M25 confirmation statistic,next M26

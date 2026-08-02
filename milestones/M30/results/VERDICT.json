@@ -1,0 +1,71 @@
+{
+  "verdict": "PASS_REFERENCE_PROJECTION_CANDIDATE",
+  "method_details": {
+    "baseline8": {
+      "method": "baseline8",
+      "threshold": 16.19305419921875,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.30982,
+      "aggregate_recall_lower_one_sided_95": 0.30745975,
+      "aggregate_recall_upper_one_sided_95": 0.31219500000000006,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": false,
+      "auroc_mean": 0.9867658537,
+      "average_precision_mean": 0.9798910750552681
+    },
+    "reference_projected8": {
+      "method": "reference_projected8",
+      "threshold": 4.052854537963867,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.7982250000000001,
+      "aggregate_recall_lower_one_sided_95": 0.7964000000000001,
+      "aggregate_recall_upper_one_sided_95": 0.8000349999999999,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9849129736,
+      "average_precision_mean": 0.9846721526711232
+    }
+  },
+  "paired_superiority": {
+    "delta_point": 0.4884050000000001,
+    "delta_lower_one_sided_95": 0.48581500000000005,
+    "delta_upper_one_sided_95": 0.49097025000000005,
+    "holdout_deltas": {
+      "0": 0.49015000000000003,
+      "1": 0.48769999999999997,
+      "2": 0.48824999999999996,
+      "3": 0.49285000000000007,
+      "4": 0.4817000000000001,
+      "5": 0.48550000000000004,
+      "6": 0.48949999999999994,
+      "7": 0.48745000000000005,
+      "8": 0.49054999999999993,
+      "9": 0.4904000000000001
+    },
+    "holdouts_with_delta_at_least_0_08": 10,
+    "superiority_pass": true
+  },
+  "projection_diagnostics": {
+    "positive_weighted_energy_retention_mean": 0.5070082469067286,
+    "positive_median_of_batch_medians": 0.4917883237019671,
+    "positive_reference_degenerate_fraction": 0.0,
+    "positive_template_degenerate_fraction": 0.0
+  },
+  "prediction": {
+    "baseline_recall_in_range": true,
+    "candidate_recall_in_range": false,
+    "delta_in_range": false,
+    "both_fpr_robust": true,
+    "median_energy_retention_above_0_70": false,
+    "material_paired_gain": true,
+    "candidate_holdout_passes_in_range": true,
+    "overall_verdict_confirmed": false,
+    "fully_confirmed": false
+  }
+}

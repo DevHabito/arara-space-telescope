@@ -1,0 +1,58 @@
+{
+  "protocol": "ARARA-M28-PAIRED-CONFIRMATION-LENGTH-MAP",
+  "version": "28.0",
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "length_labels": [
+    "8",
+    "16",
+    "24",
+    "full"
+  ],
+  "fixed_lengths": [
+    8,
+    16,
+    24
+  ],
+  "calibration_seed": 2026082301,
+  "holdout_root_seed": 2026082302,
+  "aggregate_bootstrap_root_seed": 2026082303,
+  "calibration_negatives_per_family": 50000,
+  "calibration_batch_size": 1000,
+  "holdout_count": 10,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "extreme_fpr_upper_limit": 0.015,
+  "minimum_holdout_passes": 8,
+  "minimum_fpr_pass_holdouts": 9,
+  "minimum_global_recall_lower_one_sided_95": 0.6,
+  "minimum_stratum_recall_lower_one_sided_95": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "bootstrap_replicates": 10000,
+  "prediction_recall_ranges": {
+    "8": [
+      0.24,
+      0.34
+    ],
+    "16": [
+      0.12,
+      0.22
+    ],
+    "24": [
+      0.07,
+      0.18
+    ],
+    "full": [
+      0.05,
+      0.25
+    ]
+  },
+  "prediction_verdict": "STRONG_FAIL_ALL_LENGTHS"
+}

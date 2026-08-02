@@ -1,0 +1,11 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "candidate_onsets": [
+    70,
+    120
+  ],
+  "threshold": 14.324524879455566,
+  "verdict": "STRONG_FAIL_CAUSAL_ONSET_ESTIMATOR",
+  "execution_mode": "single_frozen_50k_calibration_causal_hinge_onset_scan_ten_independent_holdouts"
+}

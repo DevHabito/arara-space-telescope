@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it using this metadata."
+title: "ARARA Space Telescope: Historical Computational Research Archive"
+type: software
+authors:
+  - family-names: "Romero"
+    given-names: "Felipe Gianini"
+version: "0.1.0"
+date-released: "2026-08-01"
+repository-code: "https://github.com/DevHabito/arara-space-telescope"
+abstract: "Historical computational research archive for the ARARA Space Telescope program, preserving milestone-level source code, tests, preregistrations, manifests, and research notes from reconstruction v0.1 through M38B recovery. The archive supports inspection, reproducibility, scholarly citation, and long-term machine discoverability while explicitly avoiding claims of an operational astronomical detector or validated space telescope."
+keywords:
+  - ARARA
+  - space telescope
+  - astronomy
+  - astronomical transients
+  - signal processing
+  - computational research
+  - reproducibility
+  - preregistration
+  - research archive
+  - Python
+license: "Apache-2.0 AND CC-BY-4.0"

@@ -1,0 +1,69 @@
+{
+  "verdict": "PASS_M37R_DETECTION_DURATION_UNRELIABLE",
+  "control_valid": true,
+  "method_details": {
+    "rolling_four_shape_exact_duration_latency4": {
+      "method": "rolling_four_shape_exact_duration_latency4",
+      "threshold": 7.094576358795166,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.7553099999999999,
+      "aggregate_recall_lower_one_sided_95": 0.753575,
+      "aggregate_recall_upper_one_sided_95": 0.75704,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9990739573,
+      "average_precision_mean": 0.9988757136630089
+    },
+    "rolling_four_shape_full_duration_bank_latency4": {
+      "method": "rolling_four_shape_full_duration_bank_latency4",
+      "threshold": 7.323736667633057,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.746855,
+      "aggregate_recall_lower_one_sided_95": 0.7452597499999998,
+      "aggregate_recall_upper_one_sided_95": 0.7484749999999999,
+      "holdout_pass_count": 8,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9990120205999998,
+      "average_precision_mean": 0.9987968032326376
+    }
+  },
+  "paired_difference": {
+    "full_minus_control_point": -0.00845499999999988,
+    "full_minus_control_lower_one_sided_95": -0.009044999999999994,
+    "full_minus_control_upper_one_sided_95": -0.007874999999999995
+  },
+  "duration_identification": {
+    "primary_hit_n": 149371,
+    "duration_exact_correct": 3821,
+    "duration_exact_accuracy": 0.025580601321541666,
+    "duration_exact_accuracy_lower_one_sided_95": 0.024912139533353837,
+    "duration_tolerance2_correct": 17458,
+    "duration_tolerance2_accuracy": 0.11687676992187239,
+    "duration_tolerance2_accuracy_lower_one_sided_95": 0.11551160658832754,
+    "duration_tolerance2_accuracy_upper_one_sided_95": 0.11825292970457235,
+    "shape_correct": 46960,
+    "shape_accuracy": 0.3143849877151522,
+    "holdout_pass_count": 0,
+    "identification_pass": false
+  },
+  "prediction": {
+    "control_threshold_in_range": false,
+    "full_threshold_in_range": false,
+    "control_recall_in_range": true,
+    "full_recall_in_range": true,
+    "delta_in_range": true,
+    "control_pass_count_in_range": true,
+    "full_pass_count_in_range": true,
+    "both_fpr_robust": true,
+    "duration_identification_below_gate": true,
+    "overall_verdict_confirmed": false,
+    "fully_confirmed": false
+  },
+  "parent_m37_label": "PASS_DETECTION_DURATION_UNRELIABLE"
+}

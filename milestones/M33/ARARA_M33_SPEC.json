@@ -1,0 +1,61 @@
+{
+  "protocol": "ARARA-M33-HINGE-VERSUS-PERMUTED-ONSET-ASSOCIATION",
+  "version": "33.0",
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "window_length": 8,
+  "methods": [
+    "exact_reference_projected8",
+    "hinge_reference_projected8",
+    "permuted_hinge_reference_projected8"
+  ],
+  "calibration_curve_seed": 2026082801,
+  "calibration_permutation_seed": 2026082802,
+  "holdout_curve_seed": 2026082803,
+  "holdout_permutation_seed": 2026082804,
+  "aggregate_bootstrap_seed": 2026082805,
+  "association_bootstrap_seed": 2026082806,
+  "calibration_negatives_per_family": 50000,
+  "calibration_batch_size": 1000,
+  "holdout_count": 10,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "extreme_fpr_upper_limit": 0.015,
+  "minimum_holdout_passes": 8,
+  "minimum_fpr_pass_holdouts": 9,
+  "minimum_global_recall_lower_one_sided_95": 0.6,
+  "minimum_stratum_recall_lower_one_sided_95": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "association_margin": 0.02,
+  "minimum_holdout_association_delta": 0.015,
+  "minimum_holdouts_with_association_delta": 8,
+  "bootstrap_replicates": 10000,
+  "prediction_exact_recall_range": [
+    0.75,
+    0.85
+  ],
+  "prediction_hinge_recall_range": [
+    0.74,
+    0.79
+  ],
+  "prediction_permuted_recall_range": [
+    0.73,
+    0.79
+  ],
+  "prediction_association_delta_range": [
+    -0.01,
+    0.01
+  ],
+  "prediction_permuted_pass_range": [
+    8,
+    10
+  ],
+  "prediction_verdict": "ONSET_DISTRIBUTION_ONLY"
+}

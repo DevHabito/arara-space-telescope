@@ -1,0 +1,65 @@
+{
+  "verdict": "PASS_DETECTION_SHAPE_UNRELIABLE",
+  "control_valid": true,
+  "method_details": {
+    "rolling_exact_shape_latency4": {
+      "method": "rolling_exact_shape_latency4",
+      "threshold": 6.950809001922607,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.7594150000000001,
+      "aggregate_recall_lower_one_sided_95": 0.7577300000000001,
+      "aggregate_recall_upper_one_sided_95": 0.761055,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9991227739999999,
+      "average_precision_mean": 0.998932553185502
+    },
+    "rolling_four_shape_bank_latency4": {
+      "method": "rolling_four_shape_bank_latency4",
+      "threshold": 7.105931758880615,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.757055,
+      "aggregate_recall_lower_one_sided_95": 0.7554100000000001,
+      "aggregate_recall_upper_one_sided_95": 0.758685,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9990763945000001,
+      "average_precision_mean": 0.998877036612374
+    }
+  },
+  "paired_difference": {
+    "bank_minus_exact_point": -0.0023600000000000287,
+    "bank_minus_exact_lower_one_sided_95": -0.0027700000000000025,
+    "bank_minus_exact_upper_one_sided_95": -0.0019549999999999928
+  },
+  "shape_identification": {
+    "primary_hit_n": 151411,
+    "primary_hit_shape_correct": 43842,
+    "primary_hit_shape_accuracy": 0.2895562409600359,
+    "primary_hit_shape_accuracy_lower_one_sided_95": 0.28763867080220745,
+    "primary_hit_shape_accuracy_upper_one_sided_95": 0.29147976446730856,
+    "alert_n": 191598,
+    "alert_shape_correct": 55812,
+    "alert_shape_accuracy": 0.2912974039394983,
+    "holdout_pass_count": 0,
+    "identification_pass": false
+  },
+  "prediction": {
+    "exact_recall_in_range": true,
+    "bank_recall_in_range": false,
+    "delta_in_range": true,
+    "control_valid": true,
+    "both_fpr_robust": true,
+    "bank_threshold_in_range": false,
+    "bank_pass_count_in_range": false,
+    "shape_accuracy_in_range": false,
+    "overall_verdict_confirmed": false,
+    "fully_confirmed": false
+  }
+}

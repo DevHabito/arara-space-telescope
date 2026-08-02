@@ -1,0 +1,41 @@
+{
+  "thresholds": {
+    "rolling_exact_shape_latency4": 6.950809001922607,
+    "rolling_four_shape_bank_latency4": 7.105931758880615
+  },
+  "family_thresholds": {
+    "rolling_exact_shape_latency4": {
+      "quiet": 6.378148078918457,
+      "shared_ramp": 6.892697811126709,
+      "shared_step": 6.950809001922607,
+      "shared_bump": 6.692653656005859,
+      "shared_oscillation": 6.633120059967041
+    },
+    "rolling_four_shape_bank_latency4": {
+      "quiet": 6.507014751434326,
+      "shared_ramp": 7.05223274230957,
+      "shared_step": 7.105931758880615,
+      "shared_bump": 6.867152690887451,
+      "shared_oscillation": 6.733421802520752
+    }
+  },
+  "allowed_counts": {
+    "rolling_exact_shape_latency4": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    },
+    "rolling_four_shape_bank_latency4": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    }
+  },
+  "calibration_negatives_per_family": 50000,
+  "exact_hypothesis_count": 99,
+  "bank_hypothesis_count": 396
+}

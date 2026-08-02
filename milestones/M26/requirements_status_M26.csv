@@ -1,0 +1,7 @@
+window,condition,status,evidence
+t50,"13.75σ, exact onset, full oracle score",robust pass,M23
+t50,"13.75σ, hinge onset, split 8-point confirmation",strong fail: recall 27.04%,M25
+t50,"13.75σ, exact onset, split 8-point confirmation",strong fail: recall 28.44%,M26
+t50,8-point confirmation statistic,rejected even under exact onset,M26
+t50,hinge estimator contribution within M25 branch,not the dominant recall bottleneck; onset accuracy still independently poor,M25–M26
+t50,next required control,exact onset with 16-point confirmation,next M27

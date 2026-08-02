@@ -1,0 +1,82 @@
+{
+  "protocol": "ARARA-M2-COMMON-MODE",
+  "version": "2.0",
+  "n_time": 180,
+  "burn_in": 200,
+  "baseline_n": 50,
+  "eval_start": 50,
+  "n_references": 8,
+  "onset_range": [
+    80,
+    110
+  ],
+  "duration_range": [
+    24,
+    60
+  ],
+  "event_snr_range": [
+    3.0,
+    7.0
+  ],
+  "artifact_snr_range": [
+    3.0,
+    7.0
+  ],
+  "common_phi_range": [
+    0.2,
+    0.8
+  ],
+  "common_innovation_sd": 0.5,
+  "star_phi_range": [
+    0.0,
+    0.5
+  ],
+  "star_innovation_sd_range": [
+    0.8,
+    1.2
+  ],
+  "coupling_range": [
+    0.7,
+    1.3
+  ],
+  "post_artifact_coupling_multiplier_range": [
+    0.9,
+    1.1
+  ],
+  "reference_impulse_probability": 0.3,
+  "positive_shapes": [
+    "linear",
+    "power_law",
+    "exponential",
+    "logistic"
+  ],
+  "positive_contexts": [
+    "clean",
+    "concurrent"
+  ],
+  "negative_families": [
+    "quiet",
+    "shared_ramp",
+    "shared_step",
+    "shared_bump",
+    "shared_oscillation"
+  ],
+  "detector_windows": [
+    8,
+    16,
+    32
+  ],
+  "development_per_stratum": 2000,
+  "holdout_per_stratum_total": 5000,
+  "holdout_batches": 20,
+  "holdout_per_stratum_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_cm_recall_lower_ci": 0.3,
+  "minimum_delta_lower_ci": 0.15,
+  "clean_noninferiority_margin": -0.05,
+  "bootstrap_replicates": 10000,
+  "development_root_seed": 2026072801,
+  "holdout_root_seed": 2026072802,
+  "bootstrap_seed": 2026072803
+}

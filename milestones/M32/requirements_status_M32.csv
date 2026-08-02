@@ -1,0 +1,7 @@
+window,condition,status,evidence
+"t50, last 8 cadences",exact reference-projected control,"valid; recall 79.5285%, 10/10",M32
+"t50, last 8 cadences",split hinge onset feeding reference projection,"detection pass; recall 76.5470%, 10/10",M32
+t50,onset localization among candidate alerts,"failed; 25.2283%, 0/10 localization passes",M32
+t50,exact-onset requirement for detection,"not required under exact endpoint, shape and duration",M32
+t50,physical onset timestamp,not demonstrated,M32
+t50,next required control,hinge onset versus within-group permuted hinge onset,M33 required

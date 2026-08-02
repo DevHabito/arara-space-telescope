@@ -1,0 +1,7 @@
+window,condition,status,evidence
+t50,"13.75σ, exact onset, 50k calibration",robust pass,M23
+t50,"13.75σ, onset +1 cadence",robust pass,M23
+t50,"13.75σ, onset +2 cadences",strong fail,M23
+t50,"13.75σ, causal hinge onset estimator","strong fail: recall 1.98%, onset envelope accuracy 31.30%",M24
+t50,autonomous onset,not demonstrated,M24
+t50,remaining oracle information,"endpoint t50, shape and duration exact",M24 scope

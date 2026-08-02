@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.npz
+*.npy
+**/results/calibration_parts/
+**/results/calibration_blocks/
+**/results/calibration_chunks/
+**/results/holdouts/
+.DS_Store
+Thumbs.db

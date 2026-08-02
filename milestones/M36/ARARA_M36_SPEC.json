@@ -1,0 +1,73 @@
+{
+  "protocol": "ARARA-M36-FOUR-SHAPE-ROLLING-BANK",
+  "version": "36.0",
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "window_length": 8,
+  "endpoint_start": 81,
+  "endpoint_stop": 179,
+  "endpoint_count": 99,
+  "shape_bank": [
+    "linear",
+    "power_law",
+    "exponential",
+    "logistic"
+  ],
+  "shape_hypothesis_count": 4,
+  "joint_bank_hypothesis_count": 396,
+  "primary_latency": 4,
+  "methods": [
+    "rolling_exact_shape_latency4",
+    "rolling_four_shape_bank_latency4"
+  ],
+  "shape_accuracy_minimum_lower_one_sided_95": 0.7,
+  "minimum_shape_accuracy_holdouts": 8,
+  "calibration_seed": 2026090101,
+  "holdout_root_seed": 2026090102,
+  "aggregate_bootstrap_root_seed": 2026090103,
+  "paired_difference_bootstrap_seed": 2026090104,
+  "calibration_negatives_per_family": 50000,
+  "calibration_batch_size": 250,
+  "holdout_count": 10,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "extreme_fpr_upper_limit": 0.015,
+  "minimum_holdout_passes": 8,
+  "minimum_fpr_pass_holdouts": 9,
+  "minimum_global_recall_lower_one_sided_95": 0.6,
+  "minimum_stratum_recall_lower_one_sided_95": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "bootstrap_replicates": 10000,
+  "prediction_exact_recall_range": [
+    0.73,
+    0.79
+  ],
+  "prediction_bank_recall_range": [
+    0.66,
+    0.75
+  ],
+  "prediction_delta_range": [
+    -0.1,
+    0.0
+  ],
+  "prediction_bank_threshold_range": [
+    7.2,
+    8.6
+  ],
+  "prediction_bank_pass_range": [
+    3,
+    8
+  ],
+  "prediction_shape_accuracy_range": [
+    0.45,
+    0.75
+  ],
+  "prediction_verdict": "INCONCLUSIVE_FOUR_SHAPE_BANK"
+}

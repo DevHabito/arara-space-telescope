@@ -1,0 +1,3 @@
+Source archive: ARARA_from_zero_M21_complete.zip
+SHA-256: f56b0ff1d8e7e5f05b6913f75e334e7f2c63f067ae9f7646aefc3ec6720fae4c
+Archive size: 126485 bytes

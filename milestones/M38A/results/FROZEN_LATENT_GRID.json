@@ -1,0 +1,40 @@
+{
+  "protocol": "ARARA-M38A-LATENT-GRID-ELIGIBILITY",
+  "version": "38A.0",
+  "verdict": "PASS_M38A_LATENT_GRID_ELIGIBLE_K5",
+  "grid_size": 5,
+  "latent_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "uniform_spacing": 0.25,
+  "snr_retention_minimum": 0.995,
+  "local_mesh_guard_minimum": 0.9955,
+  "full_curve_minimum_retention": 0.9989970466078516,
+  "local_mesh_minimum_retention": 0.9977688876510862,
+  "local_refined_minimum_retention": 0.9977688876510862,
+  "worst_local_condition": {
+    "grid_size": 5,
+    "shape": "power_law",
+    "duration": 49,
+    "relative_endpoint": 3,
+    "nearest_grid_index": 0,
+    "nearest_grid_u": 0.0,
+    "coarse_u": 0.125,
+    "coarse_phi": 0.8,
+    "coarse_retention": 0.9977688876510862,
+    "refined_u": 0.125,
+    "refined_phi": 0.8,
+    "refined_retention": 0.9977688876510862,
+    "optimizer_success": true,
+    "optimizer_evaluations": 739
+  },
+  "candidate_hypotheses_for_m38b": 73260,
+  "pre_analysis_freeze_manifest_sha256": "0e0c902967c4aa1c386ed26465d3797010e435ac9f92186728bd6a1626ffae4d",
+  "preregistration_sha256": "4c468559315ce70def93a3f4ac80691ad84b48634427a57a4c40277342b123fb",
+  "implementation_sha256": "c1f53cae666ef8e477e631022cd2d1330ce94a370ac9010fdbe2a853875e4e05",
+  "interpretation": "Structural eligibility only. M38B must use this grid literally and calibrate endpoint x shape x duration x latent-grid jointly."
+}

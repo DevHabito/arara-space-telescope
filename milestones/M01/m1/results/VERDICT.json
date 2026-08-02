@@ -1,0 +1,24 @@
+{
+  "verdict": "INCONCLUSIVE",
+  "criterion_1_all_negative_fpr_cp_upper_le_0_01": true,
+  "criterion_2_m1_recall_lower_ci_ge_0_30": false,
+  "criterion_3_delta_lower_ci_ge_0_10": false,
+  "criterion_4_three_of_four_family_deltas_nonnegative": true,
+  "criterion_5_at_least_15_of_20_batches_positive": false,
+  "positive_batches": 3,
+  "family_delta": {
+    "linear": 0.0002,
+    "power_law": 0.0,
+    "exponential": 0.0,
+    "logistic": 0.0004
+  },
+  "m1_recall_point": 0.00015,
+  "cusum_recall_point": 0.0,
+  "delta_point": 0.00015,
+  "m1_recall_lower_95": 5e-05,
+  "m1_recall_upper_95": 0.00030000000000000003,
+  "cusum_recall_lower_95": 0.0,
+  "cusum_recall_upper_95": 0.0,
+  "delta_lower_95": 5e-05,
+  "delta_upper_95": 0.00030000000000000003
+}

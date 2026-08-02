@@ -1,0 +1,3 @@
+Source archive: arara_reconstruction_v0_1.zip
+SHA-256: fb8e2da48c0e2d177a4b6dc9751e1b9ac9fd5b96be56a4fd0f249ea32f0acc32
+Archive size: 69774 bytes

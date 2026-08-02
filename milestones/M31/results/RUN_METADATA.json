@@ -1,0 +1,17 @@
+{
+  "replication_of": "M30",
+  "mathematics": "exact imported M30 implementation",
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "window_length": 8,
+  "methods": [
+    "baseline8",
+    "reference_projected8"
+  ],
+  "thresholds": {
+    "baseline8": 16.33271598815918,
+    "reference_projected8": 4.074482440948486
+  },
+  "verdict": "CONFIRMED_REFERENCE_PROJECTION",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95"
+}

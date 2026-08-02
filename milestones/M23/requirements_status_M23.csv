@@ -1,0 +1,6 @@
+window,condition,status,evidence
+t50,"13.75σ, exact onset, stable 50k calibration",robust pass: 10/10 holdouts,M23
+t50,"13.75σ, onset +1 cadence",robust pass: 10/10 holdouts,M23
+t50,"13.75σ, onset +2 cadences",strong fail: 0/10 holdouts,M23
+t50,late-onset tolerance,confirmed through +1 cadence; +2 rejected,M23
+t50,remaining oracle information,"t50 endpoint, shape and duration still exact",M23 scope

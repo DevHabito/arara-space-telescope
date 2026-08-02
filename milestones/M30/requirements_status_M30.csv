@@ -1,0 +1,8 @@
+window,condition,status,evidence
+"t50, last 8 cadences",baseline non-centered matched filter,strong fail; recall 30.982%,M30
+"t50, last 8 cadences",reference-common-mode-only projection,"candidate pass; recall 79.8225%, 10/10 holdouts",M30 discovery
+"t50, last 8 cadences",paired candidate minus baseline recall,positive; lower one-sided 95% bound +48.5815 percentage points,M30
+"t50, last 8 cadences",candidate FPR,robust in 10/10 holdouts; no extreme violation,M30
+t50,reference-projected downstream,"promising discovery candidate, not independently confirmed",M30
+t50,next required test,exact independent replication of M30,M31 required
+t50,remaining oracle information,"onset, endpoint, shape and duration exact",M30 scope

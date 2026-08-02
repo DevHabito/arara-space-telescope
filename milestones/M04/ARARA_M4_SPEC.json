@@ -1,0 +1,55 @@
+{
+  "protocol": "ARARA-M4-MATCHED-FILTER-VIABILITY",
+  "version": "4.0",
+  "data_model": "identical_to_M2_M3_with_new_seeds",
+  "preprocessing": "M3_SBW",
+  "development_root_seed": 2026073001,
+  "holdout_root_seed": 2026073002,
+  "bootstrap_seed": 2026073003,
+  "durations": [
+    24,
+    36,
+    48,
+    60
+  ],
+  "prefix_levels": [
+    0.1,
+    0.15,
+    0.2,
+    0.25
+  ],
+  "power_gammas": [
+    1.5,
+    2.25,
+    3.0
+  ],
+  "exponential_betas": [
+    1.0,
+    2.5,
+    4.0
+  ],
+  "logistic_qs": [
+    6.0,
+    9.0,
+    12.0
+  ],
+  "minimum_template_length": 6,
+  "development_per_stratum": 2000,
+  "holdout_per_stratum": 5000,
+  "holdout_batches": 20,
+  "holdout_per_stratum_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_global_recall_lower_ci": 0.5,
+  "minimum_stratum_recall_lower_ci": 0.3,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.45,
+  "minimum_delta_vs_sbw_lower_ci": 0.2,
+  "strong_fail_global_recall_upper": 0.2,
+  "bootstrap_replicates": 10000,
+  "prediction_recall_range": [
+    0.3,
+    0.6
+  ]
+}

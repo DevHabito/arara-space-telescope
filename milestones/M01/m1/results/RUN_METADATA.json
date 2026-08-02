@@ -1,0 +1,11 @@
+{
+  "holdout_elapsed_seconds": 8.11154713499991,
+  "thresholds": {
+    "m1": 15.099813461303711,
+    "flux_z": 12.455404281616211,
+    "cusum": 244.3382110595703,
+    "cusum_kappa": 0.25
+  },
+  "verdict": "INCONCLUSIVE",
+  "holdout_open_count": 1
+}

@@ -1,0 +1,27 @@
+{
+  "outcome_free": true,
+  "candidate_grid_sizes": [
+    2,
+    3,
+    5,
+    9,
+    17,
+    33,
+    65,
+    129
+  ],
+  "selected_grid_size": 5,
+  "selected_grid": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "total_structural_evaluations": 1491090084,
+  "valid_structural_evaluations": 1090797444,
+  "degenerate_structural_evaluations": 400292640,
+  "trivially_identical_evaluations": 723028581,
+  "continuous_refinements": 512,
+  "m38b_joint_hypothesis_count": 73260
+}

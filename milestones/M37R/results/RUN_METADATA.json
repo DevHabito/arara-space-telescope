@@ -1,0 +1,16 @@
+{
+  "calibration_blocks": 4,
+  "calibration_negatives_per_block_per_family": 50000,
+  "pooled_calibration_negatives_per_family": 200000,
+  "total_calibration_negatives": 1000000,
+  "control_hypothesis_count": 396,
+  "full_hypothesis_count": 14652,
+  "primary_latency": 4,
+  "holdout_count": 10,
+  "thresholds": {
+    "rolling_four_shape_exact_duration_latency4": 7.094576358795166,
+    "rolling_four_shape_full_duration_bank_latency4": 7.323736667633057
+  },
+  "verdict": "PASS_M37R_DETECTION_DURATION_UNRELIABLE",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95; together they form a central 90% interval"
+}

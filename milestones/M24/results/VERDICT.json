@@ -1,0 +1,26 @@
+{
+  "verdict": "STRONG_FAIL_CAUSAL_ONSET_ESTIMATOR",
+  "aggregate_recall_point": 0.019795,
+  "aggregate_recall_lower_95": 0.019095,
+  "aggregate_recall_upper_95": 0.020505000000000002,
+  "complete_holdout_pass_count": 0,
+  "detection_holdout_pass_count": 0,
+  "onset_holdout_pass_count": 0,
+  "fpr_pass_holdout_count": 9,
+  "fpr_robust": true,
+  "extreme_fpr_violation": false,
+  "pooled_detected_for_onset": 3959,
+  "pooled_onset_in_envelope": 1239,
+  "pooled_onset_accuracy": 0.31295781763071484,
+  "pooled_onset_accuracy_lower_95": 0.3008145738231543,
+  "pooled_onset_accuracy_upper_95": 0.32530558616889355,
+  "pooled_early_below_minus2": 1181,
+  "pooled_late_above_plus1": 1539,
+  "prediction": {
+    "recall_in_range": false,
+    "onset_accuracy_in_range": true,
+    "complete_passes_le_2": true,
+    "verdict_confirmed": true,
+    "fully_confirmed": false
+  }
+}

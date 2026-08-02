@@ -1,0 +1,8 @@
+window,condition,status,evidence
+rolling endpoints 81..179,first crossing no later than t50,"strong fail remains; M34 recall 63.0655%, 0/10",M34
+rolling endpoints 81..179,first crossing no later than t50+4,"pass; recall 75.4990%, lower one-sided 95% 75.3075%, 9/10",M35
+rolling endpoints 81..179,curve-level FPR after 99-endpoint search,"robust; 10/10 holdouts, no extreme violation",M35
+rolling endpoint,exact t50 oracle,not required under a four-cadence algorithmic latency contract,M35
+physical interpretation,four-cadence latency,cadence duration not yet mapped to physical time,M35 scope
+template model,remaining oracles,"shape, duration and shape parameters remain exact",M35
+rolling endpoint plus template bank,next required test,remove shape oracle with four-shape bank and joint 396-hypothesis calibration,M36

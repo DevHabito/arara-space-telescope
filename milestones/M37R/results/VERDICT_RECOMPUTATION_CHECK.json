@@ -1,0 +1,6 @@
+{
+  "status": "MATCH",
+  "verdict": "PASS_M37R_DETECTION_DURATION_UNRELIABLE",
+  "holdout_count": 10,
+  "pooled_calibration_negatives": 1000000
+}

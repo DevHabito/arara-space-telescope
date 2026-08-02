@@ -1,0 +1,7 @@
+window,condition,status,evidence
+"t50, last 8 cadences",reference-projected8 M30 discovery,"pass; recall 79.8225%, 10/10",M30
+"t50, last 8 cadences",reference-projected8 M31 replication,"confirmed; recall 79.6505%, 10/10",M31
+"t50, last 8 cadences",independent data/calibration replication,confirmed,M30–M31
+t50,"downstream under exact onset, endpoint, shape and duration",robustly confirmed in synthetic model,M30–M31
+t50,autonomous onset,not demonstrated,next M32
+t50,next required test,split causal onset estimator feeding confirmed reference-projected8 downstream,M32

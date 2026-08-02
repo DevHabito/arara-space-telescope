@@ -1,0 +1,2136 @@
+{
+  "thresholds": {
+    "matched_filter": 28.13385772705078,
+    "sbw_slope": 18.45326042175293
+  },
+  "template_bank": {
+    "candidate_count": 160,
+    "retained_count": 144,
+    "metadata": [
+      {
+        "candidate_order": 0,
+        "shape": "linear",
+        "parameter_name": null,
+        "parameter": null,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.1,
+        "length": 6,
+        "end_value": 0.1,
+        "template_id": 0
+      },
+      {
+        "candidate_order": 3,
+        "shape": "linear",
+        "parameter_name": null,
+        "parameter": null,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.25,
+        "length": 7,
+        "end_value": 0.25,
+        "template_id": 1
+      },
+      {
+        "candidate_order": 6,
+        "shape": "linear",
+        "parameter_name": null,
+        "parameter": null,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.2,
+        "length": 9,
+        "end_value": 0.2,
+        "template_id": 2
+      },
+      {
+        "candidate_order": 7,
+        "shape": "linear",
+        "parameter_name": null,
+        "parameter": null,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.25,
+        "length": 10,
+        "end_value": 0.25,
+        "template_id": 3
+      },
+      {
+        "candidate_order": 10,
+        "shape": "linear",
+        "parameter_name": null,
+        "parameter": null,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.2,
+        "length": 11,
+        "end_value": 0.2,
+        "template_id": 4
+      },
+      {
+        "candidate_order": 11,
+        "shape": "linear",
+        "parameter_name": null,
+        "parameter": null,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.25,
+        "length": 13,
+        "end_value": 0.25,
+        "template_id": 5
+      },
+      {
+        "candidate_order": 15,
+        "shape": "linear",
+        "parameter_name": null,
+        "parameter": null,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.25,
+        "length": 16,
+        "end_value": 0.25,
+        "template_id": 6
+      },
+      {
+        "candidate_order": 16,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.2154434690031884,
+        "length": 7,
+        "end_value": 0.10000000000000002,
+        "template_id": 7
+      },
+      {
+        "candidate_order": 17,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.2823108086643086,
+        "length": 8,
+        "end_value": 0.15000000000000002,
+        "template_id": 8
+      },
+      {
+        "candidate_order": 18,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.34199518933533946,
+        "length": 10,
+        "end_value": 0.20000000000000004,
+        "template_id": 9
+      },
+      {
+        "candidate_order": 19,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.3968502629920499,
+        "length": 11,
+        "end_value": 0.25,
+        "template_id": 10
+      },
+      {
+        "candidate_order": 20,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.2154434690031884,
+        "length": 9,
+        "end_value": 0.10000000000000002,
+        "template_id": 11
+      },
+      {
+        "candidate_order": 21,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.2823108086643086,
+        "length": 12,
+        "end_value": 0.15000000000000002,
+        "template_id": 12
+      },
+      {
+        "candidate_order": 22,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.34199518933533946,
+        "length": 14,
+        "end_value": 0.20000000000000004,
+        "template_id": 13
+      },
+      {
+        "candidate_order": 23,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.3968502629920499,
+        "length": 16,
+        "end_value": 0.25,
+        "template_id": 14
+      },
+      {
+        "candidate_order": 25,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.2823108086643086,
+        "length": 15,
+        "end_value": 0.15000000000000002,
+        "template_id": 15
+      },
+      {
+        "candidate_order": 26,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.34199518933533946,
+        "length": 18,
+        "end_value": 0.20000000000000004,
+        "template_id": 16
+      },
+      {
+        "candidate_order": 27,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.3968502629920499,
+        "length": 21,
+        "end_value": 0.25,
+        "template_id": 17
+      },
+      {
+        "candidate_order": 30,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.34199518933533946,
+        "length": 22,
+        "end_value": 0.20000000000000004,
+        "template_id": 18
+      },
+      {
+        "candidate_order": 31,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 1.5,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.3968502629920499,
+        "length": 25,
+        "end_value": 0.25,
+        "template_id": 19
+      },
+      {
+        "candidate_order": 32,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.35938136638046275,
+        "length": 10,
+        "end_value": 0.1,
+        "template_id": 20
+      },
+      {
+        "candidate_order": 33,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.430346561585918,
+        "length": 12,
+        "end_value": 0.15,
+        "template_id": 21
+      },
+      {
+        "candidate_order": 34,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.48904256961953774,
+        "length": 13,
+        "end_value": 0.2,
+        "template_id": 22
+      },
+      {
+        "candidate_order": 35,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.540029869446153,
+        "length": 14,
+        "end_value": 0.24999999999999997,
+        "template_id": 23
+      },
+      {
+        "candidate_order": 37,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.430346561585918,
+        "length": 17,
+        "end_value": 0.15,
+        "template_id": 24
+      },
+      {
+        "candidate_order": 38,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.48904256961953774,
+        "length": 19,
+        "end_value": 0.2,
+        "template_id": 25
+      },
+      {
+        "candidate_order": 39,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.540029869446153,
+        "length": 21,
+        "end_value": 0.24999999999999997,
+        "template_id": 26
+      },
+      {
+        "candidate_order": 41,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.430346561585918,
+        "length": 22,
+        "end_value": 0.15,
+        "template_id": 27
+      },
+      {
+        "candidate_order": 42,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.48904256961953774,
+        "length": 25,
+        "end_value": 0.2,
+        "template_id": 28
+      },
+      {
+        "candidate_order": 43,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.540029869446153,
+        "length": 27,
+        "end_value": 0.24999999999999997,
+        "template_id": 29
+      },
+      {
+        "candidate_order": 44,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.35938136638046275,
+        "length": 23,
+        "end_value": 0.1,
+        "template_id": 30
+      },
+      {
+        "candidate_order": 46,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.48904256961953774,
+        "length": 31,
+        "end_value": 0.2,
+        "template_id": 31
+      },
+      {
+        "candidate_order": 47,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 2.25,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.540029869446153,
+        "length": 34,
+        "end_value": 0.24999999999999997,
+        "template_id": 32
+      },
+      {
+        "candidate_order": 48,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.4641588833612779,
+        "length": 13,
+        "end_value": 0.10000000000000002,
+        "template_id": 33
+      },
+      {
+        "candidate_order": 49,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.5313292845913056,
+        "length": 14,
+        "end_value": 0.15000000000000002,
+        "template_id": 34
+      },
+      {
+        "candidate_order": 50,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.5848035476425733,
+        "length": 16,
+        "end_value": 0.20000000000000004,
+        "template_id": 35
+      },
+      {
+        "candidate_order": 51,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.6299605249474366,
+        "length": 17,
+        "end_value": 0.25,
+        "template_id": 36
+      },
+      {
+        "candidate_order": 52,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.4641588833612779,
+        "length": 18,
+        "end_value": 0.10000000000000002,
+        "template_id": 37
+      },
+      {
+        "candidate_order": 53,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.5313292845913056,
+        "length": 21,
+        "end_value": 0.15000000000000002,
+        "template_id": 38
+      },
+      {
+        "candidate_order": 54,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.5848035476425733,
+        "length": 23,
+        "end_value": 0.20000000000000004,
+        "template_id": 39
+      },
+      {
+        "candidate_order": 55,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.6299605249474366,
+        "length": 24,
+        "end_value": 0.25,
+        "template_id": 40
+      },
+      {
+        "candidate_order": 57,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.5313292845913056,
+        "length": 27,
+        "end_value": 0.15000000000000002,
+        "template_id": 41
+      },
+      {
+        "candidate_order": 58,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.5848035476425733,
+        "length": 30,
+        "end_value": 0.20000000000000004,
+        "template_id": 42
+      },
+      {
+        "candidate_order": 59,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.6299605249474366,
+        "length": 32,
+        "end_value": 0.25,
+        "template_id": 43
+      },
+      {
+        "candidate_order": 60,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.4641588833612779,
+        "length": 29,
+        "end_value": 0.10000000000000002,
+        "template_id": 44
+      },
+      {
+        "candidate_order": 61,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 60,
+        "level": 0.15,
+        "x_end": 0.5313292845913056,
+        "length": 33,
+        "end_value": 0.15000000000000002,
+        "template_id": 45
+      },
+      {
+        "candidate_order": 62,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.5848035476425733,
+        "length": 37,
+        "end_value": 0.20000000000000004,
+        "template_id": 46
+      },
+      {
+        "candidate_order": 63,
+        "shape": "power_law",
+        "parameter_name": "gamma",
+        "parameter": 3.0,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.6299605249474366,
+        "length": 39,
+        "end_value": 0.25,
+        "template_id": 47
+      },
+      {
+        "candidate_order": 64,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.15856507874042913,
+        "length": 6,
+        "end_value": 0.1,
+        "template_id": 48
+      },
+      {
+        "candidate_order": 65,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.22931826786901977,
+        "length": 7,
+        "end_value": 0.15,
+        "template_id": 49
+      },
+      {
+        "candidate_order": 66,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.2953945291203477,
+        "length": 9,
+        "end_value": 0.20000000000000004,
+        "template_id": 50
+      },
+      {
+        "candidate_order": 67,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.35737401950878855,
+        "length": 10,
+        "end_value": 0.25,
+        "template_id": 51
+      },
+      {
+        "candidate_order": 68,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.15856507874042913,
+        "length": 7,
+        "end_value": 0.1,
+        "template_id": 52
+      },
+      {
+        "candidate_order": 69,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.22931826786901977,
+        "length": 10,
+        "end_value": 0.15,
+        "template_id": 53
+      },
+      {
+        "candidate_order": 70,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.2953945291203477,
+        "length": 12,
+        "end_value": 0.20000000000000004,
+        "template_id": 54
+      },
+      {
+        "candidate_order": 71,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.35737401950878855,
+        "length": 14,
+        "end_value": 0.25,
+        "template_id": 55
+      },
+      {
+        "candidate_order": 72,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 48,
+        "level": 0.1,
+        "x_end": 0.15856507874042913,
+        "length": 9,
+        "end_value": 0.1,
+        "template_id": 56
+      },
+      {
+        "candidate_order": 73,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.22931826786901977,
+        "length": 13,
+        "end_value": 0.15,
+        "template_id": 57
+      },
+      {
+        "candidate_order": 74,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.2953945291203477,
+        "length": 16,
+        "end_value": 0.20000000000000004,
+        "template_id": 58
+      },
+      {
+        "candidate_order": 75,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.35737401950878855,
+        "length": 19,
+        "end_value": 0.25,
+        "template_id": 59
+      },
+      {
+        "candidate_order": 76,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.15856507874042913,
+        "length": 11,
+        "end_value": 0.1,
+        "template_id": 60
+      },
+      {
+        "candidate_order": 77,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 60,
+        "level": 0.15,
+        "x_end": 0.22931826786901977,
+        "length": 15,
+        "end_value": 0.15,
+        "template_id": 61
+      },
+      {
+        "candidate_order": 78,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.2953945291203477,
+        "length": 19,
+        "end_value": 0.20000000000000004,
+        "template_id": 62
+      },
+      {
+        "candidate_order": 79,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 1.0,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.35737401950878855,
+        "length": 23,
+        "end_value": 0.25,
+        "template_id": 63
+      },
+      {
+        "candidate_order": 80,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.30023599639542786,
+        "length": 9,
+        "end_value": 0.09999999999999999,
+        "template_id": 64
+      },
+      {
+        "candidate_order": 81,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.39393459942295045,
+        "length": 11,
+        "end_value": 0.15,
+        "template_id": 65
+      },
+      {
+        "candidate_order": 82,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.4697968503216516,
+        "length": 13,
+        "end_value": 0.19999999999999998,
+        "template_id": 66
+      },
+      {
+        "candidate_order": 83,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.5335394759558053,
+        "length": 14,
+        "end_value": 0.25,
+        "template_id": 67
+      },
+      {
+        "candidate_order": 84,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.30023599639542786,
+        "length": 12,
+        "end_value": 0.09999999999999999,
+        "template_id": 68
+      },
+      {
+        "candidate_order": 85,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.39393459942295045,
+        "length": 16,
+        "end_value": 0.15,
+        "template_id": 69
+      },
+      {
+        "candidate_order": 86,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.4697968503216516,
+        "length": 18,
+        "end_value": 0.19999999999999998,
+        "template_id": 70
+      },
+      {
+        "candidate_order": 87,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.5335394759558053,
+        "length": 21,
+        "end_value": 0.25,
+        "template_id": 71
+      },
+      {
+        "candidate_order": 88,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 48,
+        "level": 0.1,
+        "x_end": 0.30023599639542786,
+        "length": 16,
+        "end_value": 0.09999999999999999,
+        "template_id": 72
+      },
+      {
+        "candidate_order": 89,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.39393459942295045,
+        "length": 20,
+        "end_value": 0.15,
+        "template_id": 73
+      },
+      {
+        "candidate_order": 90,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.4697968503216516,
+        "length": 24,
+        "end_value": 0.19999999999999998,
+        "template_id": 74
+      },
+      {
+        "candidate_order": 91,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.5335394759558053,
+        "length": 27,
+        "end_value": 0.25,
+        "template_id": 75
+      },
+      {
+        "candidate_order": 92,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.30023599639542786,
+        "length": 20,
+        "end_value": 0.09999999999999999,
+        "template_id": 76
+      },
+      {
+        "candidate_order": 93,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 60,
+        "level": 0.15,
+        "x_end": 0.39393459942295045,
+        "length": 25,
+        "end_value": 0.15,
+        "template_id": 77
+      },
+      {
+        "candidate_order": 94,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.4697968503216516,
+        "length": 30,
+        "end_value": 0.19999999999999998,
+        "template_id": 78
+      },
+      {
+        "candidate_order": 95,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 2.5,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.5335394759558053,
+        "length": 34,
+        "end_value": 0.25,
+        "template_id": 79
+      },
+      {
+        "candidate_order": 96,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.4624998223499504,
+        "length": 13,
+        "end_value": 0.09999999999999998,
+        "template_id": 80
+      },
+      {
+        "candidate_order": 97,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.5504071193950618,
+        "length": 15,
+        "end_value": 0.15,
+        "template_id": 81
+      },
+      {
+        "candidate_order": 98,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.6153163035625684,
+        "length": 16,
+        "end_value": 0.2,
+        "template_id": 82
+      },
+      {
+        "candidate_order": 99,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.6667990221465107,
+        "length": 18,
+        "end_value": 0.24999999999999994,
+        "template_id": 83
+      },
+      {
+        "candidate_order": 100,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.4624998223499504,
+        "length": 18,
+        "end_value": 0.09999999999999998,
+        "template_id": 84
+      },
+      {
+        "candidate_order": 101,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.5504071193950618,
+        "length": 21,
+        "end_value": 0.15,
+        "template_id": 85
+      },
+      {
+        "candidate_order": 102,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.6153163035625684,
+        "length": 24,
+        "end_value": 0.2,
+        "template_id": 86
+      },
+      {
+        "candidate_order": 103,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.6667990221465107,
+        "length": 26,
+        "end_value": 0.24999999999999994,
+        "template_id": 87
+      },
+      {
+        "candidate_order": 104,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 48,
+        "level": 0.1,
+        "x_end": 0.4624998223499504,
+        "length": 24,
+        "end_value": 0.09999999999999998,
+        "template_id": 88
+      },
+      {
+        "candidate_order": 105,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.5504071193950618,
+        "length": 28,
+        "end_value": 0.15,
+        "template_id": 89
+      },
+      {
+        "candidate_order": 106,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.6153163035625684,
+        "length": 31,
+        "end_value": 0.2,
+        "template_id": 90
+      },
+      {
+        "candidate_order": 107,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.6667990221465107,
+        "length": 34,
+        "end_value": 0.24999999999999994,
+        "template_id": 91
+      },
+      {
+        "candidate_order": 108,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.4624998223499504,
+        "length": 29,
+        "end_value": 0.09999999999999998,
+        "template_id": 92
+      },
+      {
+        "candidate_order": 109,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 60,
+        "level": 0.15,
+        "x_end": 0.5504071193950618,
+        "length": 35,
+        "end_value": 0.15,
+        "template_id": 93
+      },
+      {
+        "candidate_order": 110,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.6153163035625684,
+        "length": 38,
+        "end_value": 0.2,
+        "template_id": 94
+      },
+      {
+        "candidate_order": 111,
+        "shape": "exponential",
+        "parameter_name": "beta",
+        "parameter": 4.0,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.6667990221465107,
+        "length": 42,
+        "end_value": 0.24999999999999994,
+        "template_id": 95
+      },
+      {
+        "candidate_order": 112,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.19458330143305416,
+        "length": 6,
+        "end_value": 0.09999999999993787,
+        "template_id": 96
+      },
+      {
+        "candidate_order": 113,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.2508619271695995,
+        "length": 8,
+        "end_value": 0.1499999999997652,
+        "template_id": 97
+      },
+      {
+        "candidate_order": 114,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.29715787144240546,
+        "length": 9,
+        "end_value": 0.1999999999999475,
+        "template_id": 98
+      },
+      {
+        "candidate_order": 115,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.3373557566145159,
+        "length": 10,
+        "end_value": 0.24999999999999822,
+        "template_id": 99
+      },
+      {
+        "candidate_order": 116,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.19458330143305416,
+        "length": 9,
+        "end_value": 0.09999999999993787,
+        "template_id": 100
+      },
+      {
+        "candidate_order": 117,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.2508619271695995,
+        "length": 11,
+        "end_value": 0.1499999999997652,
+        "template_id": 101
+      },
+      {
+        "candidate_order": 118,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.29715787144240546,
+        "length": 12,
+        "end_value": 0.1999999999999475,
+        "template_id": 102
+      },
+      {
+        "candidate_order": 119,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.3373557566145159,
+        "length": 14,
+        "end_value": 0.24999999999999822,
+        "template_id": 103
+      },
+      {
+        "candidate_order": 120,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 48,
+        "level": 0.1,
+        "x_end": 0.19458330143305416,
+        "length": 11,
+        "end_value": 0.09999999999993787,
+        "template_id": 104
+      },
+      {
+        "candidate_order": 121,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.2508619271695995,
+        "length": 14,
+        "end_value": 0.1499999999997652,
+        "template_id": 105
+      },
+      {
+        "candidate_order": 122,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.29715787144240546,
+        "length": 16,
+        "end_value": 0.1999999999999475,
+        "template_id": 106
+      },
+      {
+        "candidate_order": 123,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.3373557566145159,
+        "length": 18,
+        "end_value": 0.24999999999999822,
+        "template_id": 107
+      },
+      {
+        "candidate_order": 124,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.19458330143305416,
+        "length": 13,
+        "end_value": 0.09999999999993787,
+        "template_id": 108
+      },
+      {
+        "candidate_order": 125,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 60,
+        "level": 0.15,
+        "x_end": 0.2508619271695995,
+        "length": 17,
+        "end_value": 0.1499999999997652,
+        "template_id": 109
+      },
+      {
+        "candidate_order": 126,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.29715787144240546,
+        "length": 19,
+        "end_value": 0.1999999999999475,
+        "template_id": 110
+      },
+      {
+        "candidate_order": 127,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 6.0,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.3373557566145159,
+        "length": 22,
+        "end_value": 0.24999999999999822,
+        "template_id": 111
+      },
+      {
+        "candidate_order": 128,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.26631496994237247,
+        "length": 8,
+        "end_value": 0.09999999999997261,
+        "template_id": 112
+      },
+      {
+        "candidate_order": 129,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.3138321596048816,
+        "length": 9,
+        "end_value": 0.15,
+        "template_id": 113
+      },
+      {
+        "candidate_order": 130,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.35048991696879045,
+        "length": 10,
+        "end_value": 0.19999999999999846,
+        "template_id": 114
+      },
+      {
+        "candidate_order": 131,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.38116391504741265,
+        "length": 11,
+        "end_value": 0.2499999999995345,
+        "template_id": 115
+      },
+      {
+        "candidate_order": 132,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.26631496994237247,
+        "length": 11,
+        "end_value": 0.09999999999997261,
+        "template_id": 116
+      },
+      {
+        "candidate_order": 133,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.3138321596048816,
+        "length": 13,
+        "end_value": 0.15,
+        "template_id": 117
+      },
+      {
+        "candidate_order": 134,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.35048991696879045,
+        "length": 14,
+        "end_value": 0.19999999999999846,
+        "template_id": 118
+      },
+      {
+        "candidate_order": 135,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.38116391504741265,
+        "length": 15,
+        "end_value": 0.2499999999995345,
+        "template_id": 119
+      },
+      {
+        "candidate_order": 136,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 48,
+        "level": 0.1,
+        "x_end": 0.26631496994237247,
+        "length": 14,
+        "end_value": 0.09999999999997261,
+        "template_id": 120
+      },
+      {
+        "candidate_order": 137,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.3138321596048816,
+        "length": 17,
+        "end_value": 0.15,
+        "template_id": 121
+      },
+      {
+        "candidate_order": 138,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.35048991696879045,
+        "length": 18,
+        "end_value": 0.19999999999999846,
+        "template_id": 122
+      },
+      {
+        "candidate_order": 139,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.38116391504741265,
+        "length": 20,
+        "end_value": 0.2499999999995345,
+        "template_id": 123
+      },
+      {
+        "candidate_order": 140,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.26631496994237247,
+        "length": 17,
+        "end_value": 0.09999999999997261,
+        "template_id": 124
+      },
+      {
+        "candidate_order": 141,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 60,
+        "level": 0.15,
+        "x_end": 0.3138321596048816,
+        "length": 20,
+        "end_value": 0.15,
+        "template_id": 125
+      },
+      {
+        "candidate_order": 142,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.35048991696879045,
+        "length": 23,
+        "end_value": 0.19999999999999846,
+        "template_id": 126
+      },
+      {
+        "candidate_order": 143,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 9.0,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.38116391504741265,
+        "length": 24,
+        "end_value": 0.2499999999995345,
+        "template_id": 127
+      },
+      {
+        "candidate_order": 144,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 24,
+        "level": 0.1,
+        "x_end": 0.31871363439280226,
+        "length": 9,
+        "end_value": 0.10000000000000113,
+        "template_id": 128
+      },
+      {
+        "candidate_order": 145,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 24,
+        "level": 0.15,
+        "x_end": 0.35657584509438983,
+        "length": 10,
+        "end_value": 0.15000000000000008,
+        "template_id": 129
+      },
+      {
+        "candidate_order": 146,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 24,
+        "level": 0.2,
+        "x_end": 0.3852460266899592,
+        "length": 11,
+        "end_value": 0.19999999999987433,
+        "template_id": 130
+      },
+      {
+        "candidate_order": 147,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 24,
+        "level": 0.25,
+        "x_end": 0.4089975454705576,
+        "length": 11,
+        "end_value": 0.2499999999997829,
+        "template_id": 131
+      },
+      {
+        "candidate_order": 148,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 36,
+        "level": 0.1,
+        "x_end": 0.31871363439280226,
+        "length": 13,
+        "end_value": 0.10000000000000113,
+        "template_id": 132
+      },
+      {
+        "candidate_order": 149,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 36,
+        "level": 0.15,
+        "x_end": 0.35657584509438983,
+        "length": 14,
+        "end_value": 0.15000000000000008,
+        "template_id": 133
+      },
+      {
+        "candidate_order": 150,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 36,
+        "level": 0.2,
+        "x_end": 0.3852460266899592,
+        "length": 15,
+        "end_value": 0.19999999999987433,
+        "template_id": 134
+      },
+      {
+        "candidate_order": 151,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 36,
+        "level": 0.25,
+        "x_end": 0.4089975454705576,
+        "length": 16,
+        "end_value": 0.2499999999997829,
+        "template_id": 135
+      },
+      {
+        "candidate_order": 152,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 48,
+        "level": 0.1,
+        "x_end": 0.31871363439280226,
+        "length": 17,
+        "end_value": 0.10000000000000113,
+        "template_id": 136
+      },
+      {
+        "candidate_order": 153,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 48,
+        "level": 0.15,
+        "x_end": 0.35657584509438983,
+        "length": 19,
+        "end_value": 0.15000000000000008,
+        "template_id": 137
+      },
+      {
+        "candidate_order": 154,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 48,
+        "level": 0.2,
+        "x_end": 0.3852460266899592,
+        "length": 20,
+        "end_value": 0.19999999999987433,
+        "template_id": 138
+      },
+      {
+        "candidate_order": 155,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 48,
+        "level": 0.25,
+        "x_end": 0.4089975454705576,
+        "length": 21,
+        "end_value": 0.2499999999997829,
+        "template_id": 139
+      },
+      {
+        "candidate_order": 156,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 60,
+        "level": 0.1,
+        "x_end": 0.31871363439280226,
+        "length": 21,
+        "end_value": 0.10000000000000113,
+        "template_id": 140
+      },
+      {
+        "candidate_order": 157,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 60,
+        "level": 0.15,
+        "x_end": 0.35657584509438983,
+        "length": 23,
+        "end_value": 0.15000000000000008,
+        "template_id": 141
+      },
+      {
+        "candidate_order": 158,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 60,
+        "level": 0.2,
+        "x_end": 0.3852460266899592,
+        "length": 25,
+        "end_value": 0.19999999999987433,
+        "template_id": 142
+      },
+      {
+        "candidate_order": 159,
+        "shape": "logistic",
+        "parameter_name": "q",
+        "parameter": 12.0,
+        "duration": 60,
+        "level": 0.25,
+        "x_end": 0.4089975454705576,
+        "length": 26,
+        "end_value": 0.2499999999997829,
+        "template_id": 143
+      }
+    ],
+    "groups": {
+      "6": {
+        "template_ids": [
+          0,
+          48,
+          96
+        ],
+        "template_count": 3
+      },
+      "7": {
+        "template_ids": [
+          1,
+          7,
+          49,
+          52
+        ],
+        "template_count": 4
+      },
+      "8": {
+        "template_ids": [
+          8,
+          97,
+          112
+        ],
+        "template_count": 3
+      },
+      "9": {
+        "template_ids": [
+          2,
+          11,
+          50,
+          56,
+          64,
+          98,
+          100,
+          113,
+          128
+        ],
+        "template_count": 9
+      },
+      "10": {
+        "template_ids": [
+          3,
+          9,
+          20,
+          51,
+          53,
+          99,
+          114,
+          129
+        ],
+        "template_count": 8
+      },
+      "11": {
+        "template_ids": [
+          4,
+          10,
+          60,
+          65,
+          101,
+          104,
+          115,
+          116,
+          130,
+          131
+        ],
+        "template_count": 10
+      },
+      "12": {
+        "template_ids": [
+          12,
+          21,
+          54,
+          68,
+          102
+        ],
+        "template_count": 5
+      },
+      "13": {
+        "template_ids": [
+          5,
+          22,
+          33,
+          57,
+          66,
+          80,
+          108,
+          117,
+          132
+        ],
+        "template_count": 9
+      },
+      "14": {
+        "template_ids": [
+          13,
+          23,
+          34,
+          55,
+          67,
+          103,
+          105,
+          118,
+          120,
+          133
+        ],
+        "template_count": 10
+      },
+      "15": {
+        "template_ids": [
+          15,
+          61,
+          81,
+          119,
+          134
+        ],
+        "template_count": 5
+      },
+      "16": {
+        "template_ids": [
+          6,
+          14,
+          35,
+          58,
+          69,
+          72,
+          82,
+          106,
+          135
+        ],
+        "template_count": 9
+      },
+      "17": {
+        "template_ids": [
+          24,
+          36,
+          109,
+          121,
+          124,
+          136
+        ],
+        "template_count": 6
+      },
+      "18": {
+        "template_ids": [
+          16,
+          37,
+          70,
+          83,
+          84,
+          107,
+          122
+        ],
+        "template_count": 7
+      },
+      "19": {
+        "template_ids": [
+          25,
+          59,
+          62,
+          110,
+          137
+        ],
+        "template_count": 5
+      },
+      "20": {
+        "template_ids": [
+          73,
+          76,
+          123,
+          125,
+          138
+        ],
+        "template_count": 5
+      },
+      "21": {
+        "template_ids": [
+          17,
+          26,
+          38,
+          71,
+          85,
+          139,
+          140
+        ],
+        "template_count": 7
+      },
+      "22": {
+        "template_ids": [
+          18,
+          27,
+          111
+        ],
+        "template_count": 3
+      },
+      "23": {
+        "template_ids": [
+          30,
+          39,
+          63,
+          126,
+          141
+        ],
+        "template_count": 5
+      },
+      "24": {
+        "template_ids": [
+          40,
+          74,
+          86,
+          88,
+          127
+        ],
+        "template_count": 5
+      },
+      "25": {
+        "template_ids": [
+          19,
+          28,
+          77,
+          142
+        ],
+        "template_count": 4
+      },
+      "26": {
+        "template_ids": [
+          87,
+          143
+        ],
+        "template_count": 2
+      },
+      "27": {
+        "template_ids": [
+          29,
+          41,
+          75
+        ],
+        "template_count": 3
+      },
+      "28": {
+        "template_ids": [
+          89
+        ],
+        "template_count": 1
+      },
+      "29": {
+        "template_ids": [
+          44,
+          92
+        ],
+        "template_count": 2
+      },
+      "30": {
+        "template_ids": [
+          42,
+          78
+        ],
+        "template_count": 2
+      },
+      "31": {
+        "template_ids": [
+          31,
+          90
+        ],
+        "template_count": 2
+      },
+      "32": {
+        "template_ids": [
+          43
+        ],
+        "template_count": 1
+      },
+      "33": {
+        "template_ids": [
+          45
+        ],
+        "template_count": 1
+      },
+      "34": {
+        "template_ids": [
+          32,
+          79,
+          91
+        ],
+        "template_count": 3
+      },
+      "35": {
+        "template_ids": [
+          93
+        ],
+        "template_count": 1
+      },
+      "37": {
+        "template_ids": [
+          46
+        ],
+        "template_count": 1
+      },
+      "38": {
+        "template_ids": [
+          94
+        ],
+        "template_count": 1
+      },
+      "39": {
+        "template_ids": [
+          47
+        ],
+        "template_count": 1
+      },
+      "42": {
+        "template_ids": [
+          95
+        ],
+        "template_count": 1
+      }
+    }
+  },
+  "development_seed_children": [
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        0
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        1
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        2
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        3
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        4
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        5
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        6
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        7
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        8
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        9
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        10
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        11
+      ]
+    },
+    {
+      "entropy": 2026073001,
+      "spawn_key": [
+        12
+      ]
+    }
+  ]
+}

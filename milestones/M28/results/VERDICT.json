@@ -1,0 +1,72 @@
+{
+  "verdict": "STRONG_FAIL_ALL_LENGTHS",
+  "candidate_length": null,
+  "length_details": {
+    "8": {
+      "length": "8",
+      "verdict": "STRONG_FAIL",
+      "threshold": 16.317588806152344,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.30423,
+      "aggregate_recall_lower_one_sided_95": 0.3021,
+      "aggregate_recall_upper_one_sided_95": 0.30633,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "prediction_recall_in_range": true
+    },
+    "16": {
+      "length": "16",
+      "verdict": "STRONG_FAIL",
+      "threshold": 21.13241958618164,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.17928999999999998,
+      "aggregate_recall_lower_one_sided_95": 0.17735974999999998,
+      "aggregate_recall_upper_one_sided_95": 0.18115499999999998,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "prediction_recall_in_range": true
+    },
+    "24": {
+      "length": "24",
+      "verdict": "STRONG_FAIL",
+      "threshold": 23.17072296142578,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.13465,
+      "aggregate_recall_lower_one_sided_95": 0.13304000000000002,
+      "aggregate_recall_upper_one_sided_95": 0.13620500000000002,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "prediction_recall_in_range": true
+    },
+    "full": {
+      "length": "full",
+      "verdict": "STRONG_FAIL",
+      "threshold": 24.072240829467773,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.11621499999999998,
+      "aggregate_recall_lower_one_sided_95": 0.114735,
+      "aggregate_recall_upper_one_sided_95": 0.11769,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "prediction_recall_in_range": true
+    }
+  },
+  "prediction": {
+    "no_length_passed": true,
+    "all_lengths_strong_fail": true,
+    "thresholds_strictly_increasing": true,
+    "recall_strictly_decreasing": true,
+    "shared_step_drives_16_24_full": true,
+    "all_recall_ranges_confirmed": true,
+    "overall_verdict_confirmed": true,
+    "fully_confirmed": true
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "selection_start": 50,
+  "guard_length": 1,
+  "confirmation_length": 8,
+  "threshold": 16.778310775756836,
+  "verdict": "STRONG_FAIL_SPLIT_SAMPLE_ONSET",
+  "execution_mode": "single_frozen_50k_calibration_split_selection_guard_confirmation_ten_independent_holdouts"
+}

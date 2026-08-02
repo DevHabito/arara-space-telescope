@@ -1,0 +1,68 @@
+{
+  "verdict": "PASS",
+  "fpr_control": true,
+  "monotonicity_pass": true,
+  "adjacent_recall_differences": [
+    0.18945,
+    0.13575000000000004,
+    0.08660000000000001,
+    0.05624999999999991
+  ],
+  "passing_levels": [
+    12.0,
+    14.0,
+    16.0,
+    18.0
+  ],
+  "minimum_passing_snr": 12.0,
+  "predicted_first_passing_snr": 14.0,
+  "prediction_confirmed": false,
+  "threshold": 6.6391096115112305,
+  "level_details": {
+    "10.0": {
+      "snr": 10.0,
+      "recall_point": 0.4448,
+      "recall_lower_95": 0.43915,
+      "recall_upper_95": 0.45055,
+      "good_strata": 3,
+      "good_batches": 0,
+      "pass": false
+    },
+    "12.0": {
+      "snr": 12.0,
+      "recall_point": 0.63425,
+      "recall_lower_95": 0.62885,
+      "recall_upper_95": 0.6397,
+      "good_strata": 8,
+      "good_batches": 20,
+      "pass": true
+    },
+    "14.0": {
+      "snr": 14.0,
+      "recall_point": 0.77,
+      "recall_lower_95": 0.7652000000000001,
+      "recall_upper_95": 0.7748,
+      "good_strata": 8,
+      "good_batches": 20,
+      "pass": true
+    },
+    "16.0": {
+      "snr": 16.0,
+      "recall_point": 0.8566,
+      "recall_lower_95": 0.8526,
+      "recall_upper_95": 0.8604999999999999,
+      "good_strata": 8,
+      "good_batches": 20,
+      "pass": true
+    },
+    "18.0": {
+      "snr": 18.0,
+      "recall_point": 0.9128499999999999,
+      "recall_lower_95": 0.90955,
+      "recall_upper_95": 0.9161499999999999,
+      "good_strata": 8,
+      "good_batches": 20,
+      "pass": true
+    }
+  }
+}

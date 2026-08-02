@@ -1,0 +1,8 @@
+{
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "confirmation_length": 16,
+  "threshold": 21.526670455932617,
+  "verdict": "STRONG_FAIL_EXACT_ONSET_16_CONFIRMATION",
+  "execution_mode": "single_frozen_50k_calibration_exact_onset_16_cadence_confirmation_ten_holdouts"
+}

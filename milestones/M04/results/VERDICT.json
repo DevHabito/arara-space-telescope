@@ -1,0 +1,23 @@
+{
+  "verdict": "STRONG_FAIL",
+  "criterion_1_fpr_control": false,
+  "criterion_2_global_recall_lower_ge_0_50": false,
+  "criterion_3_six_strata_lower_ge_0_30": false,
+  "criterion_4_fifteen_batches_recall_ge_0_45": false,
+  "criterion_5_delta_vs_sbw_lower_ge_0_20": false,
+  "good_strata": 0,
+  "good_batches": 0,
+  "thresholds": {
+    "matched_filter": 28.13385772705078,
+    "sbw_slope": 18.45326042175293
+  },
+  "template_candidate_count": 160,
+  "template_retained_count": 144,
+  "mf_recall_point": 0.0007,
+  "sbw_recall_point": 0.0001,
+  "delta_point": 0.0006,
+  "mf_recall_lower_95": 0.0005,
+  "mf_recall_upper_95": 0.000925,
+  "delta_lower_95": 0.00039999999999999996,
+  "delta_upper_95": 0.000825
+}

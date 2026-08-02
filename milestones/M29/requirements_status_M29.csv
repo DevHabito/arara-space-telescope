@@ -1,0 +1,7 @@
+window,condition,status,evidence
+"t50, last 8 cadences",baseline non-centered matched filter,strong fail; recall 29.1375%,M29
+"t50, last 8 cadences",partial-t projected on constant+ramp+reference common mode,"strong fail; recall 0.6675%, AUROC 0.5288",M29
+"t50, last 8 cadences",paired projected minus baseline recall,strictly negative; upper one-sided 95% bound -28.2795 percentage points,M29
+"t50, last 8 cadences",linear-template identifiability after full nuisance projection,absent; 100% template degeneracy in linear strata,M29
+t50,constant+ramp+reference nuisance projection,rejected,M29
+t50,next required control,reference-common-mode-only projection with uncentered matched filter,M29 diagnosis

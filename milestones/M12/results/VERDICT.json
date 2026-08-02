@@ -1,0 +1,66 @@
+{
+  "verdict": "PASS",
+  "mapping_pass": true,
+  "early_window_success": true,
+  "monotonicity_pass": true,
+  "adjacent_recall_differences": [
+    0.15280000000000002,
+    0.4601,
+    0.2215999999999999
+  ],
+  "passing_fractions": [
+    0.75,
+    1.0
+  ],
+  "earliest_passing_fraction": 0.75,
+  "predicted_first_passing_fraction": 0.75,
+  "prediction_confirmed": true,
+  "thresholds": {
+    "0.25": 6.794193267822266,
+    "0.5": 7.920212745666504,
+    "0.75": 8.285100936889648,
+    "1.0": 9.26500415802002
+  },
+  "fraction_details": {
+    "0.25": {
+      "fraction": 0.25,
+      "fpr_control": true,
+      "recall_point": 0.021950000000000004,
+      "recall_lower_95": 0.02025,
+      "recall_upper_95": 0.023649999999999997,
+      "good_strata": 0,
+      "good_batches": 0,
+      "pass": false
+    },
+    "0.5": {
+      "fraction": 0.5,
+      "fpr_control": true,
+      "recall_point": 0.17475000000000002,
+      "recall_lower_95": 0.17034749999999999,
+      "recall_upper_95": 0.17915,
+      "good_strata": 0,
+      "good_batches": 0,
+      "pass": false
+    },
+    "0.75": {
+      "fraction": 0.75,
+      "fpr_control": true,
+      "recall_point": 0.63485,
+      "recall_lower_95": 0.62935,
+      "recall_upper_95": 0.64035,
+      "good_strata": 8,
+      "good_batches": 20,
+      "pass": true
+    },
+    "1.0": {
+      "fraction": 1.0,
+      "fpr_control": true,
+      "recall_point": 0.8564499999999999,
+      "recall_lower_95": 0.8524499999999999,
+      "recall_upper_95": 0.8603500000000001,
+      "good_strata": 8,
+      "good_batches": 20,
+      "pass": true
+    }
+  }
+}

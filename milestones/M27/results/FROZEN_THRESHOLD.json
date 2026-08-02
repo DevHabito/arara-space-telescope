@@ -1,0 +1,18 @@
+{
+  "threshold": 21.526670455932617,
+  "family_thresholds": {
+    "quiet": 3.9179255962371826,
+    "shared_ramp": 16.308826446533203,
+    "shared_step": 21.526670455932617,
+    "shared_bump": 16.773134231567383,
+    "shared_oscillation": 11.544445037841797
+  },
+  "allowed_counts": {
+    "quiet": 250,
+    "shared_ramp": 250,
+    "shared_step": 250,
+    "shared_bump": 250,
+    "shared_oscillation": 250
+  },
+  "calibration_negatives_per_family": 50000
+}

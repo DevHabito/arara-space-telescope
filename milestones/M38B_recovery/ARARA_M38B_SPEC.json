@@ -1,0 +1,23 @@
+{
+  "protocol": "ARARA-M38B-FROZEN-LATENT-GRID-OPERATIONAL-BANK",
+  "version": "38B.0",
+  "latent_grid": [0.0, 0.25, 0.5, 0.75, 1.0],
+  "durations": [24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+  "endpoint_start": 81,
+  "endpoint_stop": 179,
+  "control_hypothesis_count": 14652,
+  "candidate_hypothesis_count": 73260,
+  "fixed_snr": 13.75,
+  "primary_latency": 4,
+  "methods": ["rolling_full_duration_exact_latent_latency4", "rolling_full_duration_latent_grid5_latency4"],
+  "calibration_block_count": 4,
+  "calibration_negatives_per_block_per_family": 50000,
+  "calibration_negatives_per_family": 200000,
+  "calibration_batch_size": 20,
+  "calibration_seed": 2026090501,
+  "holdout_root_seed": 2026090502,
+  "aggregate_bootstrap_root_seed": 2026090503,
+  "paired_difference_bootstrap_seed": 2026090504,
+  "holdout_count": 10,
+  "bootstrap_replicates": 10000
+}

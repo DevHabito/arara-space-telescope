@@ -1,0 +1,8 @@
+window,condition,status,evidence
+t50,exact-onset non-centered matched filter L=8,strong fail; paired recall 30.423%,M28
+t50,exact-onset non-centered matched filter L=16,strong fail; paired recall 17.929%,M28
+t50,exact-onset non-centered matched filter L=24,strong fail; paired recall 13.465%,M28
+t50,exact-onset non-centered matched filter full,strong fail; paired recall 11.622%,M28
+t50,confirmation-length effect,recall strictly decreases and threshold strictly increases on paired curves,M28
+t50,current matched-filter family,rejected for operational use,M26–M28
+t50,next required test,nuisance-projected statistic versus paired L=8 baseline,M28 diagnosis

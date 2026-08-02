@@ -1,0 +1,17 @@
+{
+  "verdict": "PASS",
+  "aggregate_recall_point": 0.6639299999999999,
+  "aggregate_recall_lower_95": 0.6481695000000001,
+  "aggregate_recall_upper_95": 0.6801349999999999,
+  "replication_pass_count": 10,
+  "fpr_pass_replication_count": 10,
+  "extreme_fpr_violation": false,
+  "fpr_robust": true,
+  "minimum_replication_passes": 8,
+  "prediction": {
+    "pass_count_confirmed": true,
+    "aggregate_recall_confirmed": false,
+    "verdict_confirmed": true,
+    "fully_confirmed": false
+  }
+}

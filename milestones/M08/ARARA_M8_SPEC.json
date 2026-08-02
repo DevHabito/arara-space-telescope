@@ -1,0 +1,25 @@
+{
+  "protocol": "ARARA-M8-ORACLE-T100",
+  "version": "8.0",
+  "target_fraction": 1.0,
+  "development_root_seed": 2026080301,
+  "holdout_root_seed": 2026080302,
+  "bootstrap_seed": 2026080303,
+  "development_per_stratum": 2000,
+  "holdout_per_stratum": 5000,
+  "holdout_batches": 20,
+  "holdout_per_stratum_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_global_recall_lower_ci": 0.4,
+  "minimum_stratum_recall_lower_ci": 0.3,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.35,
+  "strong_fail_global_recall_upper": 0.2,
+  "bootstrap_replicates": 10000,
+  "prediction_recall_range": [
+    0.25,
+    0.55
+  ]
+}

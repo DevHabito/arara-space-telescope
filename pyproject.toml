@@ -1,0 +1,17 @@
+[project]
+name = "arara-space-telescope"
+version = "0.1.0"
+description = "Historical computational research archive for the ARARA Space Telescope program."
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=2.0",
+  "pandas>=2.0",
+  "scipy>=1.13",
+  "scikit-learn>=1.5",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"

@@ -1,0 +1,25 @@
+{
+  "protocol": "ARARA-M7-ORACLE-T75",
+  "version": "7.0",
+  "target_fraction": 0.75,
+  "development_root_seed": 2026080201,
+  "holdout_root_seed": 2026080202,
+  "bootstrap_seed": 2026080203,
+  "development_per_stratum": 2000,
+  "holdout_per_stratum": 5000,
+  "holdout_batches": 20,
+  "holdout_per_stratum_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_global_recall_lower_ci": 0.3,
+  "minimum_stratum_recall_lower_ci": 0.2,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.25,
+  "strong_fail_global_recall_upper": 0.1,
+  "bootstrap_replicates": 10000,
+  "prediction_recall_range": [
+    0.12,
+    0.35
+  ]
+}

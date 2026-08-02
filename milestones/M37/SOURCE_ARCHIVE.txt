@@ -1,0 +1,3 @@
+Source archive: ARARA_from_zero_M37_complete.zip
+SHA-256: 92f8da018d3150a2f9ab389f63fb8ffddca2b733bbbcd391a6e720adb94a2580
+Archive size: 16351470 bytes

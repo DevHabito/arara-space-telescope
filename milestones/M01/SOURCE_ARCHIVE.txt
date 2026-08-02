@@ -1,0 +1,3 @@
+Source archive: ARARA_from_zero_M1_complete.zip
+SHA-256: d44e841b3e0fcce02ddac66bc3b784584481c3b24e17601d7e7c065a212b6693
+Archive size: 3377339 bytes

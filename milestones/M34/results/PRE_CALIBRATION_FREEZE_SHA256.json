@@ -1,0 +1,22 @@
+{
+  "ARARA_M34_PREREGISTRATION.md": "f331650d626f9ac28825f86b3c6be547f81663fa18f26926da13db8adbf040ff",
+  "ARARA_M34_SPEC.json": "c1c95937947cd3aa3df05dbe0c2af9488326421293dcb1074a4aba742e4e690e",
+  "ARARA_M34_IMPLEMENTATION_NOTE.md": "8234db5240cb2df67604c5c17d39d587f949fb22c419e081ef2e139cbd17c089",
+  "IMPLEMENTATION_AUDIT_LOG.md": "3772b25b4c8cf8f0c1943ef82567a033a3c132493d8a29223c1bbe67baf7e4c4",
+  "FROZEN_SEEDS.json": "c73f19352b3e67f2820551b8131b4b56c97317d058085833158ed70f60203ec9",
+  "arara_m34.py": "b47aaa1e2c83fa7a6a72a75185bc4530988b202e053092f3bc636ec55dc6d208",
+  "arara_m33_dependency.py": "7f09924c64363f96d9b1ab8a777ab2d6b6e9b75d4599bc6265695d710c478b95",
+  "arara_m32_dependency.py": "c699e0da99bfb977dd1468104ca115efa7e277015659683d2c504631e0ce7f45",
+  "arara_m25_dependency.py": "549c25201741a313ba154f2a8646266a52ad3f893125d524ecbf6c663e010ef5",
+  "arara_m24_dependency.py": "590e01f1b63a9975e6ac7e37476de9706aae287b99a6fa09fd7f75d8bb1be480",
+  "arara_m31_dependency.py": "91d391b3d8cce74c30e0a50ed1f815cd035eb34bfb35c5f7eec7de753d1678ab",
+  "arara_m30_dependency.py": "6e2aef5b319e0ed86f19a0522d4bb1c1012d9e15882e52881753cb03cf079ece",
+  "arara_m22_dependency.py": "c8ce2b9b0d923170e9e8fa3bbf47e539582817722b3001ff59a88baa20199961",
+  "arara_m28_dependency.py": "3b9d60c16151c42636f5feaed33a0aa42a68c51c43c17728b7b461706b8f78c7",
+  "arara_m29_dependency.py": "73cd4fd2767ac25926d73c984afd2822239aece6f51e96e32180e73a1f6d362f",
+  "tests/test_arara_m34.py": "7b8950997e1ccef87d6a568b8af920c54014fea6b64abffff174054047f8665c",
+  "dependency/arara_m15.py": "357c15d5c406426726219e5901c4de095ba470317f78562d5f6091a17365b318",
+  "dependency/arara_m9.py": "147ac7a04cb1c98ac17e48b89d28014411582d3a13cf4ec3957540a1097191bf",
+  "dependency/arara_m5.py": "b5249a16b85a7f2f87e0f514b64a45797c702a0edd1006242a8e0f2d4c74d458",
+  "dependency/arara_m2.py": "bbe8c93ec8735d8f0bf47368158bf40181be4e1b7b63b0d0d822eeef3b76e13f"
+}

@@ -1,0 +1,64 @@
+{
+  "verdict": "STRONG_FAIL_NUISANCE_PROJECTION",
+  "method_details": {
+    "baseline8": {
+      "method": "baseline8",
+      "threshold": 16.520498275756836,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.291375,
+      "aggregate_recall_lower_one_sided_95": 0.28953500000000004,
+      "aggregate_recall_upper_one_sided_95": 0.293205,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": false,
+      "auroc_mean": 0.9863827342999999,
+      "average_precision_mean": 0.9790900509000542
+    },
+    "projected_t8": {
+      "method": "projected_t8",
+      "threshold": 4.497557640075684,
+      "threshold_driver": "shared_ramp",
+      "aggregate_recall_point": 0.006674999999999981,
+      "aggregate_recall_lower_one_sided_95": 0.006290000000000001,
+      "aggregate_recall_upper_one_sided_95": 0.0070702499999999975,
+      "holdout_pass_count": 0,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": false,
+      "auroc_mean": 0.5288234095,
+      "average_precision_mean": 0.4682548833674571
+    }
+  },
+  "paired_superiority": {
+    "delta_point": -0.2847,
+    "delta_lower_one_sided_95": -0.28660525000000003,
+    "delta_upper_one_sided_95": -0.28279475,
+    "holdout_deltas": {
+      "0": -0.28204999999999997,
+      "1": -0.2872499999999999,
+      "2": -0.2859,
+      "3": -0.2860500000000001,
+      "4": -0.28315,
+      "5": -0.2838,
+      "6": -0.28300000000000003,
+      "7": -0.28805,
+      "8": -0.28485,
+      "9": -0.2829000000000001
+    },
+    "holdouts_with_delta_at_least_0_08": 0,
+    "superiority_pass": false
+  },
+  "prediction": {
+    "baseline_recall_in_range": true,
+    "projected_recall_in_range": false,
+    "delta_in_range": false,
+    "both_fpr_robust": true,
+    "material_paired_gain": false,
+    "candidate_holdout_passes_0_to_5": true,
+    "overall_verdict_confirmed": false,
+    "fully_confirmed": false
+  }
+}

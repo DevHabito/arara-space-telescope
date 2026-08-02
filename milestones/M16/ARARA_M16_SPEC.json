@@ -1,0 +1,42 @@
+{
+  "protocol": "ARARA-M16-CALIBRATION-SIZE-STABILITY-12SIGMA-T50",
+  "version": "16.0",
+  "fixed_snr": 12.0,
+  "target_fraction": 0.5,
+  "calibration_sizes_per_family": [
+    2000,
+    10000,
+    50000
+  ],
+  "world_count": 3,
+  "calibration_resamples_per_size": 100,
+  "world_root_seed": 2026081101,
+  "resampling_root_seed": 2026081102,
+  "recall_bootstrap_root_seed": 2026081103,
+  "calibration_superpool_per_family": 50000,
+  "calibration_generation_batch_size": 1000,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "minimum_global_recall_lower_ci": 0.6,
+  "minimum_stratum_recall_lower_ci": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "bootstrap_replicates_per_calibration": 10000,
+  "primary_width_ratio_limit": 0.5,
+  "predicted_width_ratio_limit": 0.4,
+  "primary_50k_world_pass_rate": 0.8,
+  "primary_50k_aggregate_lower_pass_rate": 0.7,
+  "primary_2k_aggregate_max_pass_rate": 0.4,
+  "strong_fail_50k_max_pass_rate": 0.2,
+  "strong_fail_50k_recall_lower_q90": 0.6,
+  "prediction_median_50k_recall_range": [
+    0.5,
+    0.56
+  ]
+}

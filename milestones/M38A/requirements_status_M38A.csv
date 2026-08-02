@@ -1,0 +1,8 @@
+component,status,evidence
+M38A outcome-free execution,complete,0 positives; 0 negatives; 0 holdouts
+K=2 full-curve grid,fail,minimum retention 0.986205601 < 0.995
+K=3 local detector geometry,fail,full curve 0.996319759; local mesh 0.992306497 < 0.995
+K=5 latent grid,eligible,full curve 0.998997047; local mesh 0.997768888; refined 0.997768888
+frozen latent grid,"[0.0, 0.25, 0.5, 0.75, 1.0]",FROZEN_LATENT_GRID.json
+continuous latent oracle,structurally removable candidate,M38A; operational confirmation still required
+next required test,M38B joint operational bank,"99 endpoints x 4 shapes x 37 durations x 5 latent values = 73,260 hypotheses per curve"

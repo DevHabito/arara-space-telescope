@@ -1,0 +1,53 @@
+{
+  "verdict": "INCONCLUSIVE",
+  "fpr_control": true,
+  "monotonicity_pass": true,
+  "adjacent_recall_differences": [
+    0.04844999999999999,
+    0.046699999999999964,
+    0.04360000000000008
+  ],
+  "passing_levels": [],
+  "minimum_passing_snr": null,
+  "predicted_first_passing_snr": 12.0,
+  "prediction_confirmed": false,
+  "threshold": 6.872221946716309,
+  "level_details": {
+    "10.5": {
+      "snr": 10.5,
+      "recall_point": 0.45945,
+      "recall_lower_95": 0.4538,
+      "recall_upper_95": 0.46514999999999995,
+      "good_strata": 3,
+      "good_batches": 0,
+      "pass": false
+    },
+    "11.0": {
+      "snr": 11.0,
+      "recall_point": 0.5079,
+      "recall_lower_95": 0.50215,
+      "recall_upper_95": 0.5137,
+      "good_strata": 4,
+      "good_batches": 0,
+      "pass": false
+    },
+    "11.5": {
+      "snr": 11.5,
+      "recall_point": 0.5546,
+      "recall_lower_95": 0.5489,
+      "recall_upper_95": 0.56015,
+      "good_strata": 5,
+      "good_batches": 12,
+      "pass": false
+    },
+    "12.0": {
+      "snr": 12.0,
+      "recall_point": 0.5982000000000001,
+      "recall_lower_95": 0.59265,
+      "recall_upper_95": 0.60385,
+      "good_strata": 6,
+      "good_batches": 20,
+      "pass": false
+    }
+  }
+}

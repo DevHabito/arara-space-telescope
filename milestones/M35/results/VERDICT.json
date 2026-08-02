@@ -1,0 +1,53 @@
+{
+  "verdict": "PASS_ROLLING_ENDPOINT_LATENCY4",
+  "control_valid": true,
+  "method_details": {
+    "hinge_exact_t50": {
+      "method": "hinge_exact_t50",
+      "threshold": 4.235359191894531,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.7700850000000001,
+      "aggregate_recall_lower_one_sided_95": 0.76825,
+      "aggregate_recall_upper_one_sided_95": 0.771865,
+      "holdout_pass_count": 10,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9785737339999999,
+      "average_precision_mean": 0.9798272924191591
+    },
+    "rolling_hinge_first_crossing": {
+      "method": "rolling_hinge_first_crossing",
+      "threshold": 7.002526760101318,
+      "threshold_driver": "shared_step",
+      "aggregate_recall_point": 0.7549899999999999,
+      "aggregate_recall_lower_one_sided_95": 0.7530747499999998,
+      "aggregate_recall_upper_one_sided_95": 0.7570202500000001,
+      "holdout_pass_count": 9,
+      "fpr_pass_holdout_count": 10,
+      "fpr_robust": true,
+      "extreme_fpr_violation": false,
+      "operational_pass": true,
+      "auroc_mean": 0.9991300719,
+      "average_precision_mean": 0.998941386368698
+    }
+  },
+  "paired_difference": {
+    "rolling_minus_exact_point": -0.015095000000000192,
+    "rolling_minus_exact_lower_one_sided_95": -0.017039999999999993,
+    "rolling_minus_exact_upper_one_sided_95": -0.013160000000000005
+  },
+  "prediction": {
+    "exact_recall_in_range": true,
+    "rolling_recall_in_range": true,
+    "delta_in_range": true,
+    "control_valid": true,
+    "both_fpr_robust": true,
+    "rolling_pass_count_in_range": true,
+    "rolling_threshold_in_range": true,
+    "overall_verdict_confirmed": true,
+    "fully_confirmed": true
+  },
+  "parent_gate_verdict": "PASS_ROLLING_CAUSAL_ENDPOINT_CANDIDATE"
+}

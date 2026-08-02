@@ -1,0 +1,44 @@
+{
+  "protocol": "ARARA-M27-EXACT-ONSET-16-CADENCE-CONFIRMATION",
+  "version": "27.0",
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "selection_start": 50,
+  "guard_length": 1,
+  "confirmation_length": 16,
+  "calibration_seed": 2026082201,
+  "holdout_root_seed": 2026082202,
+  "aggregate_bootstrap_root_seed": 2026082203,
+  "calibration_negatives_per_family": 50000,
+  "calibration_batch_size": 1000,
+  "holdout_count": 10,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "extreme_fpr_upper_limit": 0.015,
+  "minimum_holdout_passes": 8,
+  "minimum_fpr_pass_holdouts": 9,
+  "minimum_global_recall_lower_ci": 0.6,
+  "minimum_stratum_recall_lower_ci": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "bootstrap_replicates": 10000,
+  "prediction_threshold_range": [
+    20.0,
+    26.0
+  ],
+  "prediction_recall_range": [
+    0.45,
+    0.62
+  ],
+  "prediction_pass_count_range": [
+    2,
+    6
+  ],
+  "prediction_verdict": "INCONCLUSIVE"
+}

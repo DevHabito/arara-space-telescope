@@ -1,0 +1,39 @@
+{
+  "thresholds": {
+    "baseline8": 16.19305419921875,
+    "reference_projected8": 4.052854537963867
+  },
+  "family_thresholds": {
+    "baseline8": {
+      "quiet": 3.834339141845703,
+      "shared_ramp": 13.004131317138672,
+      "shared_step": 16.19305419921875,
+      "shared_bump": 13.390833854675293,
+      "shared_oscillation": 10.869791030883789
+    },
+    "reference_projected8": {
+      "quiet": 3.587434768676758,
+      "shared_ramp": 4.046777725219727,
+      "shared_step": 4.052854537963867,
+      "shared_bump": 3.9135758876800537,
+      "shared_oscillation": 3.704554557800293
+    }
+  },
+  "allowed_counts": {
+    "baseline8": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    },
+    "reference_projected8": {
+      "quiet": 250,
+      "shared_ramp": 250,
+      "shared_step": 250,
+      "shared_bump": 250,
+      "shared_oscillation": 250
+    }
+  },
+  "calibration_negatives_per_family": 50000
+}

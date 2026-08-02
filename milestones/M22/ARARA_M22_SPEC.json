@@ -1,0 +1,56 @@
+{
+  "protocol": "ARARA-M22-CONTROLLED-ONSET-ERROR-TOLERANCE",
+  "version": "22.0",
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "onset_offsets": [
+    -4,
+    -2,
+    0,
+    2,
+    4
+  ],
+  "replication_count": 10,
+  "replication_root_seed": 2026081701,
+  "aggregate_bootstrap_root_seed": 2026081702,
+  "development_negatives_per_family": 2000,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "extreme_fpr_upper_limit": 0.015,
+  "minimum_replication_passes": 8,
+  "minimum_fpr_pass_replications": 9,
+  "minimum_global_recall_lower_ci": 0.6,
+  "minimum_stratum_recall_lower_ci": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "bootstrap_replicates": 10000,
+  "prediction_recall_ranges": {
+    "-4": [
+      0.5,
+      0.64
+    ],
+    "-2": [
+      0.6,
+      0.68
+    ],
+    "0": [
+      0.64,
+      0.7
+    ],
+    "2": [
+      0.6,
+      0.68
+    ],
+    "4": [
+      0.5,
+      0.64
+    ]
+  },
+  "prediction_verdict": "PASS_ONSET_TOLERANCE_PM2"
+}

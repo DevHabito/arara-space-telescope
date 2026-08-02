@@ -1,0 +1,119 @@
+{
+  "protocol": "ARARA-M37-FULL-DURATION-SHAPE-ROLLING-BANK",
+  "version": "37.0",
+  "durations": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "duration_count": 37,
+  "shape_bank": [
+    "linear",
+    "power_law",
+    "exponential",
+    "logistic"
+  ],
+  "shape_count": 4,
+  "endpoint_start": 81,
+  "endpoint_stop": 179,
+  "endpoint_count": 99,
+  "control_hypothesis_count": 396,
+  "candidate_hypothesis_count": 14652,
+  "primary_latency": 4,
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "window_length": 8,
+  "methods": [
+    "rolling_four_shape_exact_duration_latency4",
+    "rolling_four_shape_full_duration_bank_latency4"
+  ],
+  "duration_tolerance": 2,
+  "duration_identification_minimum_lower_one_sided_95": 0.7,
+  "minimum_duration_identification_holdouts": 8,
+  "calibration_seed": 2026090201,
+  "holdout_root_seed": 2026090202,
+  "aggregate_bootstrap_root_seed": 2026090203,
+  "paired_difference_bootstrap_seed": 2026090204,
+  "calibration_negatives_per_family": 50000,
+  "calibration_batch_size": 50,
+  "holdout_count": 10,
+  "holdout_positive_per_stratum": 2500,
+  "holdout_negative_per_family": 5000,
+  "holdout_batches": 20,
+  "holdout_positive_per_stratum_per_batch": 125,
+  "holdout_negative_per_family_per_batch": 250,
+  "development_fpr_target": 0.005,
+  "holdout_fpr_upper_limit": 0.01,
+  "extreme_fpr_upper_limit": 0.015,
+  "minimum_holdout_passes": 8,
+  "minimum_fpr_pass_holdouts": 9,
+  "minimum_global_recall_lower_one_sided_95": 0.6,
+  "minimum_stratum_recall_lower_one_sided_95": 0.5,
+  "minimum_good_strata": 6,
+  "minimum_good_batches": 15,
+  "batch_recall_threshold": 0.55,
+  "bootstrap_replicates": 10000,
+  "prediction_control_recall_range": [
+    0.73,
+    0.79
+  ],
+  "prediction_full_recall_range": [
+    0.72,
+    0.77
+  ],
+  "prediction_delta_range": [
+    -0.05,
+    0.0
+  ],
+  "prediction_full_threshold_range": [
+    7.2,
+    8.2
+  ],
+  "prediction_full_pass_range": [
+    8,
+    10
+  ],
+  "prediction_exact_duration_accuracy_range": [
+    0.03,
+    0.2
+  ],
+  "prediction_tolerance2_accuracy_range": [
+    0.15,
+    0.5
+  ],
+  "prediction_verdict": "PASS_DETECTION_DURATION_UNRELIABLE"
+}

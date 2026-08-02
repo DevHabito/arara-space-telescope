@@ -1,0 +1,6 @@
+{
+  "status": "MATCH",
+  "verdict": "INVALID_M37_EXACT_DURATION_CONTROL",
+  "holdout_count": 10,
+  "positive_curve_count": 200000
+}

@@ -1,0 +1,329 @@
+[
+  {
+    "world": 0,
+    "calibration_families": {
+      "quiet": {
+        "integer_seed": 2564459154,
+        "entropy": 2026081101,
+        "spawn_key": [
+          0,
+          0
+        ]
+      },
+      "shared_ramp": {
+        "integer_seed": 2400513226,
+        "entropy": 2026081101,
+        "spawn_key": [
+          0,
+          1
+        ]
+      },
+      "shared_step": {
+        "integer_seed": 3361817698,
+        "entropy": 2026081101,
+        "spawn_key": [
+          0,
+          2
+        ]
+      },
+      "shared_bump": {
+        "integer_seed": 1214070896,
+        "entropy": 2026081101,
+        "spawn_key": [
+          0,
+          3
+        ]
+      },
+      "shared_oscillation": {
+        "integer_seed": 2673046123,
+        "entropy": 2026081101,
+        "spawn_key": [
+          0,
+          4
+        ]
+      }
+    },
+    "holdout": {
+      "integer_seed": 1356359813,
+      "entropy": 2026081101,
+      "spawn_key": [
+        0,
+        5
+      ]
+    },
+    "sizes": {
+      "2000": {
+        "resampling": {
+          "integer_seed": 1605032848,
+          "entropy": 2026081102,
+          "spawn_key": [
+            0,
+            0
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 3502881628,
+          "entropy": 2026081103,
+          "spawn_key": [
+            0,
+            0
+          ]
+        }
+      },
+      "10000": {
+        "resampling": {
+          "integer_seed": 2141891050,
+          "entropy": 2026081102,
+          "spawn_key": [
+            0,
+            1
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 3193603188,
+          "entropy": 2026081103,
+          "spawn_key": [
+            0,
+            1
+          ]
+        }
+      },
+      "50000": {
+        "resampling": {
+          "integer_seed": 2433012745,
+          "entropy": 2026081102,
+          "spawn_key": [
+            0,
+            2
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 549884046,
+          "entropy": 2026081103,
+          "spawn_key": [
+            0,
+            2
+          ]
+        }
+      }
+    }
+  },
+  {
+    "world": 1,
+    "calibration_families": {
+      "quiet": {
+        "integer_seed": 1591274018,
+        "entropy": 2026081101,
+        "spawn_key": [
+          1,
+          0
+        ]
+      },
+      "shared_ramp": {
+        "integer_seed": 121546769,
+        "entropy": 2026081101,
+        "spawn_key": [
+          1,
+          1
+        ]
+      },
+      "shared_step": {
+        "integer_seed": 1535278109,
+        "entropy": 2026081101,
+        "spawn_key": [
+          1,
+          2
+        ]
+      },
+      "shared_bump": {
+        "integer_seed": 823362399,
+        "entropy": 2026081101,
+        "spawn_key": [
+          1,
+          3
+        ]
+      },
+      "shared_oscillation": {
+        "integer_seed": 3544783272,
+        "entropy": 2026081101,
+        "spawn_key": [
+          1,
+          4
+        ]
+      }
+    },
+    "holdout": {
+      "integer_seed": 3636444931,
+      "entropy": 2026081101,
+      "spawn_key": [
+        1,
+        5
+      ]
+    },
+    "sizes": {
+      "2000": {
+        "resampling": {
+          "integer_seed": 2970591598,
+          "entropy": 2026081102,
+          "spawn_key": [
+            1,
+            0
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 3541324266,
+          "entropy": 2026081103,
+          "spawn_key": [
+            1,
+            0
+          ]
+        }
+      },
+      "10000": {
+        "resampling": {
+          "integer_seed": 677577249,
+          "entropy": 2026081102,
+          "spawn_key": [
+            1,
+            1
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 418666204,
+          "entropy": 2026081103,
+          "spawn_key": [
+            1,
+            1
+          ]
+        }
+      },
+      "50000": {
+        "resampling": {
+          "integer_seed": 3864052596,
+          "entropy": 2026081102,
+          "spawn_key": [
+            1,
+            2
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 3717313778,
+          "entropy": 2026081103,
+          "spawn_key": [
+            1,
+            2
+          ]
+        }
+      }
+    }
+  },
+  {
+    "world": 2,
+    "calibration_families": {
+      "quiet": {
+        "integer_seed": 1262456553,
+        "entropy": 2026081101,
+        "spawn_key": [
+          2,
+          0
+        ]
+      },
+      "shared_ramp": {
+        "integer_seed": 996220021,
+        "entropy": 2026081101,
+        "spawn_key": [
+          2,
+          1
+        ]
+      },
+      "shared_step": {
+        "integer_seed": 1377428600,
+        "entropy": 2026081101,
+        "spawn_key": [
+          2,
+          2
+        ]
+      },
+      "shared_bump": {
+        "integer_seed": 3727670723,
+        "entropy": 2026081101,
+        "spawn_key": [
+          2,
+          3
+        ]
+      },
+      "shared_oscillation": {
+        "integer_seed": 1934666275,
+        "entropy": 2026081101,
+        "spawn_key": [
+          2,
+          4
+        ]
+      }
+    },
+    "holdout": {
+      "integer_seed": 1037643717,
+      "entropy": 2026081101,
+      "spawn_key": [
+        2,
+        5
+      ]
+    },
+    "sizes": {
+      "2000": {
+        "resampling": {
+          "integer_seed": 4107780948,
+          "entropy": 2026081102,
+          "spawn_key": [
+            2,
+            0
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 4271597340,
+          "entropy": 2026081103,
+          "spawn_key": [
+            2,
+            0
+          ]
+        }
+      },
+      "10000": {
+        "resampling": {
+          "integer_seed": 2226422681,
+          "entropy": 2026081102,
+          "spawn_key": [
+            2,
+            1
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 1018309351,
+          "entropy": 2026081103,
+          "spawn_key": [
+            2,
+            1
+          ]
+        }
+      },
+      "50000": {
+        "resampling": {
+          "integer_seed": 3009696338,
+          "entropy": 2026081102,
+          "spawn_key": [
+            2,
+            2
+          ]
+        },
+        "recall_bootstrap": {
+          "integer_seed": 2208757238,
+          "entropy": 2026081103,
+          "spawn_key": [
+            2,
+            2
+          ]
+        }
+      }
+    }
+  }
+]

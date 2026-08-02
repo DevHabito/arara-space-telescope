@@ -1,0 +1,29 @@
+{
+  "verdict": "STRONG_FAIL_SPLIT_SAMPLE_ONSET",
+  "frozen_threshold": 16.778310775756836,
+  "aggregate_recall_point": 0.270425,
+  "aggregate_recall_lower_95": 0.26781975,
+  "aggregate_recall_upper_95": 0.27303025,
+  "complete_holdout_pass_count": 0,
+  "detection_holdout_pass_count": 0,
+  "onset_holdout_pass_count": 0,
+  "fpr_pass_holdout_count": 10,
+  "fpr_robust": true,
+  "extreme_fpr_violation": false,
+  "pooled_detected_for_onset": 54085,
+  "pooled_onset_in_envelope": 15017,
+  "pooled_onset_accuracy": 0.2776555422020893,
+  "pooled_onset_accuracy_lower_95": 0.27448767996790735,
+  "pooled_onset_accuracy_upper_95": 0.2808410396783424,
+  "pooled_early_below_minus2": 15739,
+  "pooled_late_above_plus1": 23329,
+  "prediction": {
+    "threshold_below_m24": false,
+    "recall_in_range": false,
+    "onset_accuracy_in_range": true,
+    "detection_passes_ge_8": false,
+    "complete_passes_le_2": true,
+    "verdict_confirmed": true,
+    "fully_confirmed": false
+  }
+}

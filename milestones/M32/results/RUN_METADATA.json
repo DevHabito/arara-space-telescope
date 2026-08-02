@@ -1,0 +1,21 @@
+{
+  "fixed_snr": 13.75,
+  "target_fraction": 0.5,
+  "window_length": 8,
+  "selection_start": 50,
+  "guard_length": 1,
+  "confirmation_length": 8,
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "methods": [
+    "exact_reference_projected8",
+    "split_onset_reference_projected8"
+  ],
+  "thresholds": {
+    "exact_reference_projected8": 4.088747024536133,
+    "split_onset_reference_projected8": 4.280668258666992
+  },
+  "verdict": "PASS_DETECTION_ONSET_UNRELIABLE",
+  "execution_mode": "paired_exact_and_split_onset_templates_feeding_confirmed_reference_projection",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95"
+}

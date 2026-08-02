@@ -1,0 +1,8 @@
+component,status,evidence
+pooled calibration,complete,"4 independent blocks x 50,000 per family; 200,000 pooled per family; 1,000,000 total"
+exact-duration control,valid,recall 75.5310%; lower one-sided 95% 75.3575%; 10/10 holdouts; FPR 10/10
+full duration-bank detection,pass,recall 74.6855%; lower one-sided 95% 74.5260%; 8/10 holdouts; FPR 10/10
+exact duration oracle for detection,not required under current synthetic contract,M37R
+duration identification,unreliable,2.5581% exact; 11.6877% within ±2; 0/10 gates
+remaining template oracle,continuous latent parameter u remains exact,M37R scope
+next required test,M38A latent-grid eligibility before outcome testing,"freeze a grid from a template-mismatch/SNR-loss contract, then calibrate endpoint x shape x duration x latent grid jointly"

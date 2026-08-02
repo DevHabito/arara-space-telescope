@@ -1,0 +1,8 @@
+window,condition,status,evidence
+"t50, last 8 cadences",exact reference-projected control,"valid; recall 79.3785%, 10/10",M33
+"t50, last 8 cadences",hinge own-curve alignment,"operational; recall 77.4860%, 10/10",M33
+"t50, last 8 cadences",within-group permuted hinge alignment,"not operational; recall 69.8805%, 0/10 due stratum coverage",M33
+t50,curve-specific hinge information,"confirmed; +7.6055 percentage points, lower one-sided 95% +7.4670",M33
+t50,physical onset timestamp,not demonstrated; own-curve accuracy 25.2336%,M33
+t50,methodological interpretation,"hinge is a causal alignment anchor, not a validated physical onset timestamp",M32–M33
+rolling causal endpoint,next required test,remove exact t50 endpoint with first-crossing search and look-elsewhere calibration,M34

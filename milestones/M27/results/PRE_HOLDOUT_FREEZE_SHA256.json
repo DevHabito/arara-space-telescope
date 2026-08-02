@@ -1,0 +1,21 @@
+{
+  "ARARA_M27_PREREGISTRATION.md": "d114a1d1383cb63dae5756c09901539dbd06954c5ff17002bdb65d0584977495",
+  "ARARA_M27_SPEC.json": "034608a9349309c95d620f18cbf2a7f18c836509c4f6510e1b3e6774cd8d6db8",
+  "ARARA_M27_IMPLEMENTATION_NOTE.md": "1c4360f411cc21e7db160ed96c95843602f6e4313c2b0c5e487642ee15267de4",
+  "IMPLEMENTATION_AUDIT_LOG.md": "4112893a20dbff894273ae5cdd2cd3f1469c4fd00faddcd056ecd1f8b8adbeb0",
+  "FROZEN_SEEDS.json": "a33bfc30462d95c7668954739d020edd2d78c873dfbfd2be5281b67a1dc725d8",
+  "arara_m27.py": "5716daad2ef32bae45bdda70bb7771892e6438547d31bd4e56e13ac768eaa6e5",
+  "arara_m22_dependency.py": "c8ce2b9b0d923170e9e8fa3bbf47e539582817722b3001ff59a88baa20199961",
+  "arara_m24_dependency.py": "590e01f1b63a9975e6ac7e37476de9706aae287b99a6fa09fd7f75d8bb1be480",
+  "arara_m25_dependency.py": "549c25201741a313ba154f2a8646266a52ad3f893125d524ecbf6c663e010ef5",
+  "tests/test_arara_m27.py": "16228d888d9f6b3293fb35cd504e76401eb4010e037f7e9ed0dd8c9d0fab842d",
+  "dependency/arara_m15.py": "357c15d5c406426726219e5901c4de095ba470317f78562d5f6091a17365b318",
+  "dependency/arara_m9.py": "147ac7a04cb1c98ac17e48b89d28014411582d3a13cf4ec3957540a1097191bf",
+  "dependency/arara_m5.py": "b5249a16b85a7f2f87e0f514b64a45797c702a0edd1006242a8e0f2d4c74d458",
+  "dependency/arara_m2.py": "bbe8c93ec8735d8f0bf47368158bf40181be4e1b7b63b0d0d822eeef3b76e13f",
+  "results/FROZEN_THRESHOLD.json": "5455078fccb9315744f30f2b8aa21f490e50ef53e961acb95767425fe04cf637",
+  "results/calibration_metrics.csv": "c5853d0ed7825b8b91b84b3cc10ef9fd7d11e524e548395006eea8d73cec2868",
+  "results/calibration_diagnostics.csv": "80da91f458800ce62c53dba0e70a311938780c4a1c17c42b8adb70fced322ee1",
+  "results/CALIBRATION_VERIFICATION.json": "76e29f93088eca78a942b38d526a3ce686c4e8230a8cb9903e84c14fab87cee6",
+  "results/CALIBRATION_SCORE_SHA256.json": "e32ade1fa6aa265cc23e087bda1b408e579e1f52c5adbb6257290592d3d11c86"
+}

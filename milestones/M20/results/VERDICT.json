@@ -1,0 +1,19 @@
+{
+  "verdict": "PASS_REFINEMENT_CANDIDATE",
+  "numeric_verdict": "PASS",
+  "aggregate_recall_point": 0.6594,
+  "aggregate_recall_lower_95": 0.6362397499999999,
+  "aggregate_recall_upper_95": 0.6821952499999999,
+  "replication_pass_count": 8,
+  "fpr_pass_replication_count": 10,
+  "extreme_fpr_violation": false,
+  "fpr_robust": true,
+  "minimum_replication_passes": 8,
+  "requires_independent_confirmation": true,
+  "prediction": {
+    "pass_count_confirmed": true,
+    "aggregate_recall_confirmed": true,
+    "verdict_confirmed": true,
+    "fully_confirmed": true
+  }
+}

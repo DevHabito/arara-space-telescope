@@ -1,0 +1,6 @@
+{
+  "replication_count": 10,
+  "completed_replications": 10,
+  "execution_mode": "frozen_replications_in_technical_chunks",
+  "verdict": "PASS"
+}

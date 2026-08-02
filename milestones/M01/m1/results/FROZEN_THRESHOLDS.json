@@ -1,0 +1,170 @@
+{
+  "thresholds": {
+    "m1": 15.099813461303711,
+    "flux_z": 12.455404281616211,
+    "cusum": 244.3382110595703,
+    "cusum_kappa": 0.25
+  },
+  "cusum_candidates": [
+    {
+      "kappa": 0.25,
+      "threshold": 244.3382110595703,
+      "mean_early_recall": 0.0,
+      "worst_fpr": 0.005,
+      "family_recalls": {
+        "linear": 0.0,
+        "power_law": 0.0,
+        "exponential": 0.0,
+        "logistic": 0.0
+      },
+      "family_thresholds": {
+        "quiet": 54.69941711425781,
+        "positive_impulse": 70.05816650390625,
+        "symmetric_bump": 244.3382110595703,
+        "sinusoid": 5.5500688552856445,
+        "negative_dip_recovery": 31.158903121948242
+      },
+      "allowed": {
+        "quiet": 10,
+        "positive_impulse": 10,
+        "symmetric_bump": 10,
+        "sinusoid": 10,
+        "negative_dip_recovery": 10
+      }
+    },
+    {
+      "kappa": 0.5,
+      "threshold": 227.231201171875,
+      "mean_early_recall": 0.0,
+      "worst_fpr": 0.005,
+      "family_recalls": {
+        "linear": 0.0,
+        "power_law": 0.0,
+        "exponential": 0.0,
+        "logistic": 0.0
+      },
+      "family_thresholds": {
+        "quiet": 31.350078582763672,
+        "positive_impulse": 44.047176361083984,
+        "symmetric_bump": 227.231201171875,
+        "sinusoid": 3.304746150970459,
+        "negative_dip_recovery": 21.70760726928711
+      },
+      "allowed": {
+        "quiet": 10,
+        "positive_impulse": 10,
+        "symmetric_bump": 10,
+        "sinusoid": 10,
+        "negative_dip_recovery": 10
+      }
+    },
+    {
+      "kappa": 0.75,
+      "threshold": 213.83287048339844,
+      "mean_early_recall": 0.0,
+      "worst_fpr": 0.005,
+      "family_recalls": {
+        "linear": 0.0,
+        "power_law": 0.0,
+        "exponential": 0.0,
+        "logistic": 0.0
+      },
+      "family_thresholds": {
+        "quiet": 19.885421752929688,
+        "positive_impulse": 26.69351577758789,
+        "symmetric_bump": 213.83287048339844,
+        "sinusoid": 2.7512712478637695,
+        "negative_dip_recovery": 15.33011245727539
+      },
+      "allowed": {
+        "quiet": 10,
+        "positive_impulse": 10,
+        "symmetric_bump": 10,
+        "sinusoid": 10,
+        "negative_dip_recovery": 10
+      }
+    },
+    {
+      "kappa": 1.0,
+      "threshold": 197.67413330078125,
+      "mean_early_recall": 0.0,
+      "worst_fpr": 0.005,
+      "family_recalls": {
+        "linear": 0.0,
+        "power_law": 0.0,
+        "exponential": 0.0,
+        "logistic": 0.0
+      },
+      "family_thresholds": {
+        "quiet": 13.93927001953125,
+        "positive_impulse": 19.15373420715332,
+        "symmetric_bump": 197.67413330078125,
+        "sinusoid": 2.3562421798706055,
+        "negative_dip_recovery": 11.734763145446777
+      },
+      "allowed": {
+        "quiet": 10,
+        "positive_impulse": 10,
+        "symmetric_bump": 10,
+        "sinusoid": 10,
+        "negative_dip_recovery": 10
+      }
+    }
+  ],
+  "development_seed_children": [
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        0
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        1
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        2
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        3
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        4
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        5
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        6
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        7
+      ]
+    },
+    {
+      "entropy": 2026072701,
+      "spawn_key": [
+        8
+      ]
+    }
+  ]
+}

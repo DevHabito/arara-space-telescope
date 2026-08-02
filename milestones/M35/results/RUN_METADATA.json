@@ -1,0 +1,14 @@
+{
+  "rolling_endpoint_start": 81,
+  "rolling_endpoint_stop": 179,
+  "rolling_endpoint_count": 99,
+  "primary_success_window": "true onset through exact t50 plus 4 cadences inclusive",
+  "calibration_negatives_per_family": 50000,
+  "holdout_count": 10,
+  "thresholds": {
+    "hinge_exact_t50": 4.235359191894531,
+    "rolling_hinge_first_crossing": 7.002526760101318
+  },
+  "verdict": "PASS_ROLLING_ENDPOINT_LATENCY4",
+  "confidence_convention": "one-sided 95% bounds at q=0.05 and q=0.95"
+}

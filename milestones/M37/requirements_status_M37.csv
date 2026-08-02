@@ -1,0 +1,9 @@
+component,status,evidence
+M37 frozen execution,complete,"5 x 50,000 calibration negatives; 10 holdouts; hashes verified"
+exact-duration control,invalid,1/10 holdouts passed; preregistered minimum was 8/10
+control implementation equivalence,verified,M36/M37 same-curve maximum score difference 2.3e-13; winning shapes identical
+full duration-bank detection,not classifiable,candidate metrics are descriptive because the control was invalid
+candidate descriptive recall,73.4580%,lower one-sided 95% 73.2895%; 0/10 holdout gates
+candidate FPR,robust descriptively,10/10 holdouts; no extreme violation
+duration identification,unreliable descriptively,2.5838% exact; 11.6100% within ±2; 0/10 identification gates
+next required test,M37R validity-first independent replication,"same 14,652-hypothesis bank; larger preregistered pooled calibration and new holdouts"

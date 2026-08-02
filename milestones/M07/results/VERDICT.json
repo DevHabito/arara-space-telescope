@@ -1,0 +1,14 @@
+{
+  "verdict": "INCONCLUSIVE",
+  "criterion_1_fpr_control": true,
+  "criterion_2_global_recall_lower_ge_0_30": false,
+  "criterion_3_six_strata_lower_ge_0_20": false,
+  "criterion_4_fifteen_batches_recall_ge_0_25": false,
+  "good_strata": 0,
+  "good_batches": 0,
+  "threshold": 8.229795455932617,
+  "target_fraction": 0.75,
+  "recall_point": 0.12925,
+  "recall_lower_95": 0.12647499999999998,
+  "recall_upper_95": 0.13205
+}

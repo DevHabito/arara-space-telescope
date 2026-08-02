@@ -1,0 +1,8 @@
+window,condition,status,evidence
+exact t50,hinge + reference-projected control,"valid; recall 77.2385%, 10/10",M34
+rolling endpoints 81..179,first crossing no later than t50,"strong fail; recall 63.0655%, 0/10 due 4/8 good strata",M34 primary
+rolling endpoints 81..179,curve-level FPR after 99-endpoint search,"robust; 10/10 holdouts, no extreme violation",M34
+rolling endpoints 81..179,first crossing no later than t50+4,pre-registered diagnostic recall 75.7625%; not a gate,M34 diagnostic
+rolling endpoint,exact t50 oracle removed with zero latency,not demonstrated,M34
+rolling endpoint,next required test,independent t50+4 latency confirmation with unchanged search,M35
+physical interpretation,four cadence latency,not yet converted to physical time,M35 prerequisite

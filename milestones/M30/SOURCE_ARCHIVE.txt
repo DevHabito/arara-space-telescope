@@ -1,0 +1,3 @@
+Source archive: ARARA_from_zero_M30_complete.zip
+SHA-256: a7a036146f6bde3eed7962eb283a5cfcde494a02259e95d03d888e0eaba6680a
+Archive size: 3146434 bytes
