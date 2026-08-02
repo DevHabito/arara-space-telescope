@@ -1,6 +1,7 @@
 # ARARA Space Telescope
 
-Historical computational research archive for the ARARA From Zero program.
+Historical computational research archive for the ARARA Space Telescope research
+program.
 
 This repository preserves source code, tests, preregistrations, manifests, and
 research notes from reconstruction v0.1 through milestone M38B. Its purpose is
