@@ -1,0 +1,16 @@
+{
+  "experiment_id": "ARARA-M38B-R",
+  "stage": "design_only",
+  "source_protocol_version": "38B.0",
+  "source_grid_verdict": "PASS_M38A_LATENT_GRID_ELIGIBLE_K5",
+  "archived_source_commit": "840ac58cb9be1b5e99726bfdd45549ef0a7f5ae7",
+  "proposed_seed_roots": {
+    "calibration": 2026102101,
+    "holdouts": 2026102102,
+    "aggregate_bootstrap": 2026102103,
+    "paired_bootstrap": 2026102104
+  },
+  "sampling_policy": "unchanged historical M38B gates and complete sample counts",
+  "execution_permission": "not_authorized",
+  "note": "Roots proposed prospectively before any M38B-R simulation. This file is not an executable preregistration or a holdout result."
+}
