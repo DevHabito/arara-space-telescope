@@ -83,7 +83,6 @@ class RecoveryAuditTests(unittest.TestCase):
 
     def test_missing_results_remain_blocked(self):
         with tempfile.TemporaryDirectory() as directory:
-            result = audit(Path(directory)) if False else None
             package = self.fixture(Path(directory))
             result = audit(Path(directory))
             self.assertEqual(result["status"], "NO_OPERATIONAL_VERDICT")
