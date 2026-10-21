@@ -42,6 +42,8 @@ def score_projected(
         raise ValueError("Projected-score inputs must be finite")
 
     reference_energy = np.einsum("ces,ces->ce", reference, reference)
+    if not np.all(np.isfinite(reference_energy)):
+        raise ValueError("Nonfinite reference energy during projection")
     reference_valid = reference_energy > ENERGY_FLOOR
     safe_reference_energy = np.where(reference_valid, reference_energy, 1.0)
 
@@ -65,6 +67,8 @@ def score_projected(
     projected_energy = np.einsum(
         "ches,ches->che", template_orthogonal, template_orthogonal
     )
+    if not (np.all(np.isfinite(original_energy)) and np.all(np.isfinite(projected_energy))):
+        raise ValueError("Nonfinite template energy during projection")
     template_valid = projected_energy > ENERGY_FLOOR
     score_denominator = np.sqrt(np.where(template_valid, projected_energy, 1.0))
     numerator = np.einsum(
@@ -76,6 +80,9 @@ def score_projected(
     retention = np.where(
         original_energy > ENERGY_FLOOR, projected_energy / safe_original, 0.0
     )
+
+    if not (np.all(np.isfinite(score)) and np.all(np.isfinite(retention))):
+        raise ValueError("Nonfinite score or retention during projection")
 
     return score, {
         "energy_retention": np.clip(retention, 0.0, 1.0),
