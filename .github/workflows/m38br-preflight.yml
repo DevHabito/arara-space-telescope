@@ -1,0 +1,22 @@
+name: m38br-preflight
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  immutable-source-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Negative and regression tests
+        run: python -m unittest discover -s tests -p 'test_m38br_preflight.py' -v
+      - name: Read-only archive and design audit
+        run: python scripts/m38br_preflight.py
