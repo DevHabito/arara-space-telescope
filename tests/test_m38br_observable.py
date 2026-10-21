@@ -102,6 +102,46 @@ class ObservableCandidateTests(unittest.TestCase):
         self.assertEqual(result["grid_score_grid"].shape, (2, 3))
         self.assertTrue(np.all(np.isfinite(result["grid_score_grid"])))
 
+    def test_observed_preprocessing_is_invariant_to_raw_truth_argument(self):
+        rng = np.random.default_rng(912)
+        observed_stars = rng.normal(size=(2, 9, 180))
+        zero_truth = np.zeros((2, 180))
+        alternate_truth = rng.normal(size=(2, 180))
+        data_cfg = archived.m2.Config()
+        preprocess = archived.m32.m30.m29.sbw_with_reference_nuisance
+
+        baseline = preprocess(observed_stars, zero_truth, data_cfg)
+        altered = preprocess(observed_stars.copy(), alternate_truth, data_cfg)
+
+        # processed_signal is an explicit diagnostic and is not consumed by
+        # this candidate. The three operational outputs must be unchanged.
+        np.testing.assert_array_equal(baseline[0], altered[0])
+        np.testing.assert_array_equal(baseline[2], altered[2])
+        for name in baseline[3]:
+            np.testing.assert_array_equal(baseline[3][name], altered[3][name])
+        self.assertFalse(np.array_equal(baseline[1], altered[1]))
+
+    def test_future_sample_changes_cannot_modify_earlier_candidate_scores(self):
+        cfg = archived.Config(endpoint_start=81, endpoint_stop=83)
+        rng = np.random.default_rng(913)
+        residual = rng.normal(size=(2, 180))
+        reference = rng.normal(size=(2, 180))
+        params = {"residual_phi": np.array([0.2, 0.5])}
+
+        baseline = prototype.score_observation_only(residual, reference, params, cfg)
+        modified = residual.copy()
+        modified[:, 84:] += 100.0
+        after_future_change = prototype.score_observation_only(
+            modified, reference, params, cfg
+        )
+        np.testing.assert_array_equal(
+            baseline["grid_score_grid"], after_future_change["grid_score_grid"]
+        )
+        np.testing.assert_array_equal(
+            baseline["estimated_onset_grid"],
+            after_future_change["estimated_onset_grid"],
+        )
+
     def test_fails_closed_on_nan_input(self):
         cfg, residual, reference, params, _, _ = fixture()
         residual[0, 0] = np.nan
