@@ -1,2 +1,3 @@
 import AraraFormal.Protocol
 import AraraFormal.OracleBoundary
+import AraraFormal.ObservationOnly
