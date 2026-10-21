@@ -1,0 +1,21 @@
+name: m38br-observation-only
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  candidate-numerical-regressions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - name: Differential and adversarial prototype tests
+        run: python -m unittest discover -s tests -p 'test_m38br_observable.py' -v
