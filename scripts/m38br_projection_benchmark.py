@@ -51,6 +51,55 @@ def main() -> int:
     if not np.allclose(expected, actual, rtol=1e-10, atol=1e-10):
         raise AssertionError("Well-conditioned benchmark fixture disagrees")
 
+
+    # Explicit diagnostic: nearly parallel template with an exact real-valued
+    # target score sqrt(8/7); this is never an astronomical observation.
+    ill_target = np.array([[[1., -1., 1., -1., 1., -1., 1., -1.]]])
+    ill_reference = np.ones((1, 1, 8))
+    ill_template = ill_reference[:, None, :, :].copy()
+    ill_template[0, 0, 0, 0] += 1.2e-6
+    old_ill, _ = original(ill_target, ill_template, ill_reference)
+    new_ill, _ = new(ill_target, ill_template, ill_reference)
+    analytic_score = float(np.sqrt(8.0 / 7.0))
+
+    # Full endpoint/shape/duration/grid mechanics on one unlabeled curve.
+    # This is a resource benchmark, not a valid synthetic negative or positive.
+    full_cfg = observable_candidate.archived.Config()
+    full_target = rng.normal(size=(1, 180))
+    full_reference = rng.normal(size=(1, 180))
+    full_params = {"residual_phi": np.array([0.3])}
+    full_candidate = observable_candidate.score_observation_only
+    from unittest.mock import patch
+
+    def run_independent_bank():
+        with patch.object(
+            observable_candidate.archived.m37,
+            "projected_scores_hypotheses",
+            side_effect=score_projected,
+        ):
+            return full_candidate(
+                full_target, full_reference, full_params, full_cfg
+            )
+
+    def run_archived_bank():
+        return full_candidate(
+            full_target, full_reference, full_params, full_cfg
+        )
+
+    def single_run(function):
+        tracemalloc.start()
+        started = perf_counter()
+        scores = function()["grid_score_grid"]
+        elapsed = perf_counter() - started
+        _, peak = tracemalloc.get_traced_memory()
+        tracemalloc.stop()
+        return scores, {"wall_seconds": elapsed, "python_traced_peak_bytes": peak}
+
+    old_full, old_full_metrics = single_run(run_archived_bank)
+    new_full, new_full_metrics = single_run(run_independent_bank)
+    if not np.allclose(old_full, new_full, rtol=1e-9, atol=1e-9):
+        raise AssertionError("Unlabeled full-bank scores differ unexpectedly")
+
     recorded = {
         "scope": "unlabeled numerical microbenchmark only",
         "git_sha": os.environ.get("GITHUB_SHA", "local-untracked"),
@@ -59,6 +108,15 @@ def main() -> int:
         "platform": platform.platform(),
         "fixture_shape": list(templates.shape),
         "max_absolute_score_difference": float(np.max(np.abs(actual - expected))),
+        "near_parallel_analytic_score": analytic_score,
+        "near_parallel_archived_score": float(old_ill[0, 0, 0]),
+        "near_parallel_independent_score": float(new_ill[0, 0, 0]),
+        "near_parallel_archived_absolute_error": float(abs(old_ill[0, 0, 0] - analytic_score)),
+        "near_parallel_independent_absolute_error": float(abs(new_ill[0, 0, 0] - analytic_score)),
+        "full_candidate_fixture_shape": list(full_target.shape),
+        "full_candidate_archived_projector": old_full_metrics,
+        "full_candidate_independent_projector": new_full_metrics,
+        "full_candidate_score_max_abs_difference": float(np.max(np.abs(old_full - new_full))),
         "archived_energy_formula": benchmark(original, target, templates, reference),
         "independent_vector_projection": benchmark(new, target, templates, reference),
         "linux_process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,

@@ -40,3 +40,9 @@ The observation-only candidate and independent projector remain uncalibrated. A 
 ## References
 
 Classical orthogonal projection, Euclidean inner product, Gram–Schmidt orthogonalization, and conditioning analysis are established numerical linear algebra. See Golub and Van Loan, *Matrix Computations* (4th ed., Johns Hopkins University Press, 2013), and Higham, *Accuracy and Stability of Numerical Algorithms* (2nd ed., SIAM, 2002). No claim is made that these methods originated in ARARA.
+
+## Analytic near-parallel witness and full-bank resource diagnostic
+
+For `r=(1,1,1,1,1,1,1,1)`, `y=(1,-1,1,-1,1,-1,1,-1)`, and `t=r+1.2e-6*(1,0,0,0,0,0,0,0)`, the exact real-valued normalized projected score is `sqrt(8/7)`. The new test checks that the explicit projection implementation reproduces this analytic value (with tolerance), and the runner stores both the archived and independent results and their respective absolute errors. This evaluates **numerical precision**, not signal detection.
+
+The benchmark also runs the uncalibrated observation-only candidate across all 99 nominal endpoints for a **single, arbitrarily generated unlabelled curve** using each projector in turn. It records elapsed seconds and Python-traced peak allocations, and compares their score grids. This is an engineering fixture only: neither calibration sample sizes nor model-derived positives/negatives are run; no FPR, recall, PPV, thresholds, or holdouts are produced. The measurements should not be scaled linearly into a mission or a million-curve budget.

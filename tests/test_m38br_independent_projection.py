@@ -135,6 +135,24 @@ class IndependentProjectionTests(unittest.TestCase):
         # declaring the historically calculated score scientifically invalid.
         self.assertEqual(new.shape, old.shape)
 
+    def test_near_parallel_projection_matches_analytic_geometry(self):
+        # For r=ones, y alternating +/-1, and t=r+epsilon*e_1,
+        # exact real arithmetic yields score sqrt(8/7) for epsilon>0.
+        # This fixture is ill-conditioned but still above the energy gate.
+        residual = np.array([[[1., -1., 1., -1., 1., -1., 1., -1.]]])
+        reference = np.ones((1, 1, 8))
+        template = reference[:, None, :, :].copy()
+        template[0, 0, 0, 0] += 1.2e-6
+        independent_score, diagnostic = score_projected(
+            residual, template, reference
+        )
+        self.assertFalse(bool(diagnostic["template_degenerate"][0, 0, 0]))
+        self.assertAlmostEqual(
+            float(independent_score[0, 0, 0]),
+            float(np.sqrt(8.0 / 7.0)),
+            delta=1e-9,
+        )
+
     def test_full_candidate_using_independent_projector_matches_stable_fixture(self):
         cfg = candidate.archived.Config(endpoint_start=81, endpoint_stop=83)
         rng = np.random.default_rng(412)
