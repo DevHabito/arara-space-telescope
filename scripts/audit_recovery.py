@@ -53,6 +53,9 @@ def audit(root: Path = REPOSITORY_ROOT) -> dict[str, object]:
     # The four shapes are specified in the original M38B preregistration.
     control_count = endpoints * 4 * durations
     candidate_count = control_count * latent_points
+    # The linear shape does not depend on u, so the implementation evaluates
+    # its duration templates once. The three nonlinear shapes use all u values.
+    candidate_evaluations = endpoints * durations * (1 + 3 * latent_points)
     if (control_count, candidate_count) != (
         spec["control_hypothesis_count"], spec["candidate_hypothesis_count"]
     ):
@@ -106,6 +109,7 @@ def audit(root: Path = REPOSITORY_ROOT) -> dict[str, object]:
         "scope": "archived M38B recovery; structural checks only",
         "control_hypotheses": control_count,
         "candidate_hypotheses": candidate_count,
+        "candidate_score_evaluations_per_curve": candidate_evaluations,
         "original_calibration_seed": spec["calibration_seed"],
         "recovered_calibration_seed": recovered_seed,
         "unprotected_executable_files": unprotected,

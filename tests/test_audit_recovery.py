@@ -90,6 +90,7 @@ class RecoveryAuditTests(unittest.TestCase):
             self.assertIn("UNCOVERED_EXECUTABLE_SOURCES", result["findings"])
             self.assertIn("ABSOLUTE_EXECUTION_PATH", result["findings"])
             self.assertEqual(result["candidate_hypotheses"], 73_260)
+            self.assertEqual(result["candidate_score_evaluations_per_curve"], 58_608)
             self.assertEqual(len(result["missing_holdouts"]), 10)
 
     def test_changed_source_is_integrity_failure(self):

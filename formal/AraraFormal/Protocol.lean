@@ -18,6 +18,19 @@ theorem frozenControlCount : hypothesisCount 99 4 37 1 = 14652 := by
 theorem frozenCandidateCount : hypothesisCount 99 4 37 5 = 73260 := by
   decide
 
+/-! The linear shape is independent of u in the source implementation.
+The nonlinear power-law, exponential and logistic shapes use five u values.
+This counts template score evaluations, not necessarily distinct statistics. -/
+def candidateEvaluations (endpoints durations latentValues : Nat) : Nat :=
+  endpoints * durations * (1 + 3 * latentValues)
+
+theorem evaluatedCandidateCount : candidateEvaluations 99 37 5 = 58608 := by
+  decide
+
+theorem nominalSlotsExceedEvaluations :
+    candidateEvaluations 99 37 5 < hypothesisCount 99 4 37 5 := by
+  decide
+
 theorem singleLatentCount (endpoints shapes durations : Nat) :
     hypothesisCount endpoints shapes durations 1 =
       endpoints * shapes * durations := by

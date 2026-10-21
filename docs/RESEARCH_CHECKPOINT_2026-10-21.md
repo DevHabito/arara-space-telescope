@@ -22,3 +22,7 @@ The Lean 4 module proposes proofs only of arithmetic cardinalities, control-veto
 ## Next scientific gate
 
 Prepare a distinct prospective M38B-R preregistration (not a retroactive edit) with complete dependency hashes, reproducible environment, source-independent controls, exact stop/failure gates, and immutable seed plan. Calibrate negatives before opening any holdout. Preserve every unsuccessful outcome. Do not claim operational astronomy until independent real-data validation and false-alert estimates in target-hour/field-hour units.
+
+## Nominal templates versus actual candidate evaluations
+
+The M38B preregistration declares 99 endpoints × 4 shapes × 37 durations × 5 latent values = 73,260 nominal grid slots. Inspection of score_latent_grid_bank shows that the linear shape is independent of the latent parameter and is evaluated only once per duration; the power-law, exponential and logistic shapes each use all five latent values. Thus the candidate's implemented per-curve template score evaluations are 99 × 37 × (1 + 3 × 5) = 58,608 (not counting the separately scored exact-latent control). These are evaluation counts, not a proof that every resulting statistic is distinct. Do not alter the frozen protocol or infer FPR from nominal template counts; empirical calibration already uses the bank's maximum. This distinction matters for computational-resource estimates and accurate reporting.

@@ -19,3 +19,5 @@ Terms describe either standard methods or ARARA-specific choices. A definition i
 | Recovery | Reconstitution of a partially lost experiment | ARARA provenance; changed seeds require a new identity |
 | Formal verification | Kernel checking of a precisely stated mathematical proposition | Formal methods; does not independently verify physical assumptions |
 | Injection-recovery | Inserting known synthetic signals into observational data and testing recovery | Established astronomical validation approach; not completed on real data for ARARA |
+
+**Nominal hypothesis slots vs computed template evaluations:** A nominal Cartesian-product count may include values ignored by an invariant template family. In M38B the linear family is independent of u, so 73,260 nominal slots correspond to 58,608 computed candidate template scores per curve. These counts do not by themselves determine the effective multiple-testing penalty.
