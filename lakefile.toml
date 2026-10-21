@@ -1,0 +1,7 @@
+name = "arara_formal"
+version = "0.1.0"
+defaultTargets = ["AraraFormal"]
+
+[[lean_lib]]
+name = "AraraFormal"
+srcDir = "formal"
