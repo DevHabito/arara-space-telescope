@@ -34,6 +34,17 @@ The proposed random roots in `PROTOCOL_DRAFT.json` are not yet authorized for ex
 
 The source-independent onset reference, observation-only baseline processor, historical-geometry checker, and Lean 4 causality witnesses are recorded under [the research index](../../docs/RESEARCH_INDEX.md). Read the [research notebook](../../docs/RESEARCH_NOTEBOOK_2026-11-03.md) alongside the [failure register](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md). These are pre-outcome software and mathematical audits only. They do not authorize calibration, thresholds, holdouts, physical astronomy claims, or retroactive changes to this draft protocol.
 
+## Independent full-bank numerical reference — P0.3
+
+The new [complete-bank audit](INDEPENDENT_BANK_AUDIT.md) and
+[precommitted comparison policy](INDEPENDENT_BANK_COMPARISON_POLICY.md)
+document the source-independent diagnostic scorer, its 99-endpoint
+unlabelled fixture, numerical equivalence bounds and the explicit divergence
+when the hinge onset is undefined. A first implementation error was preserved
+as [F14](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md) and subsequently
+corrected in CI. This does not freeze an experiment runner or authorize
+calibration or holdouts. Do not reuse any historical thresholds.
+
 ## Usage
 
 ```bash

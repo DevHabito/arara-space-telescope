@@ -40,6 +40,52 @@ The audit was made on branch `audit/m38br-independent-onset-20261103`, tracked b
 
 **Formal mathematics.** Lean 4 checked the exact-integer or discrete claims currently expressed in the library: hinge eligibility, a fixed-coefficient one-step AR(1) prefix invariant, and a counterexample when the coefficient changes. I do not infer a proof about the NumPy implementation, IEEE floating-point arithmetic, or physical light curves from those theorems.
 
+### P0.3 — independent full-bank diagnostic (3 November 2026)
+
+I fixed the numerical comparison rules *before* implementing the second bank.
+The criteria are in [INDEPENDENT_BANK_COMPARISON_POLICY.md](../experiments/M38B-R/INDEPENDENT_BANK_COMPARISON_POLICY.md), committed separately at `8c621f137f87882c614478dfbbcae7cf0a64426a`.
+I set a stable-fixture maximum-score comparison of `rtol=atol=1e-9`,
+an index agreement check only for leading-score margins above `1e-7`,
+and special treatment for undefined onset and near-parallel projections.
+I did not change these criteria in response to later test results.
+
+I then implemented [independent_bank.py](../experiments/M38B-R/independent_bank.py).
+It independently generates linear, power-law, exponential and logistic shapes;
+AR(1)-filters nine raw template samples into eight confirmation samples;
+uses the direct-sum onset estimator and explicit reference projection; and
+selects the winning hypothesis in the specified tie order. It imports no
+historical milestone scorer or simulator oracle. The complete 99-endpoint
+diagnostic fixture covers 58,608 computed template combinations per curve,
+without invoking a scientific positive/negative generator, calibration or
+holdout. The independent observation-level entrypoint takes star observations
+only, fits the needed preprocessing parameters, and returns an **uncalibrated**
+score and diagnostics.
+
+The first [research-audit run 41717127226](https://github.com/DevHabito/arara-space-telescope/actions/runs/41717127226)
+failed two of the nine new P0.3 tests. I had written a condition that
+mistakenly classified the `-inf` objective of an undefined onset as a
+malformed number. The seven other tests passed, including the stable
+full-grid comparison. This was my implementation error, not a failed
+astronomical detection hypothesis.
+
+I corrected only the faulty guard in commit
+`ee439a1992175624652ee8228690e0f0d2f25f37`; the original tests and
+frozen numerical criteria remained unchanged. The subsequent
+[research-audit run 41717275635](https://github.com/DevHabito/arara-space-telescope/actions/runs/41717275635)
+reported **81/81 passing Python audit tests**, a successful Lean 4 build
+and matching manifest hashes. It retains the archived M38B
+`NO_OPERATIONAL_VERDICT`. These numerical fixtures confirm only specific
+software properties; they do not establish astronomical sensitivity.
+
+The new scorer *deliberately differs* from the earlier observation-only
+prototype when no positive hinge objective exists: it sets the score to
+`-inf` and the parameter labels to `-1`. The earlier prototype can still
+score a template at a first-candidate default. That difference is explicit
+and remains a design choice requiring a prospective policy. Neither
+implementation has a calibrated threshold. See
+[P0.3 audit](../experiments/M38B-R/INDEPENDENT_BANK_AUDIT.md)
+and [failure entries F14–F15](FAILURE_AND_LIMITATIONS_REGISTER.md).
+
 ## What did not work
 
 I am keeping the failed checks in a separate [failure and limitation register](FAILURE_AND_LIMITATIONS_REGISTER.md). They include a Lean syntax failure involving the reserved identifier `at`, an initial overflow test that overflowed **before** entering the function under test, the unresolved degeneracy of an onset statistic, the existing oracle leakage in the historical M38B scorer, and numerical sensitivity of a near-parallel projection.
@@ -54,14 +100,14 @@ During this same documentation pass, I made a change that the archive's checksum
 
 - M38B has no completed, source-verified operational calibration and holdout verdict in this archive.
 - M38B-R has **not** run calibration, holdouts or a prospective detection-power study. Its `PROTOCOL_DRAFT.json` says `execution_permission: not_authorized`.
-- There is no independently reconstructed full-bank, end-to-end causal detector. The observation-only prototype still imports archived estimation/projection components.
+- A source-independent, complete-bank **diagnostic** now exists and has passed fixed-fixture comparisons. There is still no prospectively frozen production runner, general floating-point proof, instrument observation pipeline, or calibrated end-to-end detector; the earlier observation-only prototype continues to import archival components.
 - The full prototype configuration, executable runner, statistical stopping rules, seeds, exact environment and artifact verification are not yet jointly frozen for a prospective run.
 - No real-sky false-alert rate, completeness, precision, photometric noise budget, telescope pointing response, read noise, dark noise, detector hardware or flight readiness is established.
 - Passing software tests does not establish the scientific validity of the simulator's distributional assumptions.
 
 ## The work order I will follow
 
-1. **P0.3 — source-independent complete-bank audit.** Rebuild template generation, filtering, projection and tie-breaking independently. Fix numerical acceptance criteria *before* examining discrepancy outputs. Compare ordinary and adversarial unlabelled fixtures.
+1. **P0.3 implementation checked on unlabelled fixtures; further adversarial review remains.** I reconstructed the bank, filtering, projection and tie-breaking independently and compared both shortened and full 99-endpoint numerical fixtures. Next I must audit ill-conditioned cases, tie transitions, independent parameter provenance and IEEE error behavior without changing the already recorded criteria.
 2. **Numerical policy.** State exact IEEE assumptions, conditioning thresholds and failure classifications. Treat near-parallel templates, undefined onset objectives, constant baselines and extreme finite magnitudes explicitly.
 3. **Provenance closure.** Trace raw measurement identity, baseline quality, parameter estimation, configuration, negative/positive generator separation and every statistic reaching the final decision.
 4. **Prospective freeze.** Freeze the new runner, environment, source dependencies, seeds, sample counts, acceptance gates and independent verification scripts in a distinct M38B-R preregistration. Keep failed attempts visible.
