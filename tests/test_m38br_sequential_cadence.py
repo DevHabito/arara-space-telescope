@@ -137,6 +137,24 @@ class SequentialCadenceTests(unittest.TestCase):
                 self.assertTrue(ledger.blocked)
                 self.assertEqual(ledger.count, 1)
 
+    def test_ragged_frame_rejection_blocks_segment(self):
+        # A ragged sequence can raise from NumPy conversion itself.
+        # The precommitted contract requires permanent rejection, not
+        # an unblocked ledger left behind by an unexpected exception.
+        ledger = self.new_ledger()
+        ragged = [[1.0, 2.0], [3.0]]
+        with self.assertRaises(ValueError):
+            ledger.append(
+                cadence_index=0, timestamp_seconds=1000.0, frame=ragged
+            )
+        self.assertTrue(ledger.blocked)
+        self.assertEqual(ledger.count, 0)
+        with self.assertRaisesRegex(ValueError, "blocked"):
+            ledger.append(
+                cadence_index=0, timestamp_seconds=1000.0,
+                frame=self.stars[:, :, 0],
+            )
+
     def test_frame_and_snapshot_are_owned_copies(self):
         ledger = self.new_ledger()
         first = self.stars[:, :, 0].copy()
