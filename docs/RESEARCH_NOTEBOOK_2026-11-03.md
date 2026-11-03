@@ -77,6 +77,14 @@ and matching manifest hashes. It retains the archived M38B
 `NO_OPERATIONAL_VERDICT`. These numerical fixtures confirm only specific
 software properties; they do not establish astronomical sensitivity.
 
+There is also an important limitation in the word *causal*: while finite
+future perturbations do not change earlier scores, the current **offline**
+input validation checks all 180 samples before returning. A later missing
+or nonfinite measurement therefore rejects even an unchanged early prefix.
+I added a negative regression for this behavior, F16. Strict online
+causality, streaming quality control and handling of missing data are not
+yet established.
+
 The new scorer *deliberately differs* from the earlier observation-only
 prototype when no positive hinge objective exists: it sets the score to
 `-inf` and the parameter labels to `-1`. The earlier prototype can still

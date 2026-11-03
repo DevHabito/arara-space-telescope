@@ -137,6 +137,30 @@ class IndependentBankAuditTests(unittest.TestCase):
         for name in first:
             np.testing.assert_array_equal(first[name], later[name])
 
+    def test_future_nonfinite_samples_block_offline_validation(self):
+        # This documents a remaining *online* causality limitation. With a
+        # fixed, valid past, changing an unseen future sample to NaN makes
+        # the whole-array preflight reject the observation.
+        rng = np.random.default_rng(20261106)
+        stars = rng.normal(size=(1, 9, 180))
+        observed = independent.score_independent_observed_stars(
+            stars, self.config
+        )
+        self.assertEqual(observed["grid_score_grid"].shape, (1, 3))
+        changed = stars.copy()
+        changed[0, 4, 130] = np.nan
+        with self.assertRaisesRegex(ValueError, "finite"):
+            independent.score_independent_observed_stars(
+                changed, self.config
+            )
+
+        residual = self.residual.copy()
+        residual[0, 130] = np.nan
+        with self.assertRaisesRegex(ValueError, "finite"):
+            independent.score_independent_bank(
+                residual, self.reference, self.phi, self.config
+            )
+
     def test_no_oracle_input_at_public_entrypoint(self):
         import inspect
         self.assertEqual(

@@ -65,6 +65,22 @@ future-only data perturbations, invalid/overflow inputs, an undefined-onset
 failure state, complete bank counts, and interface/source checks.
 No scientific detection performance was measured.
 
+## Offline input validation is not an online causal interface
+
+The independent bank and the observation-only preprocessor currently check
+that the **entire** supplied 180-cadence series is finite before producing
+early-endpoint scores. Consequently, an invalid measurement at cadence 130
+can make an otherwise unchanged early-endpoint analysis reject its input.
+This does **not** contradict the finite-future perturbation invariance:
+the earlier test restricts both inputs to valid finite arrays.
+
+A deliberately negative unit test,
+`test_future_nonfinite_samples_block_offline_validation`, records this
+source-level boundary. Strict streaming causality would require a prefix-only
+acceptance contract, an observational quality-mask policy and a frozen rule
+for missing data; none is established here. Do not call this a live streaming
+pipeline or infer a physical onset from a rejected series.
+
 ## Verification required
 
 Run the P0.3 unit tests in cloud CI and inspect their actual logs, including
