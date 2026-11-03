@@ -99,6 +99,11 @@ class KeyedCustodyAuditTests(unittest.TestCase):
                 )
                 for field in expected:
                     np.testing.assert_array_equal(output[field], expected[field])
+                    # Numeric exact equality alone can hide -0/+0 differences.
+                    self.assertEqual(
+                        np.asarray(output[field]).tobytes(order="C"),
+                        np.asarray(expected[field]).tobytes(order="C"),
+                    )
         self.assertEqual(verifier.count, 180)
         self.assertEqual(len(verifier.packets), 180)
         self.assertFalse(verifier.blocked)
@@ -260,6 +265,24 @@ class KeyedCustodyAuditTests(unittest.TestCase):
             verifier._packets[0], start_seconds=999.0
         )
         with self.assertRaisesRegex(ValueError, "MAC mismatch"):
+            verifier.verify_custody()
+        self.assertTrue(verifier.blocked)
+        with self.assertRaisesRegex(ValueError, "blocked"):
+            verifier.score_latest()
+
+    def test_validly_retagged_invalid_stored_bytes_block_custody(self):
+        # White-box adversary with the public fixture key changes the
+        # persisted packet representation into an undecodable byte string.
+        # The verifier must fail closed, not merely let NumPy throw.
+        verifier = self.verifier()
+        verifier.append(self.signed(0))
+        invalid = replace(
+            verifier.packets[0], raw_frame_bytes=b"not-binary64"
+        )
+        verifier._packets[0] = seal_software_test_packet(
+            invalid, public_fixture_key=PUBLIC_FIXTURE_KEY
+        )
+        with self.assertRaises(ValueError):
             verifier.verify_custody()
         self.assertTrue(verifier.blocked)
         with self.assertRaisesRegex(ValueError, "blocked"):
