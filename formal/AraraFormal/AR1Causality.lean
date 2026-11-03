@@ -5,7 +5,7 @@ import AraraFormal.OnsetEligibility
 
 A fixed AR coefficient, current sample, and immediately preceding sample
 determine a filtered value. Equal observational prefixes therefore produce
-the same filter result endpoint the endpoint. The coefficient is assumed equal.
+the same filter result at the endpoint. The coefficient is assumed equal.
 
 This abstract exact-integer theorem does NOT prove that NumPy computes this
 formula without rounding error, that an upstream fitted coefficient is
