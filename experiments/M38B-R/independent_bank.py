@@ -125,7 +125,10 @@ def score_independent_bank(
         first_candidate=cfg.first_candidate,
         last_candidate=cfg.last_candidate,
     )
-    if np.isnan(objective).any() or np.isposinf(-objective).any():
+    # Negative infinity means no admissible positive onset objective.
+    # It is a defined failure state, not a malformed numerical result.
+    # Positive infinity can arise from an exactly unit correlation.
+    if np.isnan(objective).any():
         raise ValueError("Invalid onset objective")
     alignment_defined = ~np.isneginf(objective)
     n = target.shape[0]
