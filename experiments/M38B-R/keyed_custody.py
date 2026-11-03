@@ -239,7 +239,17 @@ class KeyedCustodyVerifier:
                 self._reject("Stored signed packet MAC is malformed")
             if not hmac.compare_digest(expected, bytes.fromhex(packet.mac_hex)):
                 self._reject("Stored signed packet MAC mismatch")
-            signed = np.frombuffer(packet.raw_frame_bytes, dtype="<f8")
+            # A retagged malformed stored packet must still poison the
+            # session; NumPy's frombuffer can raise before an array exists.
+            if (
+                type(packet.raw_frame_bytes) is not bytes
+                or len(packet.raw_frame_bytes) != self._shape[0] * self._shape[1] * 8
+            ):
+                self._reject("Stored signed packet byte length mismatch")
+            try:
+                signed = np.frombuffer(packet.raw_frame_bytes, dtype="<f8")
+            except (TypeError, ValueError, BufferError):
+                self._reject("Stored signed packet cannot be decoded")
             if signed.size != self._shape[0] * self._shape[1]:
                 self._reject("Stored signed packet length mismatch")
             source_bytes = np.array(
