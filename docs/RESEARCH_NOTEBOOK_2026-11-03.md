@@ -174,6 +174,44 @@ clock synchronization or recovery from missing past observations.
 These boundaries remain open in F16 and F19. See the full
 [P0.5 audit](../experiments/M38B-R/P05_PREFIX_AUDIT.md).
 
+### P0.6 — declared cadence order, missing-past policy and an adversarial failure
+
+I wrote [the cadence policy](../experiments/M38B-R/P06_SEQUENTIAL_CADENCE_POLICY.md)
+at commit `6815ce4dc937f0ac7360db658113c9e688ad8465`
+before implementing a sequential ledger. The new
+[`sequential_cadence.py`](../experiments/M38B-R/sequential_cadence.py)
+takes explicit zero-based consecutive cadence numbers and declared
+monotonically increasing time labels, copies finite measured frames,
+and scores only the latest prefix through P0.5. It permanently blocks
+a segment on a malformed or missing frame instead of filling data
+that were never observed.
+
+The first [research-audit run 41723252836](https://github.com/DevHabito/arara-space-telescope/actions/runs/41723252836)
+passed 114 tests, including twelve new P0.6 tests. Scoring at cadences
+81, 83 and 179 matched the direct prefix computation exactly in
+those deterministic unlabelled fixtures. The data contain no
+astronomical detection labels.
+
+I added a separate adversarial case for an irregular nested input
+whose NumPy conversion fails before normal shape checking. That test
+caught a real defect: [run 41723477963](https://github.com/DevHabito/arara-space-telescope/actions/runs/41723477963)
+recorded **one failure among 115 tests** because the input raised
+`ValueError` but left the ledger unblocked. I kept the test and fixed
+the conversion boundary without weakening the earlier contract.
+The [corrected run 41723628328](https://github.com/DevHabito/arara-space-telescope/actions/runs/41723628328)
+reported **115 passing audit tests**, Lean 4 compilation and intact
+historical hashes. This mistake and its correction are F20 in the
+[failure register](FAILURE_AND_LIMITATIONS_REGISTER.md).
+
+A declared timestamp is still just metadata from the caller. It is
+not authenticated UTC, exposure time, observatory telemetry or
+proof that a camera really captured a sample when the number says
+it did. That unsolved provenance question is F21. The ledger has no
+instrument source, transport, retries, persistence or physical
+timing-error budget. This is a stronger input-order audit, not a
+space telescope running in real time. See the full
+[P0.6 engineering report](../experiments/M38B-R/P06_SEQUENTIAL_CADENCE_AUDIT.md).
+
 ## What did not work
 
 I am keeping the failed checks in a separate [failure and limitation register](FAILURE_AND_LIMITATIONS_REGISTER.md). They include a Lean syntax failure involving the reserved identifier `at`, an initial overflow test that overflowed **before** entering the function under test, the unresolved degeneracy of an onset statistic, the existing oracle leakage in the historical M38B scorer, and numerical sensitivity of a near-parallel projection.
@@ -197,7 +235,7 @@ During this same documentation pass, I made a change that the archive's checksum
 
 1. **P0.3 implementation checked on unlabelled fixtures; further adversarial review remains.** I reconstructed the bank, filtering, projection and tie-breaking independently and compared both shortened and full 99-endpoint numerical fixtures. Next I must audit ill-conditioned cases, tie transitions, independent parameter provenance and IEEE error behavior without changing the already recorded criteria.
 2. **P0.4 numerical diagnosis completed for declared fixtures; broader policy remains open.** I now have an analytic near-parallel counterexample, a scale-gate test and a read-only missing-position classifier. I have not established global IEEE error bounds, the physical meaning of the fixed cutoff, or a missing-data strategy.
-3. **P0.5 prefix boundary checked for static arrays; provenance and streaming remain open.** The new API rejects data beyond the endpoint and reproduces the corresponding batch diagnostics, but needs a separate missing-past-data contract, acquisition model, performance bounds and source-to-instrument audit before any real-time claims.
+3. **P0.6 declared sequence and gap handling tested; physical timing remains open.** A separate in-memory ledger now checks consecutive indices, declared time order and fail-closed missing frames, with a corrected malformed-array failure. It has no authenticated acquisition clock, transport persistence, error budget or true streaming instrument integration.
 4. **Prospective freeze.** Freeze the new runner, environment, source dependencies, seeds, sample counts, acceptance gates and independent verification scripts in a distinct M38B-R preregistration. Keep failed attempts visible.
 5. **Only after those gates:** consider authorization for calibration, then untouched holdouts, followed by genuinely independent instrument/real-data validation. No stage inherits permission from a passing software CI run.
 

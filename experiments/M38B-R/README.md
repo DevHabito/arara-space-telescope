@@ -69,6 +69,19 @@ low-level scorer remains a numerical diagnostic rather than a live
 instrument. These distinctions are recorded as [F16 and F19](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md).
 No thresholds, holdouts or calibration inputs were read.
 
+## Sequential cadence and time-label audit — P0.6
+
+I fixed the [P0.6 order and gap policy](P06_SEQUENTIAL_CADENCE_POLICY.md)
+before implementing the [sequential ledger](sequential_cadence.py).
+The [P0.6 audit report](P06_SEQUENTIAL_CADENCE_AUDIT.md) records
+the initially passing tests, a later ragged-input failure, the
+source correction and the separate successful rerun. The ledger
+rejects non-consecutive sample indices and invalid frames without
+silently filling gaps. The timestamps are **unverified metadata**;
+physical clock calibration and actual continuous hardware acquisition
+remain unresolved in [F21](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md).
+No scientific experiment, calibration, threshold or holdout was run.
+
 ## Usage
 
 ```bash
