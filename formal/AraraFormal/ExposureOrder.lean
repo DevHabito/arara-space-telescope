@@ -23,10 +23,12 @@ theorem boundedExposureBeforeImpliesNominalOrder
 
 theorem separationWithBoundsWitness :
     boundedExposureBefore 100 1 105 1 := by
-  decide
+  unfold boundedExposureBefore
+  omega
 
 theorem overlapWithBoundsIsIneligible :
     ¬ boundedExposureBefore 100 2 103 2 := by
-  decide
+  unfold boundedExposureBefore
+  omega
 
 end AraraFormal
