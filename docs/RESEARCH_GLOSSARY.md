@@ -19,7 +19,6 @@ Terms describe either standard methods or ARARA-specific choices. A definition i
 | Recovery | Reconstitution of a partially lost experiment | ARARA provenance; changed seeds require a new identity |
 | Formal verification | Kernel checking of a precisely stated mathematical proposition | Formal methods; does not independently verify physical assumptions |
 | Injection-recovery | Inserting known synthetic signals into observational data and testing recovery | Established astronomical validation approach; not completed on real data for ARARA |
-
 | Observation-only input | The scorer-facing measurement or parameter must be derived without simulator truth, labels, or information unavailable at prediction time | Audit requirement; a function signature alone does not prove this property |
 | Parameter provenance | An accounting of where fitted coefficients, thresholds, geometry, and processing constants originate | Standard scientific reproducibility concern; audited in ARARA P0.2 |
 | Fixed-observation counterfactual | Hold the observed samples unchanged while varying inaccessible simulator metadata to detect illicit dependencies | ARARA code audit method; not a physically repeated observation |
