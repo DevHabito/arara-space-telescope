@@ -24,10 +24,6 @@ astronomical detector, observatory instrument, or real transient-discovery
 pipeline. See [docs/SCIENTIFIC_STATUS.md](docs/SCIENTIFIC_STATUS.md) for the
 English status summary and claim boundaries.
 
-## Research notebook and verification record
-
-I keep the current research decisions, failed checks, cited prior work and outstanding scientific questions in the [research index](docs/RESEARCH_INDEX.md). The [3 November 2026 notebook](docs/RESEARCH_NOTEBOOK_2026-11-03.md) records fresh GitHub Actions evidence and the P0.1/P0.2 observational-provenance audit. This work is on an [unmerged draft PR](https://github.com/DevHabito/arara-space-telescope/pull/9); M38B-R is **not approved for calibration**.
-
 ## Repository Contents
 
 - `milestones/` - milestone-level source code, tests, preregistrations, results,

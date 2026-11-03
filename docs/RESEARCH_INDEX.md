@@ -19,6 +19,8 @@ I keep this page as the starting point for the current research record. The proj
 - [P0.2 protocol dataflow](../experiments/M38B-R/PROTOCOL_DATAFLOW_AUDIT.md).
 - [Open draft PR #9](https://github.com/DevHabito/arara-space-telescope/pull/9), [source-oracle issue #4](https://github.com/DevHabito/arara-space-telescope/issues/4), and [independent-scorer issue #7](https://github.com/DevHabito/arara-space-telescope/issues/7).
 
+The root `README.md` and `docs/SCIENTIFIC_STATUS.md` are covered by the historical checksum manifest. I do not insert new links into them on this audit branch: the research index is reached from [the M38B-R README](../experiments/M38B-R/README.md) and [draft PR #9](https://github.com/DevHabito/arara-space-telescope/pull/9) instead. See [F13](FAILURE_AND_LIMITATIONS_REGISTER.md) for the documented integrity-check failure and restoration.
+
 ## Archives, code verification and old context
 
 - [Historical checkpoint — 21 October 2026](RESEARCH_CHECKPOINT_2026-10-21.md).

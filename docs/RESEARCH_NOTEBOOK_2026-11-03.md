@@ -46,6 +46,10 @@ I am keeping the failed checks in a separate [failure and limitation register](F
 
 The Lean syntax error is visible in [failed research-audit run 41711129381](https://github.com/DevHabito/arara-space-telescope/actions/runs/41711129381). The corrected Lean source and corrected finite-input overflow regression were subsequently verified in the successful audit runs. I do not hide the failed run merely because the latest build is green.
 
+### Documentation integrity correction
+
+During this same documentation pass, I made a change that the archive's checksum policy does not allow: I added navigation links to the root `README.md` and `docs/SCIENTIFIC_STATUS.md`. The [research-audit run 41714898482](https://github.com/DevHabito/arara-space-telescope/actions/runs/41714898482) reported two hash mismatches. This is a legitimate integrity failure, not a defect in the scientific equations. I restored those two protected files from the unchanged `main` without editing or regenerating the source manifest. The new research pages remain accessible from this index, the M38B-R experimental README, and the draft PR. The restoration needs its own successful CI before the failure can be considered checked.
+
 ## What remains unproven
 
 - M38B has no completed, source-verified operational calibration and holdout verdict in this archive.

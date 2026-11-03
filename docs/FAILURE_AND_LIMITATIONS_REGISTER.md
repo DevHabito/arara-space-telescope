@@ -19,6 +19,8 @@
 | F11 | not-tested | Instrument-based astronomy: observed raw images, telescope calibration, photon/read/dark noise, stellar variability, pointing, mission telemetry and rates per field-hour or target-hour. | [Scientific status](SCIENTIFIC_STATUS.md). No real-world operational inference is authorized. |
 | F12 | observed-unresolved | The original archived M38B seeds differ from the recovery seeds, and the recovered freeze did not originally cover the full executable dependency graph. | [2026-10-21 checkpoint](RESEARCH_CHECKPOINT_2026-10-21.md). M38B-R must use its own prospective identity and complete freeze. |
 
+| F13 | correction-under-verification | The first documentation commit edited two files protected by the repository's historical checksum manifest: `README.md` and `docs/SCIENTIFIC_STATUS.md`. The `research-audit` job correctly failed when `verify_manifest.py` detected both mismatches. These files were restored byte-for-byte from `main` in the follow-up commit. The historical manifest and verifier were **not** rewritten to silence the failure. | [Failed research-audit run 41714898482](https://github.com/DevHabito/arara-space-telescope/actions/runs/41714898482). Recheck CI on the restoration commit before marking this corrected-and-checked. |
+
 ## Corrections I will not misrepresent
 
 The corrected Lean proof proves only its stated discrete proposition. The corrected overflow test verifies one finite-input rejection case. Neither correction fixes F01–F07 or F10–F12. The source-independent numerical references also do not mean that all upstream and downstream code is independently implemented.
