@@ -22,9 +22,11 @@ theorem hingeEligibilityEquivalent (endpoint candidate : Nat) :
   omega
 
 theorem firstFrozenEndpointAllowsCandidate70 : hingeEligible 81 70 := by
-  decide
+  unfold hingeEligible
+  omega
 
 theorem firstFrozenEndpointExcludesCandidate71 : ¬ hingeEligible 81 71 := by
-  decide
+  unfold hingeEligible
+  omega
 
 end AraraFormal
