@@ -19,5 +19,21 @@ Terms describe either standard methods or ARARA-specific choices. A definition i
 | Recovery | Reconstitution of a partially lost experiment | ARARA provenance; changed seeds require a new identity |
 | Formal verification | Kernel checking of a precisely stated mathematical proposition | Formal methods; does not independently verify physical assumptions |
 | Injection-recovery | Inserting known synthetic signals into observational data and testing recovery | Established astronomical validation approach; not completed on real data for ARARA |
+| Observation-only input | The scorer-facing measurement or parameter must be derived without simulator truth, labels, or information unavailable at prediction time | Audit requirement; a function signature alone does not prove this property |
+| Parameter provenance | An accounting of where fitted coefficients, thresholds, geometry, and processing constants originate | Standard scientific reproducibility concern; audited in ARARA P0.2 |
+| Fixed-observation counterfactual | Hold the observed samples unchanged while varying inaccessible simulator metadata to detect illicit dependencies | ARARA code audit method; not a physically repeated observation |
+| Noninterference | Changes to inputs outside an allowed dependency set do not change a specified output | Formal methods concept; numerical fixtures check restricted cases |
+| Undefined onset objective | No candidate has a finite admissible objective; an `argmax` fallback index is not an onset measurement | Identified edge case in archived M34 and independent reference |
+| Protocol geometry drift | A change in selection times, candidate bounds, endpoint grid, confirmation length or baseline from declared protocol values | Audited condition; the read-only checker does not freeze a runner |
+| Software PASS | All checks exercised by a specified runner completed without failing its assertions | Does not imply synthetic detection or astrophysical validity |
+| Declared exposure envelope | Claimed start/end of one exposure, each with a claimed absolute maximum timing error; strict separation means those claimed intervals do not overlap | P0.7 audit-specific convention; not a measured uncertainty budget |
+| Clock source label | Untrusted caller-supplied identifier for the stated time origin | P0.7 metadata; not UTC/TDB/BJD certification |
+| Chained frame checksum | SHA-256 of canonical frame bytes plus declared metadata, linked to the preceding checksum | Standard hash construction used for an ARARA P0.7 in-memory consistency audit; not a digital signature |
+| Source authentication | Independent evidence that a record originated from its asserted instrument or trusted producer | Not implemented or established for ARARA |
+| Instrument time uncertainty | Physically measured or validated error in an exposure time relative to a specified time standard | Missing real-world evidence; not supplied by a test fixture |
+| HMAC-SHA-256 | Established message authentication code built from a secret shared key and SHA-256 | RFC 2104 (1997); P0.8 uses Python's standard library, not a new cryptographic construction |
+| Key possession | Knowledge of the secret required to create a valid message MAC | Does not establish a telescope's physical identity or measurement truth |
+| Complete transcript replay | Re-use of a fully valid earlier record sequence in a fresh verifier with the same key and session binding | Observed P0.8 negative control; no cross-session persistent anti-replay registry |
+| Original sensor data | Actual preserved bytes produced by an instrument before any unverified transformation | Not available in P0.8; its frames are constructed binary64 numerical fixtures |
 
 **Nominal hypothesis slots vs computed template evaluations:** A nominal Cartesian-product count may include values ignored by an invariant template family. In M38B the linear family is independent of u, so 73,260 nominal slots correspond to 58,608 computed candidate template scores per curve. These counts do not by themselves determine the effective multiple-testing penalty.
