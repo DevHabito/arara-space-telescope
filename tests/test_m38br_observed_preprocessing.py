@@ -98,9 +98,12 @@ class ObservationProvenanceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "finite"):
             preprocess_observations(broken)
 
-    def test_nonfinite_intermediate_rejected(self):
-        extreme = self.observed * 1e308
-        with self.assertRaisesRegex(ValueError, "finite"):
+    def test_finite_observations_causing_intermediate_overflow_are_rejected(self):
+        extreme = np.zeros_like(self.observed)
+        extreme[0, 0, 0] = 1e308
+        extreme[0, 0, 1] = -1e308
+        self.assertTrue(np.all(np.isfinite(extreme)))
+        with self.assertRaisesRegex(ValueError, "Nonfinite preprocessing intermediate"):
             preprocess_observations(extreme)
 
     def test_bad_shape_and_baseline_rejected(self):
