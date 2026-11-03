@@ -1,0 +1,30 @@
+# Failure, negative evidence, and unresolved-limit register
+
+**Opened:** 3 November 2026. **Scope:** the inspected historical archive and the P0.1/P0.2 audit branch. I keep corrected engineering mistakes as historical entries rather than silently rewriting the record.
+
+**Meaning of states:** `corrected-and-checked` means the specific mistake was corrected and its relevant CI test/build passed; `observed-unresolved` means the behavior or missing evidence is established but not scientifically resolved; `not-tested` means that work has not been performed. None of these states is an astronomical detection verdict.
+
+| ID | State | What happened or what is missing | Evidence and consequence |
+| --- | --- | --- | --- |
+| F01 | observed-unresolved | Historical M38B was reconstructed without complete calibration thresholds and holdout verdicts. | [Scientific status](SCIENTIFIC_STATUS.md); [2026-10-21 checkpoint](RESEARCH_CHECKPOINT_2026-10-21.md). `NO_OPERATIONAL_VERDICT`, not PASS or FAIL. |
+| F02 | observed-unresolved | Historical `score_latent_grid_bank` creates a template-validity mask using simulated onset. Positive and negative scorers also receive oracle/virtual shape metadata. | `milestones/M38B_recovery/arara_m38b.py`, [issue #4](https://github.com/DevHabito/arara-space-telescope/issues/4). Existing historical outcomes cannot serve as unbiased observation-only performance evidence. |
+| F03 | observed-unresolved | An undefined hinge objective (all `-inf`) can yield candidate 70 by `argmax`, which is a selection convention rather than an onset measurement. | [Independent onset audit](../experiments/M38B-R/INDEPENDENT_ONSET_AUDIT.md) and its zero-signal unit test. |
+| F04 | observed-unresolved | Subtracting near-equal squared projection terms can lose numerical precision for near-parallel template/reference vectors. | [Independent projection audit](../experiments/M38B-R/INDEPENDENT_PROJECTION_AUDIT.md). A constructed analytic witness is not a detection-rate result. |
+| F05 | observed-unresolved | The low-level observation-only scorer accepts externally supplied `residual_phi`. A change to that input changed the actual template arrays on a fixed fixture. | `tests/test_m38br_protocol_dataflow.py`. Source control of `residual_phi` must be verified at the actual measurement boundary. |
+| F06 | observed-unresolved | The low-level scorer accepts shortened endpoint grids. Such fixtures can be useful for diagnostics but do not reproduce the complete historically specified hypothesis search. | `provenance_contract.py` and `test_low_level_candidate_accepts_partial_endpoint_grid`. A future runner must reject unapproved geometry changes. |
+| F07 | not-tested | Complete source-independent end-to-end bank, independent runtime/freeze, fully frozen M38B-R gates, calibration and untouched holdouts. | [M38B-R README](../experiments/M38B-R/README.md) and [issue #7](https://github.com/DevHabito/arara-space-telescope/issues/7). |
+| F08 | corrected-and-checked | A first Lean AR(1) file used `at` as an identifier; the compiler rejected it. The identifier was replaced and the theorem recompiled. | [Failed Lean run 41711129381](https://github.com/DevHabito/arara-space-telescope/actions/runs/41711129381); [successful Lean run 41712840089](https://github.com/DevHabito/arara-space-telescope/actions/runs/41712840089), 9 build jobs. |
+| F09 | corrected-and-checked | The first overflow regression multiplied a random fixture by `1e308`; the test could overflow in its own setup, not in preprocessing. It was replaced by an explicitly finite array that causes an intermediate overflow. | `tests/test_m38br_observed_preprocessing.py`, `test_finite_observations_causing_intermediate_overflow_are_rejected`; [successful 72-test audit log](https://github.com/DevHabito/arara-space-telescope/actions/runs/41712840089). |
+| F10 | not-tested | Floating-point equivalence under all scales, ties, near-degenerate vectors and different numerical runtimes. | The fixed-fixture comparisons are informative but do not provide a global floating-point error bound. |
+| F11 | not-tested | Instrument-based astronomy: observed raw images, telescope calibration, photon/read/dark noise, stellar variability, pointing, mission telemetry and rates per field-hour or target-hour. | [Scientific status](SCIENTIFIC_STATUS.md). No real-world operational inference is authorized. |
+| F12 | observed-unresolved | The original archived M38B seeds differ from the recovery seeds, and the recovered freeze did not originally cover the full executable dependency graph. | [2026-10-21 checkpoint](RESEARCH_CHECKPOINT_2026-10-21.md). M38B-R must use its own prospective identity and complete freeze. |
+
+## Corrections I will not misrepresent
+
+The corrected Lean proof proves only its stated discrete proposition. The corrected overflow test verifies one finite-input rejection case. Neither correction fixes F01–F07 or F10–F12. The source-independent numerical references also do not mean that all upstream and downstream code is independently implemented.
+
+## When an item may be closed
+
+I will attach the exact changed code, the original failing fixture, the successful and unsuccessful run links, the scientific implications, and the conditions under which the fix can fail. A passing build alone is not grounds to close an unresolved scientific issue. The old result and its date stay in the log.
+
+**Frozen scientific state:** `NO_OPERATIONAL_VERDICT` for archived M38B; `approved_for_calibration: false` for prospective M38B-R.

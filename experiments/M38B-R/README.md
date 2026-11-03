@@ -30,6 +30,10 @@ The candidate has 73,260 nominal slots (99 endpoints × 4 shapes × 37 durations
 
 The proposed random roots in `PROTOCOL_DRAFT.json` are not yet authorized for execution.
 
+## Current audit notes — 3 November 2026
+
+The source-independent onset reference, observation-only baseline processor, historical-geometry checker, and Lean 4 causality witnesses are recorded under [the research index](../../docs/RESEARCH_INDEX.md). Read the [research notebook](../../docs/RESEARCH_NOTEBOOK_2026-11-03.md) alongside the [failure register](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md). These are pre-outcome software and mathematical audits only. They do not authorize calibration, thresholds, holdouts, physical astronomy claims, or retroactive changes to this draft protocol.
+
 ## Usage
 
 ```bash

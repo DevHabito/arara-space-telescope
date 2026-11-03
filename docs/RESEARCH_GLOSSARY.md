@@ -20,4 +20,12 @@ Terms describe either standard methods or ARARA-specific choices. A definition i
 | Formal verification | Kernel checking of a precisely stated mathematical proposition | Formal methods; does not independently verify physical assumptions |
 | Injection-recovery | Inserting known synthetic signals into observational data and testing recovery | Established astronomical validation approach; not completed on real data for ARARA |
 
+| Observation-only input | The scorer-facing measurement or parameter must be derived without simulator truth, labels, or information unavailable at prediction time | Audit requirement; a function signature alone does not prove this property |
+| Parameter provenance | An accounting of where fitted coefficients, thresholds, geometry, and processing constants originate | Standard scientific reproducibility concern; audited in ARARA P0.2 |
+| Fixed-observation counterfactual | Hold the observed samples unchanged while varying inaccessible simulator metadata to detect illicit dependencies | ARARA code audit method; not a physically repeated observation |
+| Noninterference | Changes to inputs outside an allowed dependency set do not change a specified output | Formal methods concept; numerical fixtures check restricted cases |
+| Undefined onset objective | No candidate has a finite admissible objective; an `argmax` fallback index is not an onset measurement | Identified edge case in archived M34 and independent reference |
+| Protocol geometry drift | A change in selection times, candidate bounds, endpoint grid, confirmation length or baseline from declared protocol values | Audited condition; the read-only checker does not freeze a runner |
+| Software PASS | All checks exercised by a specified runner completed without failing its assertions | Does not imply synthetic detection or astrophysical validity |
+
 **Nominal hypothesis slots vs computed template evaluations:** A nominal Cartesian-product count may include values ignored by an invariant template family. In M38B the linear family is independent of u, so 73,260 nominal slots correspond to 58,608 computed candidate template scores per curve. These counts do not by themselves determine the effective multiple-testing penalty.

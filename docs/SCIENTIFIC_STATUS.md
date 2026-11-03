@@ -30,6 +30,10 @@ This repository does not establish that ARARA is:
 - superior to established astronomical detection methods;
 - validated on physical telescope telemetry or independent sky-survey data.
 
+## Current separate audit — 3 November 2026
+
+A dedicated, unmerged [draft pull request #9](https://github.com/DevHabito/arara-space-telescope/pull/9) records observation-only P0.1/P0.2 engineering diagnostics, additional tests, and limited Lean 4 claims. The exact audit commit, CI logs, failures and open questions are indexed in [RESEARCH_INDEX.md](RESEARCH_INDEX.md). This audit does not supersede historical milestones or change M38B-R from design-only to an authorized calibration experiment.
+
 ## Citation Boundary
 
 Future citations should describe this repository as a historical computational
