@@ -26,5 +26,10 @@ Terms describe either standard methods or ARARA-specific choices. A definition i
 | Undefined onset objective | No candidate has a finite admissible objective; an `argmax` fallback index is not an onset measurement | Identified edge case in archived M34 and independent reference |
 | Protocol geometry drift | A change in selection times, candidate bounds, endpoint grid, confirmation length or baseline from declared protocol values | Audited condition; the read-only checker does not freeze a runner |
 | Software PASS | All checks exercised by a specified runner completed without failing its assertions | Does not imply synthetic detection or astrophysical validity |
+| Declared exposure envelope | Claimed start/end of one exposure, each with a claimed absolute maximum timing error; strict separation means those claimed intervals do not overlap | P0.7 audit-specific convention; not a measured uncertainty budget |
+| Clock source label | Untrusted caller-supplied identifier for the stated time origin | P0.7 metadata; not UTC/TDB/BJD certification |
+| Chained frame checksum | SHA-256 of canonical frame bytes plus declared metadata, linked to the preceding checksum | Standard hash construction used for an ARARA P0.7 in-memory consistency audit; not a digital signature |
+| Source authentication | Independent evidence that a record originated from its asserted instrument or trusted producer | Not implemented or established for ARARA |
+| Instrument time uncertainty | Physically measured or validated error in an exposure time relative to a specified time standard | Missing real-world evidence; not supplied by a test fixture |
 
 **Nominal hypothesis slots vs computed template evaluations:** A nominal Cartesian-product count may include values ignored by an invariant template family. In M38B the linear family is independent of u, so 73,260 nominal slots correspond to 58,608 computed candidate template scores per curve. These counts do not by themselves determine the effective multiple-testing penalty.

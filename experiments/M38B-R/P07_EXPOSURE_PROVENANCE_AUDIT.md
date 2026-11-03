@@ -45,12 +45,48 @@ nonnegative bounds implies nominal exposure order. Compilation is
 not evidence of correct NumPy operations, real-valued interval
 analysis or physical clock calibration.
 
-## Results pending direct CI inspection
+## Executed findings and original failed build — 3 November 2026
 
-I will write the implementation commit, failed or successful cloud run
-IDs, exact test counts and any limitations here only after reading the
-GitHub Actions logs. The historical manifest must remain byte-for-byte
-valid; the PR must stay draft and `main` untouched.
+I committed [the P0.7 policy](P07_EXPOSURE_PROVENANCE_POLICY.md)
+at `4689a513e7eef4b4eba09ccbc6a2ddbcc88248a9`, before implementing
+the source, tests or formal witnesses.
+
+The first implementation at `d37979c2da3df644317cf268edba87444dabe11c`
+was checked by [research-audit run 41725557607](https://github.com/DevHabito/arara-space-telescope/actions/runs/41725557607).
+Its Python job completed **130/130 passing audit tests**, including
+**15 new P0.7 tests**, and the historical source manifest was verified.
+The **Lean 4 job failed**: two concrete witnesses used `decide`, and
+the Lean compiler could not synthesize the required
+`Decidable (boundedExposureBefore ...)` instances. I kept that failed
+CI result; it is not a scientific counterexample.
+
+I replaced only those two proof tactics with
+`unfold boundedExposureBefore` followed by `omega` in commit
+`3827600ae212386840cd2fc2b8a9cbbcf0465427`.
+The [corrected research-audit run 41725739124](https://github.com/DevHabito/arara-space-telescope/actions/runs/41725739124)
+recorded **130/130 passing Python audit tests**, a successful Lean 4
+build (**10 jobs**) and `Manifest verified: all hashes match`.
+It reported archived M38B `NO_OPERATIONAL_VERDICT`. No
+baseline, numerical tolerance, physical uncertainty model or
+archived source file was altered to make the theorem compile.
+
+The checked cases include exactly equal numerical diagnostics for
+latest accepted cadences **81, 83 and 179** versus the existing P0.5
+prefix path; disjointness checks for bounded exposure envelopes;
+identity and cadence mismatch blocking; nonfinite and overflowing
+time bounds; malformed frames; in-memory ownership; SHA-256 chain
+determinism; changes to frame or time metadata changing the hash;
+and detection of deliberate **stored-metadata-only** corruption.
+These are software fixtures, not actual telescope measurements.
+
+The correction and its original failed build are tracked as **F22**.
+The unverified origin and physical magnitude of time uncertainties
+remain open as **F23**; the absence of authenticated origin,
+keyed signatures and protected persistent records remains **F24**.
+
+The historical 278-suite regression is a **separate** CI workflow.
+It must be checked on the final documentation commit before claiming
+a verified final state.
 
 ## Open physical and statistical questions
 

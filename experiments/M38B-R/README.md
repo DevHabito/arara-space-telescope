@@ -82,6 +82,20 @@ physical clock calibration and actual continuous hardware acquisition
 remain unresolved in [F21](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md).
 No scientific experiment, calibration, threshold or holdout was run.
 
+## Exposure-time declaration and internal integrity audit — P0.7
+
+The [P0.7 policy](P07_EXPOSURE_PROVENANCE_POLICY.md) was frozen before
+implementing [the exposure metadata wrapper](exposure_provenance.py)
+and [the P0.7 audit](P07_EXPOSURE_PROVENANCE_AUDIT.md).
+Declared absolute error bounds must permit definitely positive,
+definitely ordered exposures. Canonical in-memory frame and metadata
+records are linked with SHA-256; invalid or inconsistent records block
+a session. This does **not** authenticate an instrument, verify clock
+accuracy, establish a time standard or provide tamper-proof storage.
+The audit preserves a failed Lean build and its subsequent correction;
+its outstanding physical-provenance limits are F23–F24. No calibration
+or holdout was opened.
+
 ## Usage
 
 ```bash

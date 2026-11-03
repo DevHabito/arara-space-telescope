@@ -212,6 +212,45 @@ timing-error budget. This is a stronger input-order audit, not a
 space telescope running in real time. See the full
 [P0.6 engineering report](../experiments/M38B-R/P06_SEQUENTIAL_CADENCE_AUDIT.md).
 
+### P0.7 — declared exposure envelopes and an in-memory integrity chain (3 November 2026)
+
+I committed [the P0.7 acceptance policy](../experiments/M38B-R/P07_EXPOSURE_PROVENANCE_POLICY.md)
+at `4689a513e7eef4b4eba09ccbc6a2ddbcc88248a9`, *before*
+implementing any test. Its purpose is limited: check whether
+producer-declared exposure intervals are internally consistent after
+including producer-declared absolute uncertainty bounds, and whether
+accepted numerical frames remain consistent with their metadata.
+
+The new [exposure provenance wrapper](../experiments/M38B-R/exposure_provenance.py)
+checks fixed labels for session, instrument, target and clock, positive
+exposure duration under declared error bounds, definite separation
+between neighboring exposures, and consecutive frame order through
+the P0.6 ledger. It computes a versioned SHA-256 chain over each
+accepted binary64 frame and the canonical representation of its
+declared time/identity metadata. A mismatch blocks subsequent
+scoring. No scientific threshold or telescope source is consulted.
+
+In the first [research-audit run 41725557607](https://github.com/DevHabito/arara-space-telescope/actions/runs/41725557607),
+all **130 Python audit tests passed**, including fifteen P0.7 cases.
+However, **Lean 4 failed to compile** the two integer witnesses written
+with `decide`; the compiler could not synthesize their decidability.
+The change to explicit arithmetic tactics fixed the build without
+changing its statement. The [corrected run 41725739124](https://github.com/DevHabito/arara-space-telescope/actions/runs/41725739124)
+then passed all 130 Python audit tests, a **ten-job Lean build**, and
+the unchanged source-manifest check. The failed and corrected versions
+are both recorded as F22, not silently collapsed into a green result.
+
+This is a traceable internal consistency check, **not authenticated
+provenance**. An untrusted source can invent an instrument name, time
+bounds, error bounds and sample values and then hash all of them.
+The code cannot establish their truth. Nor do its `<` comparisons
+prove a general IEEE-754 interval-arithmetic theorem; the Lean result
+is deliberately restricted to exact natural-number arithmetic.
+The unresolved questions F23–F24 and the prior F21 must remain open.
+See the [P0.7 report](../experiments/M38B-R/P07_EXPOSURE_PROVENANCE_AUDIT.md)
+and the separate [literature review](LITERATURE_AND_ORIGINALITY.md)
+for the preexisting scientific and engineering methods.
+
 ## What did not work
 
 I am keeping the failed checks in a separate [failure and limitation register](FAILURE_AND_LIMITATIONS_REGISTER.md). They include a Lean syntax failure involving the reserved identifier `at`, an initial overflow test that overflowed **before** entering the function under test, the unresolved degeneracy of an onset statistic, the existing oracle leakage in the historical M38B scorer, and numerical sensitivity of a near-parallel projection.
@@ -235,7 +274,7 @@ During this same documentation pass, I made a change that the archive's checksum
 
 1. **P0.3 implementation checked on unlabelled fixtures; further adversarial review remains.** I reconstructed the bank, filtering, projection and tie-breaking independently and compared both shortened and full 99-endpoint numerical fixtures. Next I must audit ill-conditioned cases, tie transitions, independent parameter provenance and IEEE error behavior without changing the already recorded criteria.
 2. **P0.4 numerical diagnosis completed for declared fixtures; broader policy remains open.** I now have an analytic near-parallel counterexample, a scale-gate test and a read-only missing-position classifier. I have not established global IEEE error bounds, the physical meaning of the fixed cutoff, or a missing-data strategy.
-3. **P0.6 declared sequence and gap handling tested; physical timing remains open.** A separate in-memory ledger now checks consecutive indices, declared time order and fail-closed missing frames, with a corrected malformed-array failure. It has no authenticated acquisition clock, transport persistence, error budget or true streaming instrument integration.
+3. **P0.7 declared exposure and integrity checks tested; physical provenance remains open.** The in-memory wrapper checks consecutive samples, declared time-error envelopes and a versioned hash chain. I still lack an authenticated hardware clock, a verified uncertainty budget, raw instrument/target identity, transport integrity and independently examined observations.
 4. **Prospective freeze.** Freeze the new runner, environment, source dependencies, seeds, sample counts, acceptance gates and independent verification scripts in a distinct M38B-R preregistration. Keep failed attempts visible.
 5. **Only after those gates:** consider authorization for calibration, then untouched holdouts, followed by genuinely independent instrument/real-data validation. No stage inherits permission from a passing software CI run.
 
