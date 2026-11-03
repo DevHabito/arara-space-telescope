@@ -103,8 +103,15 @@ def score_independent_bank(
     target = np.asarray(residual, dtype=np.float64)
     reference = np.asarray(processed_reference, dtype=np.float64)
     phi = np.asarray(residual_phi, dtype=np.float64)
-    if target.ndim != 2 or target.shape[0] == 0 or target.shape[1] < 180:
-        raise ValueError("Expected nonempty (curve, >=180 measured samples) residual")
+    if (
+        target.ndim != 2
+        or target.shape[0] == 0
+        or target.shape[1] <= cfg.endpoints[-1]
+    ):
+        raise ValueError(
+            "Expected nonempty (curve, time) residual extending through "
+            "the last configured endpoint"
+        )
     if reference.shape != target.shape:
         raise ValueError("Reference/residual shapes do not agree")
     if phi.shape != (target.shape[0],):
