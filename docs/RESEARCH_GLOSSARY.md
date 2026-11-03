@@ -31,5 +31,9 @@ Terms describe either standard methods or ARARA-specific choices. A definition i
 | Chained frame checksum | SHA-256 of canonical frame bytes plus declared metadata, linked to the preceding checksum | Standard hash construction used for an ARARA P0.7 in-memory consistency audit; not a digital signature |
 | Source authentication | Independent evidence that a record originated from its asserted instrument or trusted producer | Not implemented or established for ARARA |
 | Instrument time uncertainty | Physically measured or validated error in an exposure time relative to a specified time standard | Missing real-world evidence; not supplied by a test fixture |
+| HMAC-SHA-256 | Established message authentication code built from a secret shared key and SHA-256 | RFC 2104 (1997); P0.8 uses Python's standard library, not a new cryptographic construction |
+| Key possession | Knowledge of the secret required to create a valid message MAC | Does not establish a telescope's physical identity or measurement truth |
+| Complete transcript replay | Re-use of a fully valid earlier record sequence in a fresh verifier with the same key and session binding | Observed P0.8 negative control; no cross-session persistent anti-replay registry |
+| Original sensor data | Actual preserved bytes produced by an instrument before any unverified transformation | Not available in P0.8; its frames are constructed binary64 numerical fixtures |
 
 **Nominal hypothesis slots vs computed template evaluations:** A nominal Cartesian-product count may include values ignored by an invariant template family. In M38B the linear family is independent of u, so 73,260 nominal slots correspond to 58,608 computed candidate template scores per curve. These counts do not by themselves determine the effective multiple-testing penalty.

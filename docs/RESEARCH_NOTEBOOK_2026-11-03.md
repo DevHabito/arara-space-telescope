@@ -251,6 +251,59 @@ See the [P0.7 report](../experiments/M38B-R/P07_EXPOSURE_PROVENANCE_AUDIT.md)
 and the separate [literature review](LITERATURE_AND_ORIGINALITY.md)
 for the preexisting scientific and engineering methods.
 
+### P0.8 — HMAC packet custody and the limits of attributed origin
+
+I recorded [the P0.8 acceptance criteria](../experiments/M38B-R/P08_KEYED_CUSTODY_POLICY.md)
+at `7185997425ca4ab788c79a741d23d858707a54c7`,
+before implementation and numerical results. The
+[`keyed_custody.py`](../experiments/M38B-R/keyed_custody.py)
+verifies HMAC-SHA-256 over the original byte payload and
+versioned, canonical metadata. Packet tags include a predecessor
+tag; acceptance also requires the P0.7 exposure and P0.6 cadence
+checks. I used an intentionally **public test key** with no
+real-world trust status. No real instrument sent a packet.
+
+The first [research-audit run 41727981482](https://github.com/DevHabito/arara-space-telescope/actions/runs/41727981482)
+passed **145 Python audit tests** (15 new P0.8 cases), a
+ten-job Lean compilation and manifest verification. Crucially,
+the negative controls behaved as expected: the key holder could
+produce an entirely fabricated but validly MAC-tagged numeric
+frame, and a complete previously valid transcript could be
+accepted by a fresh verifier configured with the same key and
+session. That demonstrates why key possession is not evidence
+of actual sensor capture or protection from complete replay.
+
+I then tightened the endpoint equality assertion to compare
+the output array's actual bytes and added a stored-record
+corruption test. The new test failed in
+[run 41728262117](https://github.com/DevHabito/arara-space-telescope/actions/runs/41728262117)
+because a deliberately re-tagged malformed buffer caused NumPy
+to reject the record without blocking the verification session.
+The failed run logged **146 tests, one failure**. I corrected
+the stored-byte validation with explicit fail-closed handling
+in commit `96809479c956c3f108e3acdf89600b4e97d654d4`.
+[Research-audit 41728450100](https://github.com/DevHabito/arara-space-telescope/actions/runs/41728450100)
+then passed **146 Python tests**, the ten-job Lean build,
+and the historical manifest check. I preserved both outcomes
+as F27 rather than quietly hiding the first failure.
+
+The new protocol uses the existing method from **Hugo Krawczyk,
+Mihir Bellare and Ran Canetti (RFC 2104, 1997)**, with an
+independent published HMAC-SHA-256 test vector from
+**M. Nystrom (RFC 4231, 2005)**. These references document
+prior cryptographic methods, not an ARARA discovery or
+a proof of a deployed security system. The
+[literature register](LITERATURE_AND_ORIGINALITY.md) separates
+their scope from this implementation.
+
+My conclusion remains limited: I have tested key-bound packet
+integrity in memory, but not an authenticated instrument source,
+hardware-backed keys, original CCD/CMOS bytes, a secure transport,
+independently certified timestamps or persistent anti-replay custody.
+F25, F26 and F28 remain open. The
+[P0.8 report](../experiments/M38B-R/P08_KEYED_CUSTODY_AUDIT.md)
+sets out the failures and the positive and negative fixtures.
+
 ## What did not work
 
 I am keeping the failed checks in a separate [failure and limitation register](FAILURE_AND_LIMITATIONS_REGISTER.md). They include a Lean syntax failure involving the reserved identifier `at`, an initial overflow test that overflowed **before** entering the function under test, the unresolved degeneracy of an onset statistic, the existing oracle leakage in the historical M38B scorer, and numerical sensitivity of a near-parallel projection.
@@ -274,7 +327,7 @@ During this same documentation pass, I made a change that the archive's checksum
 
 1. **P0.3 implementation checked on unlabelled fixtures; further adversarial review remains.** I reconstructed the bank, filtering, projection and tie-breaking independently and compared both shortened and full 99-endpoint numerical fixtures. Next I must audit ill-conditioned cases, tie transitions, independent parameter provenance and IEEE error behavior without changing the already recorded criteria.
 2. **P0.4 numerical diagnosis completed for declared fixtures; broader policy remains open.** I now have an analytic near-parallel counterexample, a scale-gate test and a read-only missing-position classifier. I have not established global IEEE error bounds, the physical meaning of the fixed cutoff, or a missing-data strategy.
-3. **P0.7 declared exposure and integrity checks tested; physical provenance remains open.** The in-memory wrapper checks consecutive samples, declared time-error envelopes and a versioned hash chain. I still lack an authenticated hardware clock, a verified uncertainty budget, raw instrument/target identity, transport integrity and independently examined observations.
+3. **P0.8 key-bound packet custody tested; physical authenticity remains open.** A receiver now checks HMACs on exact numeric bytes before decoding and refuses invalid records. The test key is public and the negative controls demonstrate fabricated data and full-transcript replay are still possible. There is no trusted instrument credential, hardware timebase or durable externally anchored custody.
 4. **Prospective freeze.** Freeze the new runner, environment, source dependencies, seeds, sample counts, acceptance gates and independent verification scripts in a distinct M38B-R preregistration. Keep failed attempts visible.
 5. **Only after those gates:** consider authorization for calibration, then untouched holdouts, followed by genuinely independent instrument/real-data validation. No stage inherits permission from a passing software CI run.
 

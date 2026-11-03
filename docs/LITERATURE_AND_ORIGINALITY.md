@@ -34,6 +34,36 @@ The existing literature gives me methods to compare against and standards for co
 
 9. **C. M. Croarkin (2003).** “NIST/SEMATECH Engineering Statistics Handbook, Chapter 2: Measurement Process Characterization.” National Institute of Standards and Technology; published 1 June 2003. [NIST record](https://www.nist.gov/publications/nistsematech-engineering-statistics-handbook-chapter-2-measurement-process). **Relevance:** measurement-process uncertainty, repeatability, reproducibility and stability are engineering questions distinct from algorithm unit tests. **Boundary:** no ARARA hardware or instrument-calibration result is implied.
 
+### Message authentication and custody (existing standards)
+
+10. **Hugo Krawczyk, Mihir Bellare and Ran Canetti (February 1997).**
+*HMAC: Keyed-Hashing for Message Authentication*. RFC 2104,
+Internet Engineering Task Force, DOI:
+[10.17487/RFC2104](https://doi.org/10.17487/RFC2104).
+[Official RFC Editor record](https://www.rfc-editor.org/info/rfc2104/).
+**Relevance:** a cryptographic message authentication code combines
+a hash function with a secret shared key; its security depends on
+the cryptographic assumptions and keeping the secret controlled.
+**Boundary:** it does not prove a message came from a telescope;
+any entity possessing the key may generate a valid MAC. ARARA
+has not established independent key provisioning.
+
+11. **M. Nystrom (December 2005).**
+*Identifiers and Test Vectors for HMAC-SHA-224, HMAC-SHA-256,
+HMAC-SHA-384, and HMAC-SHA-512*. RFC 4231, Internet Engineering
+Task Force. [Official RFC Editor record](https://www.rfc-editor.org/info/rfc4231/).
+**Relevance:** the published HMAC-SHA-256 test-case-1 value for
+the key `0b` repeated 20 times and the message `Hi There`
+provides an independent algorithm known-answer check.
+**Boundary:** passing this standard-library HMAC vector
+does not validate ARARA's overall packet framing, replay resistance,
+real instrument identity, protected key custody or detection
+performance.
+
+These RFCs predate the ARARA code. P0.8 tests a particular
+in-memory **application** of HMAC, and is not a novel cryptographic
+algorithm, secure hardware attestation system or scientific discovery.
+
 ### Tools and project references (not journal articles)
 
 - **Lean 4 project:** [Lean 4 source](https://github.com/leanprover/lean4), and the [repository's formal boundary](../formal/README.md). Formal checking validates the proposition supplied to the checker, not unmodeled physical assumptions. The installed compiler is pinned by [`lean-toolchain`](../lean-toolchain). I do not invent authors or a paper DOI for the software project.

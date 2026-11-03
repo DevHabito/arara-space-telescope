@@ -96,6 +96,20 @@ The audit preserves a failed Lean build and its subsequent correction;
 its outstanding physical-provenance limits are F23–F24. No calibration
 or holdout was opened.
 
+## Keyed message custody and authentication limits — P0.8
+
+I recorded [the P0.8 acceptance criteria](P08_KEYED_CUSTODY_POLICY.md)
+before writing the [keyed packet verifier](keyed_custody.py).
+The [P0.8 audit report](P08_KEYED_CUSTODY_AUDIT.md) explains
+the HMAC-SHA-256 message check, byte-exact prefix diagnostics,
+negative forgery/replay controls and a recorded fail-open stored-byte
+bug corrected and retested in CI. The only key committed is an
+explicitly **public test fixture**, not a device credential.
+Valid HMACs prove possession of that key, not that a telescope made
+the declared observation. No hardware attestation, persistent replay
+registry, original sensor byte stream, scientific calibration,
+threshold or holdout was used.
+
 ## Usage
 
 ```bash

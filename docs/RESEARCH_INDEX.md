@@ -5,7 +5,7 @@ I keep this page as the starting point for the current research record. The proj
 ## Start here
 
 - [Scientific status](SCIENTIFIC_STATUS.md) — what the archive can and cannot establish about astronomy.
-- [Research notebook — 3 November 2026](RESEARCH_NOTEBOOK_2026-11-03.md) — first-person account of the P0.1–P0.7 audits, source trace, numbers checked in GitHub Actions and decisions.
+- [Research notebook — 3 November 2026](RESEARCH_NOTEBOOK_2026-11-03.md) — first-person account of the P0.1–P0.8 audits, source trace, numbers checked in GitHub Actions and decisions.
 - [Failure and limitation register](FAILURE_AND_LIMITATIONS_REGISTER.md) — negative findings, failed attempts, corrected engineering mistakes and unresolved scientific blockers.
 - [Literature and originality](LITERATURE_AND_ORIGINALITY.md) — authors, publication years, stable sources, prior methods and limits of relevance.
 - [Research glossary](RESEARCH_GLOSSARY.md) — terms and definitions without implying validity from terminology.
@@ -27,6 +27,8 @@ I keep this page as the starting point for the current research record. The proj
 - [P0.6 sequential cadence audit](../experiments/M38B-R/P06_SEQUENTIAL_CADENCE_AUDIT.md) — test results, corrected malformed-frame handling and physical timebase limitations.
 - [P0.7 precommitted exposure-time policy](../experiments/M38B-R/P07_EXPOSURE_PROVENANCE_POLICY.md) — asserted source identity, bounded intervals and hash-chain acceptance.
 - [P0.7 exposure provenance audit](../experiments/M38B-R/P07_EXPOSURE_PROVENANCE_AUDIT.md) — tested consistency checks, recorded Lean build failure/correction and unverified real-world provenance.
+- [P0.8 precommitted keyed-custody policy](../experiments/M38B-R/P08_KEYED_CUSTODY_POLICY.md) — key possession, packet byte integrity, replay limits and threat-model tests.
+- [P0.8 keyed packet custody audit](../experiments/M38B-R/P08_KEYED_CUSTODY_AUDIT.md) — executed HMAC tests, negative replay/forgery controls and corrected stored-byte failure.
 - [Open draft PR #9](https://github.com/DevHabito/arara-space-telescope/pull/9), [source-oracle issue #4](https://github.com/DevHabito/arara-space-telescope/issues/4), and [independent-scorer issue #7](https://github.com/DevHabito/arara-space-telescope/issues/7).
 
 The root `README.md` and `docs/SCIENTIFIC_STATUS.md` are covered by the historical checksum manifest. I do not insert new links into them on this audit branch: the research index is reached from [the M38B-R README](../experiments/M38B-R/README.md) and [draft PR #9](https://github.com/DevHabito/arara-space-telescope/pull/9) instead. See [F13](FAILURE_AND_LIMITATIONS_REGISTER.md) for the documented integrity-check failure and restoration.
