@@ -30,4 +30,10 @@ theorem ar1FilterAtZero (series : Nat → Int) (phi : Int) :
     ar1FilterAt series phi 0 = series 0 := by
   simp [ar1FilterAt]
 
+/-! Fixed observations alone cannot imply a fixed filter output if phi varies. -/
+theorem differentPhiCanChangeFilterOnFixedSamples :
+    ar1FilterAt (fun _ : Nat => (1 : Int)) 0 1 ≠
+      ar1FilterAt (fun _ : Nat => (1 : Int)) 1 1 := by
+  decide
+
 end AraraFormal
