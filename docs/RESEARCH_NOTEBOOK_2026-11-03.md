@@ -94,6 +94,49 @@ implementation has a calibrated threshold. See
 [P0.3 audit](../experiments/M38B-R/INDEPENDENT_BANK_AUDIT.md)
 and [failure entries F14–F15](FAILURE_AND_LIMITATIONS_REGISTER.md).
 
+### P0.4 — near-singular projection and missing-data position (3 November 2026)
+
+I wrote the [P0.4 diagnostic policy](../experiments/M38B-R/P04_NUMERICAL_AUDIT_POLICY.md)
+before implementing the tests. It fixes the analytic eight-element witness,
+scale factors `0.1` and `2.0`, the `1e-12` inherited energy floor and
+the numerical acceptance bounds. I did not reinterpret a disagreement
+as agreement.
+
+The [cloud audit run 41720056181](https://github.com/DevHabito/arara-space-telescope/actions/runs/41720056181)
+at commit `e63da1c168341014ff87bdea495f3c5151163851` reported
+nine new P0.4 tests passing, **91 passing audit tests in total**,
+a successful Lean build, matching historical manifest hashes and the
+unchanged `NO_OPERATIONAL_VERDICT`.
+
+The near-parallel comparison is especially informative. An eight-element
+constructed vector has an exact expected normalized projected score
+`sqrt(8/7) = 1.0690449676496976`. The independently constructed
+projection returned that value to the precision shown in the CI log.
+The older subtractive-energy calculation returned `1.0685306041827185`,
+an absolute difference from the analytic reference of
+`0.0005143634669790842`. Both calculations used the same fixed input.
+I am not interpreting this engineering witness as evidence of a new
+physical signal or as a global proof that one implementation is superior.
+The numerical conditioning problem and these observations are recorded
+in [the P0.4 report](../experiments/M38B-R/P04_NUMERICAL_AUDIT.md).
+
+Another test found a discontinuity caused by the existing absolute
+energy cutoff: multiplying a near-parallel template and reference by
+`0.1` makes its reported score zero when the projected energy falls
+below `1e-12`. The same mathematical normalized score should be
+scale-invariant in exact arithmetic away from such gating. I have not
+changed the cutoff or invented a physically justified replacement.
+This question is F17; the archived near-singular discrepancy is F18.
+
+For missing values, I added
+[`numerical_quality.py`](../experiments/M38B-R/numerical_quality.py),
+a read-only time-position classifier. It distinguishes a nonfinite
+measured prefix from an invalid sample that lies only in the future
+of the requested endpoint. It neither imputes data nor bypasses the
+existing batch scorer's whole-series rejection. F16 therefore remains
+open: the implementation does not yet have a streaming or missing-data
+policy I could fairly call operational.
+
 ## What did not work
 
 I am keeping the failed checks in a separate [failure and limitation register](FAILURE_AND_LIMITATIONS_REGISTER.md). They include a Lean syntax failure involving the reserved identifier `at`, an initial overflow test that overflowed **before** entering the function under test, the unresolved degeneracy of an onset statistic, the existing oracle leakage in the historical M38B scorer, and numerical sensitivity of a near-parallel projection.
@@ -116,7 +159,7 @@ During this same documentation pass, I made a change that the archive's checksum
 ## The work order I will follow
 
 1. **P0.3 implementation checked on unlabelled fixtures; further adversarial review remains.** I reconstructed the bank, filtering, projection and tie-breaking independently and compared both shortened and full 99-endpoint numerical fixtures. Next I must audit ill-conditioned cases, tie transitions, independent parameter provenance and IEEE error behavior without changing the already recorded criteria.
-2. **Numerical policy.** State exact IEEE assumptions, conditioning thresholds and failure classifications. Treat near-parallel templates, undefined onset objectives, constant baselines and extreme finite magnitudes explicitly.
+2. **P0.4 numerical diagnosis completed for declared fixtures; broader policy remains open.** I now have an analytic near-parallel counterexample, a scale-gate test and a read-only missing-position classifier. I have not established global IEEE error bounds, the physical meaning of the fixed cutoff, or a missing-data strategy.
 3. **Provenance closure.** Trace raw measurement identity, baseline quality, parameter estimation, configuration, negative/positive generator separation and every statistic reaching the final decision.
 4. **Prospective freeze.** Freeze the new runner, environment, source dependencies, seeds, sample counts, acceptance gates and independent verification scripts in a distinct M38B-R preregistration. Keep failed attempts visible.
 5. **Only after those gates:** consider authorization for calibration, then untouched holdouts, followed by genuinely independent instrument/real-data validation. No stage inherits permission from a passing software CI run.

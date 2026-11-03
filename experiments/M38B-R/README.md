@@ -45,6 +45,18 @@ as [F14](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md) and subsequently
 corrected in CI. This does not freeze an experiment runner or authorize
 calibration or holdouts. Do not reuse any historical thresholds.
 
+## Conditioning and missing-sample audit — P0.4
+
+I recorded the [P0.4 numerical criteria](P04_NUMERICAL_AUDIT_POLICY.md)
+before constructing the new tests. The
+[P0.4 evidence report](P04_NUMERICAL_AUDIT.md) contains the actual
+near-parallel computed scores, an analytic reference, the absolute
+energy-gate counterexample and the missing-sample classification limits.
+The read-only `numerical_quality.py` module marks invalid observed prefixes
+versus future-only missing samples; it does **not** replace preprocessing,
+repair data, or authorize a change in operational detector behavior.
+The conditions F16–F18 remain unresolved scientific-design limits.
+
 ## Usage
 
 ```bash
