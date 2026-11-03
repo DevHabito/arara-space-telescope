@@ -137,6 +137,43 @@ existing batch scorer's whole-series rejection. F16 therefore remains
 open: the implementation does not yet have a streaming or missing-data
 policy I could fairly call operational.
 
+### P0.5 — observed-prefix scoring without future-sample inputs (3 November 2026)
+
+I formalized the acceptance tests in
+[P05_PREFIX_CONTRACT_POLICY.md](../experiments/M38B-R/P05_PREFIX_CONTRACT_POLICY.md)
+at commit `72d241d00293138f5499a78c0d5d566eb1d6ad5a` before
+implementing the new interface. I rejected the tempting shortcut of
+padding short input series with zeros: a detector claiming to depend only
+on what has been observed should not need fabricated future measurements.
+
+The experimental [`observed_prefix.py`](../experiments/M38B-R/observed_prefix.py)
+now accepts precisely samples `0..endpoint` for an endpoint in the
+historical range `81..179`. It uses the 50-sample baseline processor,
+the independent causal onset reference and the complete independent
+template bank. I changed the latter's required minimum input length to
+the final requested endpoint, not a hard-coded 180. The existing batch
+entrypoint remains unchanged, including its whole-series finiteness check.
+
+In [research-audit run 41721601276](https://github.com/DevHabito/arara-space-telescope/actions/runs/41721601276)
+at commit `07b9f3226dbae5f273da26d63b84f4f0a4aded44`, **102 Python audit
+tests passed**, including eleven P0.5 tests, and Lean 4 and manifest
+verification succeeded. On a constructed, finite, unlabelled nine-star
+fixture, every prefix output at endpoints 81, 83, 110 and 179 matched the
+corresponding full-batch output **exactly**, not just within a tolerance.
+A future NaN made the separate full-batch scorer reject its series, but
+the unchanged valid prefix for endpoint 83 scored identically to the clean
+case. A NaN inside that measured prefix was rejected as required.
+
+This is a meaningful improvement in **input-level causal isolation**.
+It is not evidence that the old batch entrypoint has changed; the
+low-level bank can still accept a supplied array longer than a requested
+diagnostic endpoint. The strict contract exists on the new high-level
+prefix entrypoint only. I cannot claim that a static prefix function
+implements a production streaming telescope, low-latency acquisition,
+clock synchronization or recovery from missing past observations.
+These boundaries remain open in F16 and F19. See the full
+[P0.5 audit](../experiments/M38B-R/P05_PREFIX_AUDIT.md).
+
 ## What did not work
 
 I am keeping the failed checks in a separate [failure and limitation register](FAILURE_AND_LIMITATIONS_REGISTER.md). They include a Lean syntax failure involving the reserved identifier `at`, an initial overflow test that overflowed **before** entering the function under test, the unresolved degeneracy of an onset statistic, the existing oracle leakage in the historical M38B scorer, and numerical sensitivity of a near-parallel projection.
@@ -151,7 +188,7 @@ During this same documentation pass, I made a change that the archive's checksum
 
 - M38B has no completed, source-verified operational calibration and holdout verdict in this archive.
 - M38B-R has **not** run calibration, holdouts or a prospective detection-power study. Its `PROTOCOL_DRAFT.json` says `execution_permission: not_authorized`.
-- A source-independent, complete-bank **diagnostic** now exists and has passed fixed-fixture comparisons. There is still no prospectively frozen production runner, general floating-point proof, instrument observation pipeline, or calibrated end-to-end detector; the earlier observation-only prototype continues to import archival components.
+- A source-independent complete-bank **diagnostic** and a strictly prefix-bounded experimental entrypoint now exist, with fixed-fixture comparisons checked in CI. There is still no prospectively frozen production runner, continuous acquisition system, quality-masked missing-data policy, general floating-point proof, instrument observation pipeline or calibrated end-to-end detector; the earlier observation-only prototype continues to import archival components.
 - The full prototype configuration, executable runner, statistical stopping rules, seeds, exact environment and artifact verification are not yet jointly frozen for a prospective run.
 - No real-sky false-alert rate, completeness, precision, photometric noise budget, telescope pointing response, read noise, dark noise, detector hardware or flight readiness is established.
 - Passing software tests does not establish the scientific validity of the simulator's distributional assumptions.
@@ -160,7 +197,7 @@ During this same documentation pass, I made a change that the archive's checksum
 
 1. **P0.3 implementation checked on unlabelled fixtures; further adversarial review remains.** I reconstructed the bank, filtering, projection and tie-breaking independently and compared both shortened and full 99-endpoint numerical fixtures. Next I must audit ill-conditioned cases, tie transitions, independent parameter provenance and IEEE error behavior without changing the already recorded criteria.
 2. **P0.4 numerical diagnosis completed for declared fixtures; broader policy remains open.** I now have an analytic near-parallel counterexample, a scale-gate test and a read-only missing-position classifier. I have not established global IEEE error bounds, the physical meaning of the fixed cutoff, or a missing-data strategy.
-3. **Provenance closure.** Trace raw measurement identity, baseline quality, parameter estimation, configuration, negative/positive generator separation and every statistic reaching the final decision.
+3. **P0.5 prefix boundary checked for static arrays; provenance and streaming remain open.** The new API rejects data beyond the endpoint and reproduces the corresponding batch diagnostics, but needs a separate missing-past-data contract, acquisition model, performance bounds and source-to-instrument audit before any real-time claims.
 4. **Prospective freeze.** Freeze the new runner, environment, source dependencies, seeds, sample counts, acceptance gates and independent verification scripts in a distinct M38B-R preregistration. Keep failed attempts visible.
 5. **Only after those gates:** consider authorization for calibration, then untouched holdouts, followed by genuinely independent instrument/real-data validation. No stage inherits permission from a passing software CI run.
 

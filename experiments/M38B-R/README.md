@@ -57,6 +57,18 @@ versus future-only missing samples; it does **not** replace preprocessing,
 repair data, or authorize a change in operational detector behavior.
 The conditions F16–F18 remain unresolved scientific-design limits.
 
+## Strict observed-prefix numerical diagnostics — P0.5
+
+I added a [precommitted prefix policy](P05_PREFIX_CONTRACT_POLICY.md)
+and [P0.5 verification report](P05_PREFIX_AUDIT.md). The new experimental
+`observed_prefix.py` accepts only measured observations through its
+requested endpoint; its finite-prefix outputs matched the independent
+batch calculation exactly in the four unlabelled endpoints tested.
+The old batch interface still rejects future nonfinite samples and the
+low-level scorer remains a numerical diagnostic rather than a live
+instrument. These distinctions are recorded as [F16 and F19](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md).
+No thresholds, holdouts or calibration inputs were read.
+
 ## Usage
 
 ```bash

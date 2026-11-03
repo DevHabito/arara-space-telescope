@@ -39,12 +39,25 @@ is undefined. A later `NaN` in a **separately supplied full array** must
 continue to fail old batch validation, while the accepted finite prefix
 0..83 can still be scored independently.
 
-## Execution record
+## Execution record — exact first P0.5 implementation commit
 
-This section must be updated only after reading the actual GitHub Actions
-logs for the exact implementation commit, recording any failed attempts
-and the final verified head. An unexecuted test file is not evidence of a
-pass.
+At commit `07b9f3226dbae5f273da26d63b84f4f0a4aded44`, the
+[GitHub Actions research-audit run 41721601276](https://github.com/DevHabito/arara-space-telescope/actions/runs/41721601276)
+reported **102/102 Python audit tests passing**, including all **11 new
+observed-prefix tests**. The Lean 4 `lake build` completed in nine jobs;
+`verify_manifest.py` reported `Manifest verified: all hashes match`;
+the historical M38B status remained `NO_OPERATIONAL_VERDICT`.
+
+The checks included exact output equality for early/late prefix endpoints,
+future-only nonfinite values in the separate full-series input, rejection
+of missing *measured* samples, rejection of longer/shorter inputs, invalid
+endpoints and shapes, defined fail-closed behavior on constant data, curve
+permutations, immutable caller arrays, and absence of archive imports.
+
+These counts come from the GitHub job logs, not from the presence of a test
+file. The 278 historical tests are executed by a **separate** workflow and
+must be checked on the final documentation commit before reporting their
+result as passed. The final head's CI should also be read back separately.
 
 ## Scientific boundary
 

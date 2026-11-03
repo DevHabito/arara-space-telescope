@@ -21,6 +21,8 @@ I keep this page as the starting point for the current research record. The proj
 - [P0.3 independent-bank audit](../experiments/M38B-R/INDEPENDENT_BANK_AUDIT.md) — unlabelled 99-endpoint reconstruction, known failure and correction.
 - [P0.4 precommitted numerical policy](../experiments/M38B-R/P04_NUMERICAL_AUDIT_POLICY.md) — conditioning witnesses and fixed data-quality criteria.
 - [P0.4 numerical and missing-sample audit](../experiments/M38B-R/P04_NUMERICAL_AUDIT.md) — analytic comparison, scale cutoff and read-only quality flags.
+- [P0.5 observed-prefix policy](../experiments/M38B-R/P05_PREFIX_CONTRACT_POLICY.md) — strict input-length and numerical-equality conditions committed before code.
+- [P0.5 observed-prefix audit](../experiments/M38B-R/P05_PREFIX_AUDIT.md) — implementation, eleven checked tests and limits of streaming claims.
 - [Open draft PR #9](https://github.com/DevHabito/arara-space-telescope/pull/9), [source-oracle issue #4](https://github.com/DevHabito/arara-space-telescope/issues/4), and [independent-scorer issue #7](https://github.com/DevHabito/arara-space-telescope/issues/7).
 
 The root `README.md` and `docs/SCIENTIFIC_STATUS.md` are covered by the historical checksum manifest. I do not insert new links into them on this audit branch: the research index is reached from [the M38B-R README](../experiments/M38B-R/README.md) and [draft PR #9](https://github.com/DevHabito/arara-space-telescope/pull/9) instead. See [F13](FAILURE_AND_LIMITATIONS_REGISTER.md) for the documented integrity-check failure and restoration.
