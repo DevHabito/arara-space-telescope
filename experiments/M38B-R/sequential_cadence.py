@@ -86,16 +86,20 @@ class CadenceLedger:
         if self._declared_times and stated_time <= self._declared_times[-1]:
             self._reject("Declared timestamps must be strictly increasing")
 
+        # Inspect and convert in separate guarded steps. NumPy may raise
+        # ValueError for ragged nested sequences before shape inspection.
+        # Every failed conversion must block the ledger, not just fail a call.
         try:
             received = np.asarray(frame)
-            if received.shape != (self._curves, self._stars_per_curve):
-                self._reject(
-                    "Observed frame must have fixed (curve, star) dimensions"
-                )
-            if received.dtype.kind not in "iuf":
-                self._reject("Observed frame must contain numeric real samples")
+        except (TypeError, ValueError, OverflowError):
+            self._reject("Cannot inspect observed frame structure")
+        if received.shape != (self._curves, self._stars_per_curve):
+            self._reject("Observed frame must have fixed (curve, star) dimensions")
+        if received.dtype.kind not in "iuf":
+            self._reject("Observed frame must contain numeric real samples")
+        try:
             copied = np.array(received, dtype=np.float64, copy=True)
-        except (TypeError, OverflowError) as exc:
+        except (TypeError, ValueError, OverflowError):
             self._reject("Cannot convert observed frame to finite float64")
         if not np.isfinite(copied).all():
             self._reject("Observed frame must be entirely finite")
