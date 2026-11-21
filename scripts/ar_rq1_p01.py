@@ -8,10 +8,12 @@ from __future__ import annotations
 
 import hashlib
 import json
+import platform
 
 import numpy as np
 
 PROTOCOL_ID = "AR-RQ1-P01"
+IMPLEMENTATION_VERSION = "1.0.1"
 SEED_START = 20261120
 TRIAL_COUNT = 64
 EPOCH_COUNT = 256
@@ -117,6 +119,8 @@ def evaluate() -> dict:
     }
     payload = {
         "protocol": PROTOCOL_ID,
+        "implementation_version": IMPLEMENTATION_VERSION,
+        "python_version": platform.python_version(),
         "numpy_version": np.__version__,
         "seed_start": SEED_START,
         "trials_per_scenario": TRIAL_COUNT,
