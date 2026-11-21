@@ -1,0 +1,68 @@
+{
+  "gates": {
+    "G1_shared_drift_benefit": "PASS",
+    "G2_reference_outlier_resistance": "PASS",
+    "G3_target_local_artifact_failure": "PASS",
+    "G4_paired_injection_sanity": "PASS"
+  },
+  "implementation_version": "1.0.1",
+  "numpy_version": "2.3.5",
+  "payload_sha256": "32d2adcb0a5d8104d43487e77b337046af34fa8e52ef9cf90d7ec6072c9a64b8",
+  "protocol": "AR-RQ1-P01",
+  "python_version": "3.13.5",
+  "results": {
+    "REF_CONTAM": {
+      "MEAN_REF": {
+        "false_dip_rate": 0,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.015668013251
+      },
+      "MEDIAN_REF": {
+        "false_dip_rate": 0,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.002826699584
+      },
+      "RAW": {
+        "false_dip_rate": 0.28125,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.011400614794
+      }
+    },
+    "SHARED": {
+      "MEAN_REF": {
+        "false_dip_rate": 0,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.000902560591
+      },
+      "MEDIAN_REF": {
+        "false_dip_rate": 0,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.000906193426
+      },
+      "RAW": {
+        "false_dip_rate": 0.28125,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.011400614794
+      }
+    },
+    "TARGET_ARTIFACT": {
+      "MEAN_REF": {
+        "false_dip_rate": 1,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.019815857716
+      },
+      "MEDIAN_REF": {
+        "false_dip_rate": 1,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.019847706642
+      },
+      "RAW": {
+        "false_dip_rate": 0.640625,
+        "max_abs_retention_error": 0,
+        "median_abs_null": 0.016753193305
+      }
+    }
+  },
+  "seed_start": 20261120,
+  "trials_per_scenario": 64
+}
