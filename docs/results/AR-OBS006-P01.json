@@ -1,0 +1,141 @@
+{
+  "astropy_version": "7.2.4",
+  "gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "hypotheses": {
+    "H1_x_holdout_prediction": "SUPPORTED_IN_SELECTED_PRODUCTS",
+    "H2_y_holdout_prediction": "SUPPORTED_IN_SELECTED_PRODUCTS",
+    "H3_shifted_control_specificity": "SUPPORTED_IN_SELECTED_PRODUCTS"
+  },
+  "implementation_version": "1.0.0",
+  "measurements": {
+    "aperture": {
+      "aperture_bit_counts_1_to_9": {
+        "1": 121,
+        "2": 21,
+        "3": 32,
+        "4": 21,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 121,
+        "9": 0
+      },
+      "background_pixel_count": 32,
+      "image_shape": [
+        11,
+        11
+      ],
+      "optimal_pixel_count": 21
+    },
+    "counts": {
+      "eligible_consecutive_pairs": 16925,
+      "eligible_individual_cadences": 17025,
+      "exclusion_tallies_may_overlap": {
+        "LC_time_nonfinite": 973,
+        "TPF_time_nonfinite": 973,
+        "engineering_quaternion_unusable": 1,
+        "engineering_row_absent": 973,
+        "engineering_time_missing": 0,
+        "pixel_photocenter_unusable": 973,
+        "quality_nonzero": 1919
+      },
+      "ineligible_or_nonconsecutive_adjacent_rows": 2018,
+      "matched_engineering_cadences": 17971,
+      "matched_lc_cadences": 18944,
+      "quality_zero_rows": 17025,
+      "total_tpf_cadences": 18944
+    },
+    "model": {
+      "axes": {
+        "x": {
+          "MAE_baseline": 0.003603543378201589,
+          "MAE_ridge": 0.0029655542046651815,
+          "MAE_shift97": 0.003607121340080582,
+          "R2_ridge": 0.3353518575675083,
+          "R2_shift97": -0.0018793934610485952,
+          "SSE_baseline": 0.14554950018356655,
+          "SSE_ridge": 0.09673920492898512,
+          "SSE_shift97": 0.14582304496247045
+        },
+        "y": {
+          "MAE_baseline": 0.00495411478852278,
+          "MAE_ridge": 0.004288325931204821,
+          "MAE_shift97": 0.004962580563673539,
+          "R2_ridge": 0.27392915560197983,
+          "R2_shift97": -0.002070832128341804,
+          "SSE_baseline": 0.284575545704064,
+          "SSE_ridge": 0.20662200676437714,
+          "SSE_shift97": 0.2851648538870484
+        }
+      },
+      "evaluable": true,
+      "features": [
+        "Quat1_Med",
+        "Quat2_Med",
+        "Quat3_Med"
+      ],
+      "holdout_pairs": 6770,
+      "negative_control_shift_pairs": 97,
+      "negative_control_training_parameters": {
+        "training_feature_stddev": [
+          4.140871042176877e-7,
+          3.6262626501572243e-7,
+          3.506809548659451e-7
+        ],
+        "zero_variance_training_feature_count": 0
+      },
+      "ridge_lambda": 10,
+      "train_pairs": 10155,
+      "training_parameters": {
+        "training_feature_stddev": [
+          4.140871042176876e-7,
+          3.626262650157221e-7,
+          3.506809548659453e-7
+        ],
+        "zero_variance_training_feature_count": 0
+      }
+    }
+  },
+  "numpy_version": "2.5.5",
+  "payload_sha256": "7661b50f87b96c27b5f7c65017d500bb431965ff0bd7db3d594fb4dd68eab050",
+  "protocol": "AR-OBS006-P01",
+  "python_version": "3.12.16",
+  "selection": {
+    "CAMERA": 4,
+    "CCD": 4,
+    "SECTOR": 5,
+    "TICID": 307210830
+  },
+  "sources": {
+    "LC": {
+      "bytes": 1923840,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "role": "LC",
+      "sha256": "a54fa0f1ec9b4bd860083d9dbef49ccd667f1959e3c210e5c480ee6368e6a0ae",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits"
+    },
+    "TPF": {
+      "bytes": 46414080,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "role": "TPF",
+      "sha256": "c3e5fea929c73e81beac06deee6ff5c24af76d78f258aef2cf448a449bbcef4b",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits"
+    },
+    "VECTOR": {
+      "bytes": 9386675,
+      "file_name": "TessVectors_S005_C4_120.csv",
+      "resolved_url": "https://heasarc.gsfc.nasa.gov/docs/tess/data/TESSVectors/Vectors/120_Cadence/TessVectors_S005_C4_120.csv",
+      "sha256": "2aaa3580649782e3c9cb3642bb01101d408a4e2ac09df82e1ef54fa77f6deac8",
+      "source_url": "https://heasarc.gsfc.nasa.gov/docs/tess/data/TESSVectors/Vectors/120_Cadence/TessVectors_S005_C4_120.csv"
+    }
+  },
+  "status": "PASS"
+}
