@@ -27,7 +27,7 @@ The two new studies were designed to make that distinction refutable rather than
 - [Luger et al., EVEREST (2016)](https://doi.org/10.3847/0004-6256/152/4/100) already documents pixel-level decorrelation, cross-validation and transit injection/recovery. Thus *recovered idealized transit depth* does not on its own establish a new method.
 - [NASA TESS PLD/noise-removal documentation](https://heasarc.gsfc.nasa.gov/docs/tess/NoiseRemovalv2.html) presents pixel-level regressors as an established family. Our **PLD1 is a bounded first-order ridge approximation**, not full EVEREST/QLP/PDC.
 - [MAST TESS Data Product Overview](https://outerspace.stsci.edu/spaces/TESS/pages/14563420/2.0%2B-%2BData%2BProduct%2BOverview) documents quality bit semantics and selection. `QUALITY=0` is not a ground-truth astronomical-origin label.
-- [Zackay, Ofek & Gal-Yam (2016)](https://arxiv.org/abs/1601.02655) and the [TRANSLIENT literature](https://arxiv.org/abs/2401.16489) are relevant published alternatives for distinguishing moving or shifted image sources from actual transients, and must be included in any claim of source-attribution novelty.
+- [Zackay, Ofek & Gal-Yam (2016)](https://arxiv.org/abs/1601.02655) and the [TRANSLIENT literature](https://arxiv.org/abs/2403.09771) are relevant published alternatives for distinguishing moving or shifted image sources from actual transients, and must be included in any claim of source-attribution novelty.
 
 This is a **targeted** prior-art comparison, not proof that no older or unpublished work contains the exact benchmark. Conversely, the exact numeric R² and SSE values on a selected star do not establish original scientific methodology.
 
