@@ -1,0 +1,156 @@
+{
+  "astropy_version": "7.2.4",
+  "gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "hypotheses": {
+    "H1_incremental_short_timescale": "NOT_SUPPORTED_IN_SELECTED_PRODUCTS",
+    "H2_injection_preservation": "SUPPORTED_IN_SELECTED_PRODUCTS",
+    "H3_shift_control": "SUPPORTED_IN_SELECTED_PRODUCTS"
+  },
+  "measurements": {
+    "aperture": {
+      "aperture_bit_counts_1_to_9": {
+        "1": 121,
+        "2": 21,
+        "3": 32,
+        "4": 21,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 121,
+        "9": 0
+      },
+      "background_pixel_count": 32,
+      "image_shape": [
+        11,
+        11
+      ],
+      "optimal_pixel_count": 21
+    },
+    "benchmark": {
+      "consecutive_test_pairs": 6684,
+      "evaluable": true,
+      "hypotheses": {
+        "H1_incremental_short_timescale": "NOT_SUPPORTED_IN_SELECTED_PRODUCTS",
+        "H2_injection_preservation": "SUPPORTED_IN_SELECTED_PRODUCTS",
+        "H3_shift_control": "SUPPORTED_IN_SELECTED_PRODUCTS"
+      },
+      "incremental_squared_rms_gain": 0.0170247049836183,
+      "injection": {
+        "depth": 0.005,
+        "duration_cadences": 12,
+        "fixed_candidate_spacing": 500,
+        "fixed_candidate_start": 250,
+        "flank_cadences": 12,
+        "max_normalized_pld_fraction_change": 8.326672684688674e-17,
+        "test_events": 12,
+        "train_events": 16,
+        "type": "Idealized common-mode multiplicative dimming on all optimal aperture pixels"
+      },
+      "injection_recovery": {
+        "PLD1": {
+          "events": 12,
+          "max_fraction": 1.0022934701158364,
+          "median_abs_error_from_one": 0.0007299422161458624,
+          "median_recovered_fraction": 0.9999108080082226,
+          "min_fraction": 0.998966625767076
+        },
+        "PLD1_Q": {
+          "events": 12,
+          "max_fraction": 1.0026687390535487,
+          "median_abs_error_from_one": 0.0008988329024159913,
+          "median_recovered_fraction": 0.9999826041437381,
+          "min_fraction": 0.9981324726305979
+        },
+        "PLD1_Q_SHIFT97": {
+          "events": 12,
+          "max_fraction": 1.002951414284101,
+          "median_abs_error_from_one": 0.0009231613137440364,
+          "median_recovered_fraction": 1.0000608309712171,
+          "min_fraction": 0.998530490868075
+        },
+        "RAW": {
+          "events": 12,
+          "max_fraction": 1.0000000000000069,
+          "median_abs_error_from_one": 3.6637359812630166e-15,
+          "median_recovered_fraction": 1.0000000000000024,
+          "min_fraction": 0.9999999999999926
+        }
+      },
+      "scatter": {
+        "PLD1": {
+          "point_to_point_rms": 0.0011412080000503186
+        },
+        "PLD1_Q": {
+          "point_to_point_rms": 0.0011314519334965976
+        },
+        "PLD1_Q_SHIFT97": {
+          "point_to_point_rms": 0.0011349128403411743
+        },
+        "RAW": {
+          "point_to_point_rms": 0.0011398995635641832
+        }
+      },
+      "shifted_squared_rms_gain": 0.01100202058040678,
+      "split": {
+        "boundary": 10215,
+        "embargo": 240,
+        "evaluable": true,
+        "test_rows": 6690,
+        "test_start": 10335,
+        "train_end": 10095,
+        "train_rows": 10095
+      }
+    },
+    "counts": {
+      "eligible": 17025,
+      "max_source_sap_relative_discrepancy": 1.2027551989857079e-7,
+      "optimal_pixels": 21,
+      "original_cadences": 18944,
+      "quality_zero": 17025,
+      "vector_matches": 17971
+    }
+  },
+  "numpy_version": "2.5.5",
+  "payload_sha256": "be68c1ee73e750fb5f0560b27487d19727cad7574b12508b5da4b4e53b7549f7",
+  "protocol": "AR-OBS007-P02",
+  "python_version": "3.12.16",
+  "selection": {
+    "CAMERA": 4,
+    "CCD": 4,
+    "SECTOR": 5,
+    "TICID": 307210830
+  },
+  "sources": {
+    "LC": {
+      "bytes": 1923840,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "role": "LC",
+      "sha256": "a54fa0f1ec9b4bd860083d9dbef49ccd667f1959e3c210e5c480ee6368e6a0ae",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits"
+    },
+    "TPF": {
+      "bytes": 46414080,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "role": "TPF",
+      "sha256": "c3e5fea929c73e81beac06deee6ff5c24af76d78f258aef2cf448a449bbcef4b",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits"
+    },
+    "VECTOR": {
+      "bytes": 9386675,
+      "file_name": "TessVectors_S005_C4_120.csv",
+      "resolved_url": "https://heasarc.gsfc.nasa.gov/docs/tess/data/TESSVectors/Vectors/120_Cadence/TessVectors_S005_C4_120.csv",
+      "sha256": "2aaa3580649782e3c9cb3642bb01101d408a4e2ac09df82e1ef54fa77f6deac8",
+      "source_url": "https://heasarc.gsfc.nasa.gov/docs/tess/data/TESSVectors/Vectors/120_Cadence/TessVectors_S005_C4_120.csv"
+    }
+  },
+  "status": "PASS",
+  "version": "1.0.0"
+}
