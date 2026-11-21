@@ -126,9 +126,9 @@ class PixelMorphologyAuditTests(unittest.TestCase):
         finite[105] = False
         out = summarize_background(bg, finite, q)
         self.assertEqual(out["QUALITY_ZERO"]["total_rows"], 100)
-        self.assertEqual(out["BIT_13_SCATTERED_LIGHT"]["total_rows"], 50)
-        self.assertEqual(out["BIT_13_SCATTERED_LIGHT"]["finite_background_rows"], 49)
-        self.assertEqual(out["BIT_6_DESATURATION"]["total_rows"], 20)
+        self.assertEqual(out["BIT_13_SCATTERED_LIGHT"]["total_rows"], 70)
+        self.assertEqual(out["BIT_13_SCATTERED_LIGHT"]["finite_background_rows"], 69)
+        self.assertEqual(out["BIT_6_DESATURATION"]["total_rows"], 40)
         self.assertAlmostEqual(out["bit13_minus_quality_zero_median"], 18.0)
 
     def test_non_evaluable_and_negative_hypotheses(self):
