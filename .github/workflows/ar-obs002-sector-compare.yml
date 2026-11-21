@@ -1,0 +1,43 @@
+name: AR-OBS002 TESS sector comparison
+
+on:
+  push:
+    branches:
+      - research/ar-obs002-sector-comparison-20261120
+  pull_request:
+    paths:
+      - 'docs/preregistration/AR-OBS002-P01.md'
+      - 'scripts/ar_obs002_sector_compare.py'
+      - 'tests/test_ar_obs002_sector_compare.py'
+      - '.github/workflows/ar-obs002-sector-compare.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sector-data-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install numerical and FITS dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install "astropy>=6,<8"
+      - name: Test source access and rowwise accounting logic without remote data
+        run: python -m unittest discover -s tests -p 'test_ar_obs002_sector_compare.py' -v
+      - name: Inspect the two preregistered public SPOC products
+        run: python -m scripts.ar_obs002_sector_compare ar_obs002_audit.json
+      - name: Preserve only compact aggregate provenance
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ar-obs002-sector-provenance
+          path: ar_obs002_audit.json
+          retention-days: 30
+          if-no-files-found: warn
