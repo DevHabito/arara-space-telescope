@@ -17,6 +17,7 @@ from scripts.ar_obs002_sector_compare import (
     measure_columns,
     percentage,
     product_url,
+    validate_file_identity,
 )
 
 
@@ -46,6 +47,24 @@ class ObservationalComparisonTests(unittest.TestCase):
         )
         with self.assertRaises(ValueError):
             product_url(8)
+
+    def test_file_identity_is_per_sector_not_fixed_to_sector5(self):
+        self.assertEqual(
+            validate_file_identity([{"TICID": 307210830}, {"SECTOR": 2}], 2),
+            {"TICID": 307210830, "SECTOR": 2},
+        )
+        self.assertEqual(
+            validate_file_identity([{"TICID": 307210830, "SECTOR": 5}], 5),
+            {"TICID": 307210830, "SECTOR": 5},
+        )
+        with self.assertRaises(ValueError):
+            validate_file_identity([{"TICID": 307210830, "SECTOR": 2}], 5)
+        with self.assertRaises(ValueError):
+            validate_file_identity([{"TICID": 307210830, "SECTOR": 5}], 2)
+        with self.assertRaises(ValueError):
+            validate_file_identity([{"TICID": 307210830, "SECTOR": 2}], 8)
+        with self.assertRaises(ValueError):
+            validate_file_identity([{"TICID": 307210830, "SECTOR": 2}, {"SECTOR": 5}], 2)
 
     def test_contingency_uses_rowwise_intersections(self):
         q_zero = np.array([True, True, False, False])
