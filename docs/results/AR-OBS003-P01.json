@@ -1,0 +1,133 @@
+{
+  "astropy_version": "7.2.4",
+  "gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "hypotheses": {
+    "H1_cadence_quality_time_alignment": "SUPPORTED_IN_SELECTED_PRODUCT_PAIR",
+    "H2_sap_aperture_reconstruction": "SUPPORTED_IN_SELECTED_PRODUCT_PAIR"
+  },
+  "measurements": {
+    "aperture": {
+      "aperture_bit_counts_1_to_9": {
+        "1": 121,
+        "2": 21,
+        "3": 32,
+        "4": 21,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 121,
+        "9": 0
+      },
+      "background_pixel_count": 32,
+      "image_shape": [
+        11,
+        11
+      ],
+      "optimal_pixel_count": 21
+    },
+    "identity": {
+      "SECTOR": 5,
+      "TICID": 307210830
+    },
+    "lightcurve_table_columns": [
+      "TIME",
+      "TIMECORR",
+      "CADENCENO",
+      "SAP_FLUX",
+      "SAP_FLUX_ERR",
+      "SAP_BKG",
+      "SAP_BKG_ERR",
+      "PDCSAP_FLUX",
+      "PDCSAP_FLUX_ERR",
+      "QUALITY",
+      "PSF_CENTR1",
+      "PSF_CENTR1_ERR",
+      "PSF_CENTR2",
+      "PSF_CENTR2_ERR",
+      "MOM_CENTR1",
+      "MOM_CENTR1_ERR",
+      "MOM_CENTR2",
+      "MOM_CENTR2_ERR",
+      "POS_CORR1",
+      "POS_CORR2"
+    ],
+    "paired_observations": {
+      "eligible_reconstruction_rows": 17025,
+      "finite_paired_times": 17971,
+      "lc_cadences": 18944,
+      "matched_cadences": 18944,
+      "matched_rows_with_all_selected_pixels_finite": 17971,
+      "matched_rows_with_any_selected_pixel_finite": 17971,
+      "quality_mismatch_rows": 0,
+      "sap_reconstruction": {
+        "count_relative_error_le_0_001": 17025,
+        "fraction_relative_error_le_0_001": 1,
+        "max_relative_error": 1.2027551989857079e-7,
+        "median_relative_error": 3.032639632197059e-8,
+        "median_signed_difference_electrons_per_second": -0.000003814697265625
+      },
+      "skipped_by_reason": {
+        "not_quality_zero_in_both": 1919,
+        "quality_zero_but_invalid_sap": 0,
+        "quality_zero_valid_sap_but_missing_selected_pixel": 0
+      },
+      "time_offset_days_max": 0,
+      "time_offset_days_median": 0,
+      "tpf_cadences": 18944,
+      "unmatched_lc": 0,
+      "unmatched_tpf": 0
+    },
+    "pixel_cube_shape": [
+      18944,
+      11,
+      11
+    ],
+    "pixel_flux_units": "e-/s",
+    "pixel_table_columns": [
+      "TIME",
+      "TIMECORR",
+      "CADENCENO",
+      "RAW_CNTS",
+      "FLUX",
+      "FLUX_ERR",
+      "FLUX_BKG",
+      "FLUX_BKG_ERR",
+      "QUALITY",
+      "POS_CORR1",
+      "POS_CORR2"
+    ],
+    "sap_flux_units": "e-/s"
+  },
+  "numpy_version": "2.5.5",
+  "payload_sha256": "efae93cf6c6b687dcea52e31c8072230b154554445228ea966b765088f11c669",
+  "products": {
+    "LC": {
+      "bytes": 1923840,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "role": "LC",
+      "sha256": "a54fa0f1ec9b4bd860083d9dbef49ccd667f1959e3c210e5c480ee6368e6a0ae",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits"
+    },
+    "TPF": {
+      "bytes": 46414080,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "role": "TPF",
+      "sha256": "c3e5fea929c73e81beac06deee6ff5c24af76d78f258aef2cf448a449bbcef4b",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits"
+    }
+  },
+  "protocol": "AR-OBS003-P01",
+  "python_version": "3.12.16",
+  "sector": 5,
+  "selected_tic_id": 307210830,
+  "status": "PASS",
+  "version": "1.0.0"
+}
