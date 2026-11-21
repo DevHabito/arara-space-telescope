@@ -1,0 +1,107 @@
+{
+  "astropy_version": "7.2.4",
+  "engineering_columns": [
+    "Cadence",
+    "MidTime",
+    "Segment",
+    "Quat_Start",
+    "Quat_Stop",
+    "Quat_MIN_FOM",
+    "Quat_MIN_NUM_GSUSED",
+    "Quat_NBinned",
+    "Quat1_Med",
+    "Quat1_StdDev",
+    "Quat1_StdDev_SigClip",
+    "Quat2_Med",
+    "Quat2_StdDev",
+    "Quat2_StdDev_SigClip",
+    "Quat3_Med",
+    "Quat3_StdDev",
+    "Quat3_StdDev_SigClip",
+    "Quat4_Med",
+    "Quat4_StdDev",
+    "Quat4_StdDev_SigClip",
+    "Earth_Distance",
+    "Earth_Camera_Angle",
+    "Earth_Camera_Azimuth",
+    "Moon_Distance",
+    "Moon_Camera_Angle",
+    "Moon_Camera_Azimuth",
+    "Earth_Spacecraft_Angle",
+    "Earth_Spacecraft_Azimuth",
+    "Moon_Spacecraft_Angle",
+    "Moon_Spacecraft_Azimuth"
+  ],
+  "engineering_identity_columns": [],
+  "engineering_preamble_lines": 41,
+  "gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "hypotheses": {
+    "H1_cadence_coverage": "SUPPORTED_IN_SELECTED_PRODUCTS",
+    "H2_clock_frame_alignment": "SUPPORTED_IN_SELECTED_PRODUCTS",
+    "H3_quaternion_availability": "SUPPORTED_IN_SELECTED_PRODUCTS"
+  },
+  "implementation_version": "1.0.0",
+  "measurements": {
+    "engineering_presence": {
+      "contingency": {
+        "quality_flagged_and_engineering": 945,
+        "quality_flagged_and_no_engineering": 1,
+        "quality_zero_and_engineering": 17025,
+        "quality_zero_and_no_engineering": 0
+      },
+      "matched_engineering_available": 17970,
+      "matched_finite_quat_nbins": 17971,
+      "median_bins_for_available": 60,
+      "quality_zero_matched_rows": 17025
+    },
+    "finite_time_comparison_rows": 17971,
+    "lc_finite_time_rows": 17971,
+    "lc_rows": 18944,
+    "matched_finite_lc_and_vector_time_rows": 17971,
+    "matched_rows": 17971,
+    "time_delta_seconds": {
+      "max_abs": 0.44000005727866665,
+      "median_abs": 0.44000005727866665,
+      "median_signed": -0.44000005727866665,
+      "p95_abs": 0.44000005727866665
+    },
+    "unmatched_lc": 973,
+    "unmatched_vector": 0,
+    "vector_rows": 17971
+  },
+  "numpy_version": "2.5.5",
+  "payload_sha256": "ac924ec3c5b05010202d7fc60a0e4cb1e41a14ad93d5b01e68e2655c4ad2aa35",
+  "protocol": "AR-OBS005-P01",
+  "python_version": "3.12.16",
+  "selection": {
+    "camera": 4,
+    "ccd": 4,
+    "engineering_file": "TessVectors_S005_C4_120.csv",
+    "sector": 5,
+    "tic_id": 307210830
+  },
+  "source_files": {
+    "LC": {
+      "bytes": 1923840,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "role": "LC",
+      "sha256": "a54fa0f1ec9b4bd860083d9dbef49ccd667f1959e3c210e5c480ee6368e6a0ae",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits"
+    },
+    "VECTOR": {
+      "bytes": 9386675,
+      "file_name": "TessVectors_S005_C4_120.csv",
+      "resolved_url": "https://heasarc.gsfc.nasa.gov/docs/tess/data/TESSVectors/Vectors/120_Cadence/TessVectors_S005_C4_120.csv",
+      "sha256": "2aaa3580649782e3c9cb3642bb01101d408a4e2ac09df82e1ef54fa77f6deac8",
+      "source_url": "https://heasarc.gsfc.nasa.gov/docs/tess/data/TESSVectors/Vectors/120_Cadence/TessVectors_S005_C4_120.csv"
+    }
+  },
+  "status": "PASS"
+}
