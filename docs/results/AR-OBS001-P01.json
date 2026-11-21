@@ -1,0 +1,144 @@
+{
+  "astropy_version": "7.2.4",
+  "download": {
+    "download_bytes": 1923840,
+    "download_sha256": "a54fa0f1ec9b4bd860083d9dbef49ccd667f1959e3c210e5c480ee6368e6a0ae",
+    "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+    "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+    "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits"
+  },
+  "fits": {
+    "columns": [
+      "TIME",
+      "TIMECORR",
+      "CADENCENO",
+      "SAP_FLUX",
+      "SAP_FLUX_ERR",
+      "SAP_BKG",
+      "SAP_BKG_ERR",
+      "PDCSAP_FLUX",
+      "PDCSAP_FLUX_ERR",
+      "QUALITY",
+      "PSF_CENTR1",
+      "PSF_CENTR1_ERR",
+      "PSF_CENTR2",
+      "PSF_CENTR2_ERR",
+      "MOM_CENTR1",
+      "MOM_CENTR1_ERR",
+      "MOM_CENTR2",
+      "MOM_CENTR2_ERR",
+      "POS_CORR1",
+      "POS_CORR2"
+    ],
+    "headers": {
+      "CAMERA": "4",
+      "CCD": "4",
+      "INSTRUME": "TESS Photometer",
+      "PROCVER": "spoc-5.0.20-20201120",
+      "TELESCOP": "TESS",
+      "TIMESYS": "TDB"
+    },
+    "identity": {
+      "SECTOR": 5,
+      "TICID": 307210830
+    },
+    "observations": {
+      "cadences": 18944,
+      "finite_positive_flux_rows": {
+        "PDCSAP_FLUX": {
+          "all_rows": 17025,
+          "quality_zero_rows": 17025
+        },
+        "SAP_FLUX": {
+          "all_rows": 17857,
+          "quality_zero_rows": 17025
+        }
+      },
+      "finite_time_rows": 17971,
+      "optional_columns": {
+        "MOM_CENTR1": {
+          "available": true,
+          "finite_rows": 17857
+        },
+        "MOM_CENTR2": {
+          "available": true,
+          "finite_rows": 17857
+        },
+        "POS_CORR1": {
+          "available": true,
+          "finite_rows": 17656
+        },
+        "POS_CORR2": {
+          "available": true,
+          "finite_rows": 17656
+        },
+        "PSF_CENTR1": {
+          "available": true,
+          "finite_rows": 0
+        },
+        "PSF_CENTR2": {
+          "available": true,
+          "finite_rows": 0
+        },
+        "SAP_BKG": {
+          "available": true,
+          "finite_rows": 17857
+        }
+      },
+      "quality": {
+        "bits_1_to_16": {
+          "1": 1,
+          "2": 0,
+          "3": 24,
+          "4": 974,
+          "5": 54,
+          "6": 60,
+          "7": 0,
+          "8": 216,
+          "9": 0,
+          "10": 0,
+          "11": 0,
+          "12": 0,
+          "13": 550,
+          "14": 0,
+          "15": 0,
+          "16": 115
+        },
+        "nonzero_count": 1919,
+        "zero_count": 17025
+      }
+    },
+    "table_extension": "LIGHTCURVE",
+    "units": {
+      "MOM_CENTR1": "pixel",
+      "MOM_CENTR2": "pixel",
+      "PDCSAP_FLUX": "e-/s",
+      "POS_CORR1": "pixels",
+      "POS_CORR2": "pixels",
+      "PSF_CENTR1": "pixel",
+      "PSF_CENTR2": "pixel",
+      "QUALITY": null,
+      "SAP_BKG": "e-/s",
+      "SAP_FLUX": "e-/s",
+      "TIME": "BJD - 2457000, days"
+    }
+  },
+  "gates": {
+    "download": "PASS",
+    "fits_parse": "PASS",
+    "identity": "PASS",
+    "schema": "PASS"
+  },
+  "numpy_version": "2.5.5",
+  "payload_sha256": "2d8011f576107810da102d85d58c4e587b67eb799e3ff2e607cf302c1c1fac18",
+  "protocol": "AR-OBS001-P01",
+  "python_version": "3.12.16",
+  "schema_version": "1.0.0",
+  "selection": {
+    "file": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+    "mission": "TESS",
+    "sector": 5,
+    "tic_id": 307210830
+  },
+  "status": "PASS"
+}
