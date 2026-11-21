@@ -1,0 +1,43 @@
+name: AR-OBS006 held-out engineering-to-pixel prediction
+
+on:
+  push:
+    branches:
+      - research/ar-obs006-heldout-quaternion-20261120
+  pull_request:
+    paths:
+      - 'docs/preregistration/AR-OBS006-P01.md'
+      - 'scripts/ar_obs006_quaternion_holdout.py'
+      - 'tests/test_ar_obs006_quaternion_holdout.py'
+      - '.github/workflows/ar-obs006-quaternion-holdout.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quaternion-holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install numerical FITS dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install "astropy>=6,<8"
+      - name: Test preregistered split, gates and negative control without external data
+        run: python -m unittest discover -s tests -p 'test_ar_obs006_quaternion_holdout.py' -v
+      - name: Audit three frozen public products on a chronological holdout
+        run: python -m scripts.ar_obs006_quaternion_holdout ar_obs006_audit.json
+      - name: Retain aggregate scientific record even if source or code fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ar-obs006-quaternion-holdout
+          path: ar_obs006_audit.json
+          if-no-files-found: warn
+          retention-days: 30
