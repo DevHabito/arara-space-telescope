@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - research/ar-obs001-tess-access-audit-20261120
+  pull_request:
+    paths:
+      - 'scripts/ar_obs001_tess_audit.py'
+      - 'tests/test_ar_obs001_tess_audit.py'
+      - 'docs/preregistration/AR-OBS001-P01.md'
+      - '.github/workflows/ar-obs001-tess-audit.yml'
   workflow_dispatch:
 
 permissions:
