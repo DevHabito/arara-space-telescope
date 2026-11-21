@@ -1,0 +1,117 @@
+{
+  "astropy_version": "7.2.4",
+  "gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "hypotheses": {
+    "H1_x_movement_association": "SUPPORTED_IN_SELECTED_PRODUCT",
+    "H2_y_movement_association": "SUPPORTED_IN_SELECTED_PRODUCT",
+    "H3_background_flag_selection": "SUPPORTED_IN_SELECTED_PRODUCT"
+  },
+  "implementation_version": "1.0.0",
+  "measurements": {
+    "aperture": {
+      "aperture_bit_counts_1_to_9": {
+        "1": 121,
+        "2": 21,
+        "3": 32,
+        "4": 21,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 121,
+        "9": 0
+      },
+      "background_pixel_count": 32,
+      "image_shape": [
+        11,
+        11
+      ],
+      "optimal_pixel_count": 21
+    },
+    "background": {
+      "BIT_13_SCATTERED_LIGHT": {
+        "finite_background_rows": 550,
+        "median_estimated_background": 764.5262451171875,
+        "total_rows": 550
+      },
+      "BIT_6_DESATURATION": {
+        "finite_background_rows": 0,
+        "median_estimated_background": null,
+        "total_rows": 60
+      },
+      "QUALITY_ZERO": {
+        "finite_background_rows": 17025,
+        "median_estimated_background": 90.10851287841797,
+        "total_rows": 17025
+      },
+      "bit13_minus_quality_zero_median": 674.4177322387695
+    },
+    "cadences": 18944,
+    "finite_background_rows": 17857,
+    "finite_positive_centroid_rows": 17971,
+    "hypotheses": {
+      "H1_x_movement_association": "SUPPORTED_IN_SELECTED_PRODUCT",
+      "H2_y_movement_association": "SUPPORTED_IN_SELECTED_PRODUCT",
+      "H3_background_flag_selection": "SUPPORTED_IN_SELECTED_PRODUCT"
+    },
+    "matched_cadences": 18944,
+    "movement": {
+      "eligible_consecutive_pairs": 16925,
+      "nonconsecutive_or_ineligible_adjacent_rows": 2018,
+      "usable_individual_rows": 17025,
+      "x": {
+        "r_shift24": -0.01982199309657055,
+        "r_zero_lag": 0.9835476230294716
+      },
+      "y": {
+        "r_shift24": -0.029423623801314903,
+        "r_zero_lag": 0.9894646186364059
+      }
+    },
+    "pixel_shape": [
+      18944,
+      11,
+      11
+    ],
+    "quality_flagged_rows": 1919,
+    "quality_zero_rows": 17025,
+    "source_column_units": {
+      "FLUX": "e-/s",
+      "FLUX_BKG": "e-/s",
+      "POS_CORR1": "pixel",
+      "POS_CORR2": "pixel"
+    }
+  },
+  "numpy_version": "2.5.5",
+  "payload_sha256": "c577df950c8802650d2874c5aff32c83dee5caf17efd94ff56a9d8f3a49aaa18",
+  "products": {
+    "LC": {
+      "bytes": 1923840,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "role": "LC",
+      "sha256": "a54fa0f1ec9b4bd860083d9dbef49ccd667f1959e3c210e5c480ee6368e6a0ae",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_lc.fits"
+    },
+    "TPF": {
+      "bytes": 46414080,
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "resolved_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits",
+      "role": "TPF",
+      "sha256": "c3e5fea929c73e81beac06deee6ff5c24af76d78f258aef2cf448a449bbcef4b",
+      "source_url": "https://archive.stsci.edu/missions/tess/tid/s0005/0000/0003/0721/0830/tess2018319095959-s0005-0000000307210830-0125-s_tp.fits"
+    }
+  },
+  "protocol": "AR-OBS004-P01",
+  "python_version": "3.12.16",
+  "source_names": {
+    "LC": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+    "TPF": "tess2018319095959-s0005-0000000307210830-0125-s_tp.fits"
+  },
+  "status": "PASS"
+}

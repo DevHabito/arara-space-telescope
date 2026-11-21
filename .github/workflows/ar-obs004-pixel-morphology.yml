@@ -1,0 +1,43 @@
+name: AR-OBS004 TESS pixel morphology
+
+on:
+  push:
+    branches:
+      - research/ar-obs004-pixel-morphology-20261120
+  pull_request:
+    paths:
+      - 'docs/preregistration/AR-OBS004-P01.md'
+      - 'scripts/ar_obs004_pixel_morphology.py'
+      - 'tests/test_ar_obs004_pixel_morphology.py'
+      - '.github/workflows/ar-obs004-pixel-morphology.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pixel-morphology:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install numerical FITS dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install "astropy>=6,<8"
+      - name: Regression checks with synthetic images
+        run: python -m unittest discover -s tests -p 'test_ar_obs004_pixel_morphology.py' -v
+      - name: Evaluate frozen pixel/position and background proxies
+        run: python -m scripts.ar_obs004_pixel_morphology ar_obs004_audit.json
+      - name: Retain compact research evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ar-obs004-pixel-morphology
+          path: ar_obs004_audit.json
+          if-no-files-found: warn
+          retention-days: 30
