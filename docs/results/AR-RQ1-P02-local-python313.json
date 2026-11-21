@@ -1,0 +1,82 @@
+{
+  "class_examples_per_scenario": {
+    "A": 512,
+    "I": 512
+  },
+  "expected_gaussian_balanced_accuracy": {
+    "ALIGNED": 0.7733726476231317,
+    "INVERTED": 0.22662735237686826,
+    "UNINFORMATIVE": 0.5
+  },
+  "gates": {
+    "G1_photometric_nonidentifiability": "PASS",
+    "G2_aligned_informativeness": "PASS",
+    "G3_uninformative_diagnostic": "PASS",
+    "G4_inverted_diagnostic_failure": "PASS",
+    "G5_count_and_metric_consistency": "PASS"
+  },
+  "identical_photometry_pairs": 512,
+  "implementation_version": "1.0.0",
+  "numpy_version": "2.3.5",
+  "pairs": 512,
+  "payload_sha256": "fd8b7c0ed9ce933552297567cf89fbefde7e8c230ef4dc000c89fce2aaadbf79",
+  "protocol": "AR-RQ1-P02",
+  "python_version": "3.13.5",
+  "results": {
+    "ALIGNED": {
+      "AUX_DIAGNOSTIC": {
+        "artifact_correct_count": 410,
+        "artifact_miss_rate": 0.19921875,
+        "artifact_rejection": 0.80078125,
+        "astro_correct_count": 405,
+        "astro_retention": 0.791015625,
+        "balanced_accuracy": 0.7958984375
+      },
+      "PHOTOMETRY_ONLY": {
+        "artifact_correct_count": 0,
+        "artifact_miss_rate": 1,
+        "artifact_rejection": 0,
+        "astro_correct_count": 512,
+        "astro_retention": 1,
+        "balanced_accuracy": 0.5
+      }
+    },
+    "INVERTED": {
+      "AUX_DIAGNOSTIC": {
+        "artifact_correct_count": 135,
+        "artifact_miss_rate": 0.736328125,
+        "artifact_rejection": 0.263671875,
+        "astro_correct_count": 117,
+        "astro_retention": 0.228515625,
+        "balanced_accuracy": 0.24609375
+      },
+      "PHOTOMETRY_ONLY": {
+        "artifact_correct_count": 0,
+        "artifact_miss_rate": 1,
+        "artifact_rejection": 0,
+        "astro_correct_count": 512,
+        "astro_retention": 1,
+        "balanced_accuracy": 0.5
+      }
+    },
+    "UNINFORMATIVE": {
+      "AUX_DIAGNOSTIC": {
+        "artifact_correct_count": 273,
+        "artifact_miss_rate": 0.466796875,
+        "artifact_rejection": 0.533203125,
+        "astro_correct_count": 251,
+        "astro_retention": 0.490234375,
+        "balanced_accuracy": 0.51171875
+      },
+      "PHOTOMETRY_ONLY": {
+        "artifact_correct_count": 0,
+        "artifact_miss_rate": 1,
+        "artifact_rejection": 0,
+        "astro_correct_count": 512,
+        "astro_retention": 1,
+        "balanced_accuracy": 0.5
+      }
+    }
+  },
+  "seed_start": 20261121
+}
