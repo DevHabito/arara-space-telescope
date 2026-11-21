@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "source_protocol": "AR-OBS002-P01",
+  "report_scope": "Permanent compact extract of the original full GitHub Actions JSON; not a replacement for the archived workflow artifact.",
+  "original_workflow_run": 44849436001,
+  "original_workflow_artifact_id": 14684887210,
+  "original_canonical_payload_sha256": "e4b8460f900d3e61b787598a42d8cced42115adf15d1a1a045a7d09c9c35c9c6",
+  "first_failed_execution": {
+    "run_id": 44849327441,
+    "reason": "Source identity validator erroneously assumed Sector 5 for every file; this was a software error, not a rejected science hypothesis."
+  },
+  "environment": {
+    "python": "3.12.16",
+    "numpy": "2.5.5",
+    "astropy": "7.2.4"
+  },
+  "target_tic": 307210830,
+  "hypotheses": {
+    "H1_sector5": "SUPPORTED_IN_SELECTED_FILE",
+    "H2_sector2": "SUPPORTED_IN_SELECTED_FILE"
+  },
+  "validation_gates": {
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "PASS",
+    "G5": "PASS"
+  },
+  "sectors": {
+    "2": {
+      "file_name": "tess2018234235059-s0002-0000000307210830-0121-s_lc.fits",
+      "original_fits_sha256": "516d3ee2210ba33214026ac1255d06e112723c6053f5a33872f457b0526ba8d4",
+      "original_fits_bytes": 2004480,
+      "pipeline_version": "spoc-5.0.11-20200915",
+      "rows": 19737,
+      "quality_zero_rows": 17578,
+      "quality_flagged_rows": 2159,
+      "contingency": {
+        "TIME": {
+          "Q_and_valid": 17578,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 1121,
+          "flagged_and_invalid": 1038
+        },
+        "SAP_FLUX": {
+          "Q_and_valid": 17578,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 1043,
+          "flagged_and_invalid": 1116
+        },
+        "PDCSAP_FLUX": {
+          "Q_and_valid": 17578,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 0,
+          "flagged_and_invalid": 2159
+        },
+        "MOM_CENTR_PAIR": {
+          "Q_and_valid": 17578,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 1043,
+          "flagged_and_invalid": 1116
+        },
+        "POS_CORR_PAIR": {
+          "Q_and_valid": 17578,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 1043,
+          "flagged_and_invalid": 1116
+        }
+      },
+      "available_psf_centroid_finite_rows": {
+        "PSF_CENTR1": 0,
+        "PSF_CENTR2": 0
+      },
+      "quality_bit_rows": {
+        "3": 30,
+        "4": 1039,
+        "6": 78,
+        "8": 371,
+        "16": 722
+      }
+    },
+    "5": {
+      "file_name": "tess2018319095959-s0005-0000000307210830-0125-s_lc.fits",
+      "original_fits_sha256": "a54fa0f1ec9b4bd860083d9dbef49ccd667f1959e3c210e5c480ee6368e6a0ae",
+      "original_fits_bytes": 1923840,
+      "pipeline_version": "spoc-5.0.20-20201120",
+      "rows": 18944,
+      "quality_zero_rows": 17025,
+      "quality_flagged_rows": 1919,
+      "contingency": {
+        "TIME": {
+          "Q_and_valid": 17025,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 946,
+          "flagged_and_invalid": 973
+        },
+        "SAP_FLUX": {
+          "Q_and_valid": 17025,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 832,
+          "flagged_and_invalid": 1087
+        },
+        "PDCSAP_FLUX": {
+          "Q_and_valid": 17025,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 0,
+          "flagged_and_invalid": 1919
+        },
+        "MOM_CENTR_PAIR": {
+          "Q_and_valid": 17025,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 832,
+          "flagged_and_invalid": 1087
+        },
+        "POS_CORR_PAIR": {
+          "Q_and_valid": 17025,
+          "Q_and_invalid": 0,
+          "flagged_and_valid": 631,
+          "flagged_and_invalid": 1288
+        }
+      },
+      "available_psf_centroid_finite_rows": {
+        "PSF_CENTR1": 0,
+        "PSF_CENTR2": 0
+      },
+      "quality_bit_rows": {
+        "1": 1,
+        "3": 24,
+        "4": 974,
+        "5": 54,
+        "6": 60,
+        "8": 216,
+        "13": 550,
+        "16": 115
+      }
+    }
+  }
+}
