@@ -1,0 +1,43 @@
+name: AR-OBS003 TESS pixel/aperture audit
+
+on:
+  push:
+    branches:
+      - research/ar-obs003-tess-pixel-aperture-20261120
+  pull_request:
+    paths:
+      - 'docs/preregistration/AR-OBS003-P01.md'
+      - 'scripts/ar_obs003_pixel_aperture.py'
+      - 'tests/test_ar_obs003_pixel_aperture.py'
+      - '.github/workflows/ar-obs003-tess-pixel-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pixel-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install numerical and FITS dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install "astropy>=6,<8"
+      - name: Validate pixel, cadence and flux accounting without external data
+        run: python -m unittest discover -s tests -p 'test_ar_obs003_pixel_aperture.py' -v
+      - name: Audit frozen TESS pixels against light-curve file
+        run: python -m scripts.ar_obs003_pixel_aperture ar_obs003_audit.json
+      - name: Retain provenance aggregates even if the external source fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ar-obs003-pixel-provenance
+          path: ar_obs003_audit.json
+          if-no-files-found: warn
+          retention-days: 30
