@@ -23,7 +23,6 @@ from scripts.ar_obs001_tess_audit import (
     ArchiveHostRedirect,
     MAX_BYTES,
     TIC_ID,
-    header_identity,
 )
 
 PROTOCOL = "AR-OBS002-P01"
@@ -50,6 +49,28 @@ def product_url(sector: int) -> str:
     if sector not in SOURCES:
         raise ValueError("Sector not preregistered")
     return f"{FILE_ROOT}/s{sector:04d}/{TIC_PARTITION}/{SOURCES[sector]}"
+
+
+def validate_file_identity(headers: list, sector: int) -> dict:
+    """Compare both FITS identifiers with the selected preregistered sector."""
+    if sector not in SOURCES:
+        raise ValueError("Sector not preregistered")
+    verified = {}
+    for name, expected in (("TICID", TIC_ID), ("SECTOR", sector)):
+        reported = set()
+        for header in headers:
+            if name in header:
+                try:
+                    reported.add(int(header[name]))
+                except (ValueError, TypeError) as exc:
+                    raise ValueError(f"Invalid {name} FITS header") from exc
+        if not reported or reported != {expected}:
+            raise ValueError(
+                f"{name} does not match selected file: "
+                f"expected {expected}, found {sorted(reported)}"
+            )
+        verified[name] = expected
+    return verified
 
 
 def fetch_fits(sector: int, destination: Path) -> dict:
@@ -199,7 +220,7 @@ def inspect_product(path: Path, sector: int) -> dict:
     from astropy.io import fits
 
     with fits.open(path, memmap=False) as hdus:
-        identity = header_identity([h.header for h in hdus])
+        identity = validate_file_identity([h.header for h in hdus], sector)
         if identity["TICID"] != TIC_ID or identity["SECTOR"] != sector:
             raise ValueError("Header identity mismatch")
         tables = [
