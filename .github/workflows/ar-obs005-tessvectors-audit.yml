@@ -1,0 +1,43 @@
+name: AR-OBS005 TESSVectors provenance and alignment
+
+on:
+  push:
+    branches:
+      - research/ar-obs005-tessvectors-provenance-20261120
+  pull_request:
+    paths:
+      - 'docs/preregistration/AR-OBS005-P01.md'
+      - 'scripts/ar_obs005_tessvectors_alignment.py'
+      - 'tests/test_ar_obs005_tessvectors_alignment.py'
+      - '.github/workflows/ar-obs005-tessvectors-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vector-provenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install FITS and numerical dependencies
+        run: |
+          python -m pip install -r requirements.txt
+          python -m pip install "astropy>=6,<8"
+      - name: Test strict CSV parsing and cadence alignment with artificial data
+        run: python -m unittest discover -s tests -p 'test_ar_obs005_tessvectors_alignment.py' -v
+      - name: Inspect fixed public engineering and light-curve products
+        run: python -m scripts.ar_obs005_tessvectors_alignment ar_obs005_audit.json
+      - name: Archive small provenance report even on source-access failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ar-obs005-tessvectors-provenance
+          path: ar_obs005_audit.json
+          if-no-files-found: warn
+          retention-days: 30
