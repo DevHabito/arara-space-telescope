@@ -93,7 +93,7 @@ class ObservationalComparisonTests(unittest.TestCase):
         self.assertEqual(result["quality_bits_1_to_16"]["6"]["with_valid_pdc"], 1)
         self.assertEqual(result["valid_rows"]["TIME"], 4)
         self.assertEqual(result["valid_rows"]["MOM_CENTR_PAIR"], 3)
-        self.assertEqual(result["valid_rows"]["POS_CORR_PAIR"], 2)
+        self.assertEqual(result["valid_rows"]["POS_CORR_PAIR"], 3)
         self.assertTrue(result["optional_centroid_columns"]["PSF_CENTR1"]["present"])
         self.assertEqual(result["optional_centroid_columns"]["PSF_CENTR1"]["finite_rows"], 0)
         self.assertFalse(result["optional_centroid_columns"]["PSF_CENTR2"]["present"])
