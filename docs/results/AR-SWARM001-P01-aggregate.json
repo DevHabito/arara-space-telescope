@@ -1,0 +1,159 @@
+{
+  "protocol": "AR-SWARM001-P01",
+  "record_type": "VERIFIED_AGGREGATE_FROM_HOSTED_FULL_JSON",
+  "registered_before_implementation": "6d7be731d0c68941d723a28c41b9d661ff60f405",
+  "code_commit_before_execution": "9a0a1bbfd1f0da7f4bf95c2fddcac1e0f408cc48",
+  "observational_class": "SYNTHETIC_PROCESSING_SERVICE_ONLY",
+  "execution": {
+    "python": "3.12",
+    "unit_tests": 12,
+    "integrity_gates": {
+      "G1": "PASS",
+      "G2": "PASS",
+      "G3": "PASS",
+      "G4": "PASS",
+      "G5": "PASS"
+    },
+    "workflow_run_url": "https://github.com/DevHabito/arara-space-telescope/actions/runs/45152307189",
+    "original_full_json_artifact_url": "https://github.com/DevHabito/arara-space-telescope/actions/runs/45152307189/artifacts/14805574950",
+    "original_full_json_canonical_payload_sha256": "0d589fac6c4db752e76eddfc52881256af35c06c22d5423e26263b81fe3c1bc6",
+    "independent_digest_check": "MATCHED"
+  },
+  "frozen_model": {
+    "relative_index": "B/(I*tau), k=1",
+    "future_windows": 3,
+    "observed_history_windows": 4,
+    "accepted_definition": "current and preceding 3 windows only",
+    "label_definition": "mean synthetic downstream output adequacy over future three windows < 0.80",
+    "alarm_threshold": "90th percentile of negative training scores; alarm for strictly greater risk",
+    "episode_split": "30 training and 20 held-out episodes per observable scenario; hidden corruption withheld entirely"
+  },
+  "cohort": {
+    "train_observable": {
+      "episodes": 120,
+      "forecasts": 5040,
+      "positives": 2074,
+      "negatives": 2966
+    },
+    "test_observable": {
+      "episodes": 80,
+      "forecasts": 3360,
+      "positives": 1398,
+      "negatives": 1962
+    },
+    "test_hidden_corruption": {
+      "episodes": 50,
+      "forecasts": 2100,
+      "positives": 901,
+      "negatives": 1199
+    }
+  },
+  "selected_champion": {
+    "name": "MAX",
+    "selection": "maximum train ROC-AUC over B_ONLY,I_ONLY,TAU_ONLY,LINEAR,MAX",
+    "training_roc_auc": 0.890368242850018,
+    "heldout_roc_auc": 0.8926777951318251
+  },
+  "primary_observable_holdout": {
+    "RZS": {
+      "roc_auc": 0.8950142113606302,
+      "TP": 1180,
+      "FN": 218,
+      "FP": 205,
+      "TN": 1757,
+      "recall": 0.844062947067239,
+      "FPR": 0.10448521916411825
+    },
+    "MAX": {
+      "roc_auc": 0.8926777951318251,
+      "TP": 1123,
+      "FN": 275,
+      "FP": 199,
+      "TN": 1763,
+      "recall": 0.8032904148783977,
+      "FPR": 0.10142711518858308
+    },
+    "comparator_roc_auc": {
+      "B_ONLY": 0.6883074553862443,
+      "I_ONLY": 0.5827990401315991,
+      "TAU_ONLY": 0.8097799535961524,
+      "LINEAR": 0.8713857279731202,
+      "MAX": 0.8926777951318251
+    },
+    "auc_gain_over_train_selected_champion": 0.002336416228805094,
+    "episode_block_bootstrap_95pct_ci_of_auc_difference": [
+      -0.009112836761769359,
+      0.013983581892114667
+    ],
+    "bootstrap_episode_resamples": 400
+  },
+  "hidden_holdout": {
+    "RZS": {
+      "roc_auc": 0.4890525678538997,
+      "TP": 11,
+      "FN": 890,
+      "FP": 33,
+      "TN": 1166,
+      "recall": 0.01220865704772475,
+      "FPR": 0.027522935779816515
+    },
+    "MAX": {
+      "roc_auc": 0.47527675208437664,
+      "TP": 45,
+      "FN": 856,
+      "FP": 76,
+      "TN": 1123,
+      "recall": 0.049944506104328525,
+      "FPR": 0.0633861551292744
+    }
+  },
+  "by_scenario_RZS": {
+    "NOMINAL": {
+      "positives": 11,
+      "negatives": 829,
+      "roc_auc": 0.7386774865665094,
+      "recall": 0.09090909090909091,
+      "FPR": 0.021712907117008445
+    },
+    "CAPACITY": {
+      "positives": 639,
+      "negatives": 201,
+      "roc_auc": 0.9513932683997851,
+      "recall": 0.8716744913928013,
+      "FPR": 0.014925373134328358
+    },
+    "VISIBLE_CORRUPTION": {
+      "positives": 371,
+      "negatives": 469,
+      "roc_auc": 0.8691371789493043,
+      "recall": 0.8706199460916442,
+      "FPR": 0.23667377398720682
+    },
+    "LATENCY": {
+      "positives": 377,
+      "negatives": 463,
+      "roc_auc": 0.8487032443240085,
+      "recall": 0.7931034482758621,
+      "FPR": 0.15766738660907129
+    },
+    "HIDDEN_CORRUPTION": {
+      "positives": 901,
+      "negatives": 1199,
+      "roc_auc": 0.4890525678538997,
+      "recall": 0.01220865704772475,
+      "FPR": 0.027522935779816515
+    }
+  },
+  "scientific_verdicts": {
+    "H1_added_ranking_information": "NOT_SUPPORTED_IN_SIMULATION",
+    "H2_advance_alarm": "SUPPORTED_IN_SIMULATION",
+    "H3_hidden_corruption_limit": "BLIND_SPOT_EXPOSED_IN_SIMULATION"
+  },
+  "limitations": [
+    "Synthetic future outcome, not independent hardware ground truth",
+    "Some proxy-to-outcome relationships imposed by the simulator",
+    "H3 blind spot is introduced deliberately by omitting hidden failures from internal telemetry",
+    "Correlated forecasts within an episode; not independent astronomical events",
+    "Second paper's network repair protocol has not yet been executed"
+  ]
+}
