@@ -1,0 +1,913 @@
+{
+  "hypotheses": {
+    "H1": true,
+    "H2": true
+  },
+  "nominal_decisions": {
+    "bit_and_provenance": [
+      {
+        "action": "abstain",
+        "bit": null,
+        "shared_tag": null
+      },
+      {
+        "action": "fault",
+        "bit": false,
+        "shared_tag": false
+      },
+      {
+        "action": "abstain",
+        "bit": false,
+        "shared_tag": true
+      },
+      {
+        "action": "sky",
+        "bit": true,
+        "shared_tag": false
+      },
+      {
+        "action": "abstain",
+        "bit": true,
+        "shared_tag": true
+      }
+    ],
+    "bit_only": [
+      {
+        "action": "abstain",
+        "bit": null,
+        "shared_tag": null
+      },
+      {
+        "action": "fault",
+        "bit": false,
+        "shared_tag": null
+      },
+      {
+        "action": "abstain",
+        "bit": true,
+        "shared_tag": null
+      }
+    ]
+  },
+  "parameters": {
+    "inverted_tag": [
+      "3/4",
+      "1/10",
+      "1"
+    ],
+    "no_coverage": [
+      "0",
+      "1/10",
+      "1/10"
+    ],
+    "nominal": [
+      "3/4",
+      "1/10",
+      "1/10"
+    ],
+    "perfect_tag": [
+      "3/4",
+      "1/10",
+      "0"
+    ],
+    "uninformative_report": [
+      "3/4",
+      "1/2",
+      "1/10"
+    ],
+    "uninformative_tag": [
+      "3/4",
+      "1/10",
+      "1/2"
+    ]
+  },
+  "protocol": "AR-SWARM002-P01",
+  "scenarios": {
+    "inverted_tag": {
+      "a_alone": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "bit_and_provenance": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/80",
+            "sky": "27/80"
+          },
+          "sky": {
+            "abstain": "5/8",
+            "fault": "3/80",
+            "sky": "27/80"
+          }
+        },
+        "coverage": "3/8",
+        "error_given_decision": "1/2",
+        "risk": "11/32"
+      },
+      "bit_only": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/8",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "37/40",
+            "fault": "3/40",
+            "sky": "0"
+          }
+        },
+        "coverage": "9/40",
+        "error_given_decision": "1/6",
+        "risk": "37/160"
+      },
+      "literal_agreement": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1/4",
+            "fault": "3/8",
+            "sky": "3/8"
+          },
+          "sky": {
+            "abstain": "1/4",
+            "fault": "3/40",
+            "sky": "27/40"
+          }
+        },
+        "coverage": "3/4",
+        "error_given_decision": "3/10",
+        "risk": "23/80"
+      }
+    },
+    "no_coverage": {
+      "a_alone": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "bit_and_provenance": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "bit_only": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "literal_agreement": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      }
+    },
+    "nominal": {
+      "a_alone": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "bit_and_provenance": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "123/400",
+            "sky": "27/400"
+          },
+          "sky": {
+            "abstain": "5/8",
+            "fault": "3/80",
+            "sky": "27/80"
+          }
+        },
+        "coverage": "3/8",
+        "error_given_decision": "7/50",
+        "risk": "167/800"
+      },
+      "bit_only": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/8",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "37/40",
+            "fault": "3/40",
+            "sky": "0"
+          }
+        },
+        "coverage": "9/40",
+        "error_given_decision": "1/6",
+        "risk": "37/160"
+      },
+      "literal_agreement": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1/4",
+            "fault": "3/8",
+            "sky": "3/8"
+          },
+          "sky": {
+            "abstain": "1/4",
+            "fault": "3/40",
+            "sky": "27/40"
+          }
+        },
+        "coverage": "3/4",
+        "error_given_decision": "3/10",
+        "risk": "23/80"
+      }
+    },
+    "perfect_tag": {
+      "a_alone": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "bit_and_provenance": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "27/80",
+            "sky": "3/80"
+          },
+          "sky": {
+            "abstain": "5/8",
+            "fault": "3/80",
+            "sky": "27/80"
+          }
+        },
+        "coverage": "3/8",
+        "error_given_decision": "1/10",
+        "risk": "31/160"
+      },
+      "bit_only": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/8",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "37/40",
+            "fault": "3/40",
+            "sky": "0"
+          }
+        },
+        "coverage": "9/40",
+        "error_given_decision": "1/6",
+        "risk": "37/160"
+      },
+      "literal_agreement": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1/4",
+            "fault": "3/8",
+            "sky": "3/8"
+          },
+          "sky": {
+            "abstain": "1/4",
+            "fault": "3/40",
+            "sky": "27/40"
+          }
+        },
+        "coverage": "3/4",
+        "error_given_decision": "3/10",
+        "risk": "23/80"
+      }
+    },
+    "uninformative_report": {
+      "a_alone": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "bit_and_provenance": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/16",
+            "sky": "3/16"
+          },
+          "sky": {
+            "abstain": "5/8",
+            "fault": "3/16",
+            "sky": "3/16"
+          }
+        },
+        "coverage": "3/8",
+        "error_given_decision": "1/2",
+        "risk": "11/32"
+      },
+      "bit_only": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/8",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "5/8",
+            "fault": "3/8",
+            "sky": "0"
+          }
+        },
+        "coverage": "3/8",
+        "error_given_decision": "1/2",
+        "risk": "11/32"
+      },
+      "literal_agreement": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1/4",
+            "fault": "3/8",
+            "sky": "3/8"
+          },
+          "sky": {
+            "abstain": "1/4",
+            "fault": "3/8",
+            "sky": "3/8"
+          }
+        },
+        "coverage": "3/4",
+        "error_given_decision": "1/2",
+        "risk": "7/16"
+      }
+    },
+    "uninformative_tag": {
+      "a_alone": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "1",
+            "fault": "0",
+            "sky": "0"
+          }
+        },
+        "coverage": "0",
+        "error_given_decision": null,
+        "risk": "1/4"
+      },
+      "bit_and_provenance": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/16",
+            "sky": "3/16"
+          },
+          "sky": {
+            "abstain": "5/8",
+            "fault": "3/80",
+            "sky": "27/80"
+          }
+        },
+        "coverage": "3/8",
+        "error_given_decision": "3/10",
+        "risk": "43/160"
+      },
+      "bit_only": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "5/8",
+            "fault": "3/8",
+            "sky": "0"
+          },
+          "sky": {
+            "abstain": "37/40",
+            "fault": "3/40",
+            "sky": "0"
+          }
+        },
+        "coverage": "9/40",
+        "error_given_decision": "1/6",
+        "risk": "37/160"
+      },
+      "literal_agreement": {
+        "action_given_label": {
+          "fault": {
+            "abstain": "1/4",
+            "fault": "3/8",
+            "sky": "3/8"
+          },
+          "sky": {
+            "abstain": "1/4",
+            "fault": "3/40",
+            "sky": "27/40"
+          }
+        },
+        "coverage": "3/4",
+        "error_given_decision": "3/10",
+        "risk": "23/80"
+      }
+    }
+  },
+  "tag_stress_sweep": [
+    {
+      "provenance_minus_bit_only_risk": "-3/80",
+      "tag_error": "0"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-9/250",
+      "tag_error": "1/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-69/2000",
+      "tag_error": "1/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-33/1000",
+      "tag_error": "3/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-63/2000",
+      "tag_error": "1/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/100",
+      "tag_error": "1/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-57/2000",
+      "tag_error": "3/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-27/1000",
+      "tag_error": "7/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-51/2000",
+      "tag_error": "2/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/125",
+      "tag_error": "9/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-9/400",
+      "tag_error": "1/10"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-21/1000",
+      "tag_error": "11/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-39/2000",
+      "tag_error": "3/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-9/500",
+      "tag_error": "13/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-33/2000",
+      "tag_error": "7/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/200",
+      "tag_error": "3/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-27/2000",
+      "tag_error": "4/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/250",
+      "tag_error": "17/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-21/2000",
+      "tag_error": "9/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-9/1000",
+      "tag_error": "19/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/400",
+      "tag_error": "1/5"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/500",
+      "tag_error": "21/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-9/2000",
+      "tag_error": "11/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/1000",
+      "tag_error": "23/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "-3/2000",
+      "tag_error": "6/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "0",
+      "tag_error": "1/4"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/2000",
+      "tag_error": "13/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/1000",
+      "tag_error": "27/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/2000",
+      "tag_error": "7/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/500",
+      "tag_error": "29/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/400",
+      "tag_error": "3/10"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/1000",
+      "tag_error": "31/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "21/2000",
+      "tag_error": "8/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/250",
+      "tag_error": "33/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "27/2000",
+      "tag_error": "17/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/200",
+      "tag_error": "7/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "33/2000",
+      "tag_error": "9/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/500",
+      "tag_error": "37/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "39/2000",
+      "tag_error": "19/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "21/1000",
+      "tag_error": "39/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/400",
+      "tag_error": "2/5"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/125",
+      "tag_error": "41/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "51/2000",
+      "tag_error": "21/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "27/1000",
+      "tag_error": "43/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "57/2000",
+      "tag_error": "11/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/100",
+      "tag_error": "9/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "63/2000",
+      "tag_error": "23/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "33/1000",
+      "tag_error": "47/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "69/2000",
+      "tag_error": "12/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/250",
+      "tag_error": "49/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/80",
+      "tag_error": "1/2"
+    },
+    {
+      "provenance_minus_bit_only_risk": "39/1000",
+      "tag_error": "51/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "81/2000",
+      "tag_error": "13/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "21/500",
+      "tag_error": "53/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "87/2000",
+      "tag_error": "27/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/200",
+      "tag_error": "11/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "93/2000",
+      "tag_error": "14/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "6/125",
+      "tag_error": "57/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "99/2000",
+      "tag_error": "29/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "51/1000",
+      "tag_error": "59/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "21/400",
+      "tag_error": "3/5"
+    },
+    {
+      "provenance_minus_bit_only_risk": "27/500",
+      "tag_error": "61/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "111/2000",
+      "tag_error": "31/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "57/1000",
+      "tag_error": "63/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "117/2000",
+      "tag_error": "16/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/50",
+      "tag_error": "13/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "123/2000",
+      "tag_error": "33/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "63/1000",
+      "tag_error": "67/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "129/2000",
+      "tag_error": "17/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "33/500",
+      "tag_error": "69/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "27/400",
+      "tag_error": "7/10"
+    },
+    {
+      "provenance_minus_bit_only_risk": "69/1000",
+      "tag_error": "71/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "141/2000",
+      "tag_error": "18/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/125",
+      "tag_error": "73/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "147/2000",
+      "tag_error": "37/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "3/40",
+      "tag_error": "3/4"
+    },
+    {
+      "provenance_minus_bit_only_risk": "153/2000",
+      "tag_error": "19/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "39/500",
+      "tag_error": "77/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "159/2000",
+      "tag_error": "39/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "81/1000",
+      "tag_error": "79/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "33/400",
+      "tag_error": "4/5"
+    },
+    {
+      "provenance_minus_bit_only_risk": "21/250",
+      "tag_error": "81/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "171/2000",
+      "tag_error": "41/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "87/1000",
+      "tag_error": "83/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "177/2000",
+      "tag_error": "21/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/100",
+      "tag_error": "17/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "183/2000",
+      "tag_error": "43/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "93/1000",
+      "tag_error": "87/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "189/2000",
+      "tag_error": "22/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "12/125",
+      "tag_error": "89/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "39/400",
+      "tag_error": "9/10"
+    },
+    {
+      "provenance_minus_bit_only_risk": "99/1000",
+      "tag_error": "91/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "201/2000",
+      "tag_error": "23/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "51/500",
+      "tag_error": "93/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "207/2000",
+      "tag_error": "47/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "21/200",
+      "tag_error": "19/20"
+    },
+    {
+      "provenance_minus_bit_only_risk": "213/2000",
+      "tag_error": "24/25"
+    },
+    {
+      "provenance_minus_bit_only_risk": "27/250",
+      "tag_error": "97/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "219/2000",
+      "tag_error": "49/50"
+    },
+    {
+      "provenance_minus_bit_only_risk": "111/1000",
+      "tag_error": "99/100"
+    },
+    {
+      "provenance_minus_bit_only_risk": "9/80",
+      "tag_error": "1"
+    }
+  ]
+}
