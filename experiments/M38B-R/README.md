@@ -30,6 +30,86 @@ The candidate has 73,260 nominal slots (99 endpoints × 4 shapes × 37 durations
 
 The proposed random roots in `PROTOCOL_DRAFT.json` are not yet authorized for execution.
 
+## Current audit notes — 3 November 2026
+
+The source-independent onset reference, observation-only baseline processor, historical-geometry checker, and Lean 4 causality witnesses are recorded under [the research index](../../docs/RESEARCH_INDEX.md). Read the [research notebook](../../docs/RESEARCH_NOTEBOOK_2026-11-03.md) alongside the [failure register](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md). These are pre-outcome software and mathematical audits only. They do not authorize calibration, thresholds, holdouts, physical astronomy claims, or retroactive changes to this draft protocol.
+
+## Independent full-bank numerical reference — P0.3
+
+The new [complete-bank audit](INDEPENDENT_BANK_AUDIT.md) and
+[precommitted comparison policy](INDEPENDENT_BANK_COMPARISON_POLICY.md)
+document the source-independent diagnostic scorer, its 99-endpoint
+unlabelled fixture, numerical equivalence bounds and the explicit divergence
+when the hinge onset is undefined. A first implementation error was preserved
+as [F14](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md) and subsequently
+corrected in CI. This does not freeze an experiment runner or authorize
+calibration or holdouts. Do not reuse any historical thresholds.
+
+## Conditioning and missing-sample audit — P0.4
+
+I recorded the [P0.4 numerical criteria](P04_NUMERICAL_AUDIT_POLICY.md)
+before constructing the new tests. The
+[P0.4 evidence report](P04_NUMERICAL_AUDIT.md) contains the actual
+near-parallel computed scores, an analytic reference, the absolute
+energy-gate counterexample and the missing-sample classification limits.
+The read-only `numerical_quality.py` module marks invalid observed prefixes
+versus future-only missing samples; it does **not** replace preprocessing,
+repair data, or authorize a change in operational detector behavior.
+The conditions F16–F18 remain unresolved scientific-design limits.
+
+## Strict observed-prefix numerical diagnostics — P0.5
+
+I added a [precommitted prefix policy](P05_PREFIX_CONTRACT_POLICY.md)
+and [P0.5 verification report](P05_PREFIX_AUDIT.md). The new experimental
+`observed_prefix.py` accepts only measured observations through its
+requested endpoint; its finite-prefix outputs matched the independent
+batch calculation exactly in the four unlabelled endpoints tested.
+The old batch interface still rejects future nonfinite samples and the
+low-level scorer remains a numerical diagnostic rather than a live
+instrument. These distinctions are recorded as [F16 and F19](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md).
+No thresholds, holdouts or calibration inputs were read.
+
+## Sequential cadence and time-label audit — P0.6
+
+I fixed the [P0.6 order and gap policy](P06_SEQUENTIAL_CADENCE_POLICY.md)
+before implementing the [sequential ledger](sequential_cadence.py).
+The [P0.6 audit report](P06_SEQUENTIAL_CADENCE_AUDIT.md) records
+the initially passing tests, a later ragged-input failure, the
+source correction and the separate successful rerun. The ledger
+rejects non-consecutive sample indices and invalid frames without
+silently filling gaps. The timestamps are **unverified metadata**;
+physical clock calibration and actual continuous hardware acquisition
+remain unresolved in [F21](../../docs/FAILURE_AND_LIMITATIONS_REGISTER.md).
+No scientific experiment, calibration, threshold or holdout was run.
+
+## Exposure-time declaration and internal integrity audit — P0.7
+
+The [P0.7 policy](P07_EXPOSURE_PROVENANCE_POLICY.md) was frozen before
+implementing [the exposure metadata wrapper](exposure_provenance.py)
+and [the P0.7 audit](P07_EXPOSURE_PROVENANCE_AUDIT.md).
+Declared absolute error bounds must permit definitely positive,
+definitely ordered exposures. Canonical in-memory frame and metadata
+records are linked with SHA-256; invalid or inconsistent records block
+a session. This does **not** authenticate an instrument, verify clock
+accuracy, establish a time standard or provide tamper-proof storage.
+The audit preserves a failed Lean build and its subsequent correction;
+its outstanding physical-provenance limits are F23–F24. No calibration
+or holdout was opened.
+
+## Keyed message custody and authentication limits — P0.8
+
+I recorded [the P0.8 acceptance criteria](P08_KEYED_CUSTODY_POLICY.md)
+before writing the [keyed packet verifier](keyed_custody.py).
+The [P0.8 audit report](P08_KEYED_CUSTODY_AUDIT.md) explains
+the HMAC-SHA-256 message check, byte-exact prefix diagnostics,
+negative forgery/replay controls and a recorded fail-open stored-byte
+bug corrected and retested in CI. The only key committed is an
+explicitly **public test fixture**, not a device credential.
+Valid HMACs prove possession of that key, not that a telescope made
+the declared observation. No hardware attestation, persistent replay
+registry, original sensor byte stream, scientific calibration,
+threshold or holdout was used.
+
 ## Usage
 
 ```bash
