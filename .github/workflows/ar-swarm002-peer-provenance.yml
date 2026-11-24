@@ -1,0 +1,30 @@
+name: AR-SWARM002 exact peer audit
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/ar_swarm002_peer_provenance.py'
+      - 'tests/test_ar_swarm002*.py'
+      - 'docs/results/AR-SWARM002-P01.json'
+      - '.github/workflows/ar-swarm002-peer-provenance.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -p 'test_ar_swarm002*.py' -v
+      - name: Compare fresh execution to the archived exact results
+        run: |
+          set -euo pipefail
+          python -m scripts.ar_swarm002_peer_provenance > first.json
+          python -m scripts.ar_swarm002_peer_provenance > second.json
+          cmp first.json second.json
+          cmp first.json docs/results/AR-SWARM002-P01.json
