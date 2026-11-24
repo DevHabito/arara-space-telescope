@@ -1,0 +1,1339 @@
+{
+  "hypotheses": {
+    "H1": false,
+    "H2": true
+  },
+  "protocol": "AR-SWARM003-P01",
+  "unnecessary_repair_costs": {
+    "1": {
+      "direct_nominal_actions": [
+        {
+          "bit": null,
+          "repair": false,
+          "shared_tag": null
+        },
+        {
+          "bit": false,
+          "repair": true,
+          "shared_tag": false
+        },
+        {
+          "bit": false,
+          "repair": true,
+          "shared_tag": true
+        },
+        {
+          "bit": true,
+          "repair": false,
+          "shared_tag": false
+        },
+        {
+          "bit": true,
+          "repair": false,
+          "shared_tag": true
+        }
+      ],
+      "scenarios": {
+        "inverted_tag": {
+          "bit_and_provenance": {
+            "cost": "803/1600",
+            "defer_given_fault": "77/80",
+            "repair": "3/80",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "literal_agreement": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "11/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "no_coverage": {
+          "bit_and_provenance": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "bit_only": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "literal_agreement": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "repair_all": {
+            "cost": "11/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "nominal": {
+          "bit_and_provenance": {
+            "cost": "3043/8000",
+            "defer_given_fault": "277/400",
+            "repair": "69/400",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "literal_agreement": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "11/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "perfect_tag": {
+          "bit_and_provenance": {
+            "cost": "587/1600",
+            "defer_given_fault": "53/80",
+            "repair": "3/16",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "literal_agreement": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "11/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "uninformative_report": {
+          "bit_and_provenance": {
+            "cost": "163/320",
+            "defer_given_fault": "13/16",
+            "repair": "3/16",
+            "repair_given_sky": "3/16"
+          },
+          "bit_only": {
+            "cost": "83/160",
+            "defer_given_fault": "5/8",
+            "repair": "3/8",
+            "repair_given_sky": "3/8"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "83/160",
+            "defer_given_fault": "5/8",
+            "repair": "3/8",
+            "repair_given_sky": "3/8"
+          },
+          "literal_agreement": {
+            "cost": "83/160",
+            "defer_given_fault": "5/8",
+            "repair": "3/8",
+            "repair_given_sky": "3/8"
+          },
+          "repair_all": {
+            "cost": "11/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "uninformative_tag": {
+          "bit_and_provenance": {
+            "cost": "139/320",
+            "defer_given_fault": "13/16",
+            "repair": "9/80",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "literal_agreement": {
+            "cost": "59/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "11/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        }
+      },
+      "sweep": [
+        {
+          "provenance_minus_bit_only_cost": "-3/1600",
+          "tag_error": "0"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-21/40000",
+          "tag_error": "1/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "33/40000",
+          "tag_error": "1/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "87/40000",
+          "tag_error": "3/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "141/40000",
+          "tag_error": "1/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "39/8000",
+          "tag_error": "1/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "249/40000",
+          "tag_error": "3/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "303/40000",
+          "tag_error": "7/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "357/40000",
+          "tag_error": "2/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "411/40000",
+          "tag_error": "9/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "93/8000",
+          "tag_error": "1/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "519/40000",
+          "tag_error": "11/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "573/40000",
+          "tag_error": "3/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "627/40000",
+          "tag_error": "13/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "681/40000",
+          "tag_error": "7/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "147/8000",
+          "tag_error": "3/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "789/40000",
+          "tag_error": "4/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "843/40000",
+          "tag_error": "17/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "897/40000",
+          "tag_error": "9/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "951/40000",
+          "tag_error": "19/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "201/8000",
+          "tag_error": "1/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1059/40000",
+          "tag_error": "21/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1113/40000",
+          "tag_error": "11/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1167/40000",
+          "tag_error": "23/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1221/40000",
+          "tag_error": "6/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "51/1600",
+          "tag_error": "1/4"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1329/40000",
+          "tag_error": "13/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1383/40000",
+          "tag_error": "27/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1437/40000",
+          "tag_error": "7/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1491/40000",
+          "tag_error": "29/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "309/8000",
+          "tag_error": "3/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1599/40000",
+          "tag_error": "31/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1653/40000",
+          "tag_error": "8/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1707/40000",
+          "tag_error": "33/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1761/40000",
+          "tag_error": "17/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "363/8000",
+          "tag_error": "7/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1869/40000",
+          "tag_error": "9/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1923/40000",
+          "tag_error": "37/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1977/40000",
+          "tag_error": "19/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2031/40000",
+          "tag_error": "39/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "417/8000",
+          "tag_error": "2/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2139/40000",
+          "tag_error": "41/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2193/40000",
+          "tag_error": "21/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2247/40000",
+          "tag_error": "43/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2301/40000",
+          "tag_error": "11/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "471/8000",
+          "tag_error": "9/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2409/40000",
+          "tag_error": "23/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2463/40000",
+          "tag_error": "47/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2517/40000",
+          "tag_error": "12/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2571/40000",
+          "tag_error": "49/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "21/320",
+          "tag_error": "1/2"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2679/40000",
+          "tag_error": "51/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2733/40000",
+          "tag_error": "13/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2787/40000",
+          "tag_error": "53/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2841/40000",
+          "tag_error": "27/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "579/8000",
+          "tag_error": "11/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2949/40000",
+          "tag_error": "14/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3003/40000",
+          "tag_error": "57/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3057/40000",
+          "tag_error": "29/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3111/40000",
+          "tag_error": "59/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "633/8000",
+          "tag_error": "3/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3219/40000",
+          "tag_error": "61/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3273/40000",
+          "tag_error": "31/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3327/40000",
+          "tag_error": "63/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3381/40000",
+          "tag_error": "16/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "687/8000",
+          "tag_error": "13/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3489/40000",
+          "tag_error": "33/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3543/40000",
+          "tag_error": "67/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3597/40000",
+          "tag_error": "17/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3651/40000",
+          "tag_error": "69/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "741/8000",
+          "tag_error": "7/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3759/40000",
+          "tag_error": "71/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3813/40000",
+          "tag_error": "18/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3867/40000",
+          "tag_error": "73/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3921/40000",
+          "tag_error": "37/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "159/1600",
+          "tag_error": "3/4"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4029/40000",
+          "tag_error": "19/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4083/40000",
+          "tag_error": "77/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4137/40000",
+          "tag_error": "39/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4191/40000",
+          "tag_error": "79/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "849/8000",
+          "tag_error": "4/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4299/40000",
+          "tag_error": "81/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4353/40000",
+          "tag_error": "41/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4407/40000",
+          "tag_error": "83/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4461/40000",
+          "tag_error": "21/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "903/8000",
+          "tag_error": "17/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4569/40000",
+          "tag_error": "43/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4623/40000",
+          "tag_error": "87/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4677/40000",
+          "tag_error": "22/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4731/40000",
+          "tag_error": "89/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "957/8000",
+          "tag_error": "9/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4839/40000",
+          "tag_error": "91/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4893/40000",
+          "tag_error": "23/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "4947/40000",
+          "tag_error": "93/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "5001/40000",
+          "tag_error": "47/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1011/8000",
+          "tag_error": "19/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "5109/40000",
+          "tag_error": "24/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "5163/40000",
+          "tag_error": "97/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "5217/40000",
+          "tag_error": "49/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "5271/40000",
+          "tag_error": "99/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "213/1600",
+          "tag_error": "1"
+        }
+      ]
+    },
+    "4": {
+      "direct_nominal_actions": [
+        {
+          "bit": null,
+          "repair": false,
+          "shared_tag": null
+        },
+        {
+          "bit": false,
+          "repair": true,
+          "shared_tag": false
+        },
+        {
+          "bit": false,
+          "repair": false,
+          "shared_tag": true
+        },
+        {
+          "bit": true,
+          "repair": false,
+          "shared_tag": false
+        },
+        {
+          "bit": true,
+          "repair": false,
+          "shared_tag": true
+        }
+      ],
+      "scenarios": {
+        "inverted_tag": {
+          "bit_and_provenance": {
+            "cost": "893/1600",
+            "defer_given_fault": "77/80",
+            "repair": "3/80",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "893/1600",
+            "defer_given_fault": "77/80",
+            "repair": "3/80",
+            "repair_given_sky": "3/80"
+          },
+          "literal_agreement": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "41/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "no_coverage": {
+          "bit_and_provenance": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "bit_only": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "literal_agreement": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "repair_all": {
+            "cost": "41/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "nominal": {
+          "bit_and_provenance": {
+            "cost": "3493/8000",
+            "defer_given_fault": "277/400",
+            "repair": "69/400",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "3493/8000",
+            "defer_given_fault": "277/400",
+            "repair": "69/400",
+            "repair_given_sky": "3/80"
+          },
+          "literal_agreement": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "41/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "perfect_tag": {
+          "bit_and_provenance": {
+            "cost": "677/1600",
+            "defer_given_fault": "53/80",
+            "repair": "3/16",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "677/1600",
+            "defer_given_fault": "53/80",
+            "repair": "3/16",
+            "repair_given_sky": "3/80"
+          },
+          "literal_agreement": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "41/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "uninformative_report": {
+          "bit_and_provenance": {
+            "cost": "253/320",
+            "defer_given_fault": "13/16",
+            "repair": "3/16",
+            "repair_given_sky": "3/16"
+          },
+          "bit_only": {
+            "cost": "173/160",
+            "defer_given_fault": "5/8",
+            "repair": "3/8",
+            "repair_given_sky": "3/8"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "253/320",
+            "defer_given_fault": "13/16",
+            "repair": "3/16",
+            "repair_given_sky": "3/16"
+          },
+          "literal_agreement": {
+            "cost": "173/160",
+            "defer_given_fault": "5/8",
+            "repair": "3/8",
+            "repair_given_sky": "3/8"
+          },
+          "repair_all": {
+            "cost": "41/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        },
+        "uninformative_tag": {
+          "bit_and_provenance": {
+            "cost": "157/320",
+            "defer_given_fault": "13/16",
+            "repair": "9/80",
+            "repair_given_sky": "3/80"
+          },
+          "bit_only": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "defer_all": {
+            "cost": "1/2",
+            "defer_given_fault": "1",
+            "repair": "0",
+            "repair_given_sky": "0"
+          },
+          "direct_nominal_bayes": {
+            "cost": "157/320",
+            "defer_given_fault": "13/16",
+            "repair": "9/80",
+            "repair_given_sky": "3/80"
+          },
+          "literal_agreement": {
+            "cost": "77/160",
+            "defer_given_fault": "5/8",
+            "repair": "9/40",
+            "repair_given_sky": "3/40"
+          },
+          "repair_all": {
+            "cost": "41/20",
+            "defer_given_fault": "0",
+            "repair": "1",
+            "repair_given_sky": "1"
+          }
+        }
+      },
+      "sweep": [
+        {
+          "provenance_minus_bit_only_cost": "-93/1600",
+          "tag_error": "0"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-2271/40000",
+          "tag_error": "1/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-2217/40000",
+          "tag_error": "1/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-2163/40000",
+          "tag_error": "3/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-2109/40000",
+          "tag_error": "1/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-411/8000",
+          "tag_error": "1/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-2001/40000",
+          "tag_error": "3/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1947/40000",
+          "tag_error": "7/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1893/40000",
+          "tag_error": "2/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1839/40000",
+          "tag_error": "9/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-357/8000",
+          "tag_error": "1/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1731/40000",
+          "tag_error": "11/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1677/40000",
+          "tag_error": "3/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1623/40000",
+          "tag_error": "13/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1569/40000",
+          "tag_error": "7/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-303/8000",
+          "tag_error": "3/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1461/40000",
+          "tag_error": "4/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1407/40000",
+          "tag_error": "17/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1353/40000",
+          "tag_error": "9/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1299/40000",
+          "tag_error": "19/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-249/8000",
+          "tag_error": "1/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1191/40000",
+          "tag_error": "21/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1137/40000",
+          "tag_error": "11/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1083/40000",
+          "tag_error": "23/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-1029/40000",
+          "tag_error": "6/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-39/1600",
+          "tag_error": "1/4"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-921/40000",
+          "tag_error": "13/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-867/40000",
+          "tag_error": "27/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-813/40000",
+          "tag_error": "7/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-759/40000",
+          "tag_error": "29/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-141/8000",
+          "tag_error": "3/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-651/40000",
+          "tag_error": "31/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-597/40000",
+          "tag_error": "8/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-543/40000",
+          "tag_error": "33/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-489/40000",
+          "tag_error": "17/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-87/8000",
+          "tag_error": "7/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-381/40000",
+          "tag_error": "9/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-327/40000",
+          "tag_error": "37/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-273/40000",
+          "tag_error": "19/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-219/40000",
+          "tag_error": "39/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-33/8000",
+          "tag_error": "2/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-111/40000",
+          "tag_error": "41/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-57/40000",
+          "tag_error": "21/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "-3/40000",
+          "tag_error": "43/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "51/40000",
+          "tag_error": "11/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "21/8000",
+          "tag_error": "9/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "159/40000",
+          "tag_error": "23/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "213/40000",
+          "tag_error": "47/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "267/40000",
+          "tag_error": "12/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "321/40000",
+          "tag_error": "49/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3/320",
+          "tag_error": "1/2"
+        },
+        {
+          "provenance_minus_bit_only_cost": "429/40000",
+          "tag_error": "51/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "483/40000",
+          "tag_error": "13/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "537/40000",
+          "tag_error": "53/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "591/40000",
+          "tag_error": "27/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "129/8000",
+          "tag_error": "11/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "699/40000",
+          "tag_error": "14/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "753/40000",
+          "tag_error": "57/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "807/40000",
+          "tag_error": "29/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "861/40000",
+          "tag_error": "59/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "183/8000",
+          "tag_error": "3/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "969/40000",
+          "tag_error": "61/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1023/40000",
+          "tag_error": "31/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1077/40000",
+          "tag_error": "63/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1131/40000",
+          "tag_error": "16/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "237/8000",
+          "tag_error": "13/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1239/40000",
+          "tag_error": "33/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1293/40000",
+          "tag_error": "67/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1347/40000",
+          "tag_error": "17/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1401/40000",
+          "tag_error": "69/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "291/8000",
+          "tag_error": "7/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1509/40000",
+          "tag_error": "71/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1563/40000",
+          "tag_error": "18/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1617/40000",
+          "tag_error": "73/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1671/40000",
+          "tag_error": "37/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "69/1600",
+          "tag_error": "3/4"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1779/40000",
+          "tag_error": "19/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1833/40000",
+          "tag_error": "77/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1887/40000",
+          "tag_error": "39/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "1941/40000",
+          "tag_error": "79/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "399/8000",
+          "tag_error": "4/5"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2049/40000",
+          "tag_error": "81/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2103/40000",
+          "tag_error": "41/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2157/40000",
+          "tag_error": "83/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2211/40000",
+          "tag_error": "21/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "453/8000",
+          "tag_error": "17/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2319/40000",
+          "tag_error": "43/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2373/40000",
+          "tag_error": "87/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2427/40000",
+          "tag_error": "22/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2481/40000",
+          "tag_error": "89/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "507/8000",
+          "tag_error": "9/10"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2589/40000",
+          "tag_error": "91/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2643/40000",
+          "tag_error": "23/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2697/40000",
+          "tag_error": "93/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2751/40000",
+          "tag_error": "47/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "561/8000",
+          "tag_error": "19/20"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2859/40000",
+          "tag_error": "24/25"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2913/40000",
+          "tag_error": "97/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "2967/40000",
+          "tag_error": "49/50"
+        },
+        {
+          "provenance_minus_bit_only_cost": "3021/40000",
+          "tag_error": "99/100"
+        },
+        {
+          "provenance_minus_bit_only_cost": "123/1600",
+          "tag_error": "1"
+        }
+      ]
+    }
+  }
+}
